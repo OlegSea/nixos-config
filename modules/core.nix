@@ -40,7 +40,6 @@
         qbittorrent
         python3
         go
-        jdk24
         distrobox
         discord
         wl-clipboard

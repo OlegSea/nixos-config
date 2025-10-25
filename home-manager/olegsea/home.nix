@@ -93,8 +93,10 @@
 
   programs.git = {
     enable = true;
-    userName = "Alex Trifonov";
-    userEmail = "ta.alexashow@ya.ru";
+    settings = {
+      user.Name = "Alex Trifonov";
+      user.Email = "ta.alexashow@ya.ru";
+    };
   };
 
   # Включение Home Manager

@@ -46,6 +46,7 @@
         zed-editor
         nixd
         nil
+        gh
       ];
 
     system.stateVersion = "25.05";

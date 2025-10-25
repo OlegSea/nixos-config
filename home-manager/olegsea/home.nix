@@ -99,6 +99,13 @@
     };
   };
 
+  programs.gh = {
+      enable = true;
+      gitCredentialHelper = {
+      enable = true;
+    };
+  };
+
   # Включение Home Manager
   programs.home-manager.enable = true;
 }

@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  nixosConfigDir = "/home/olegsea/flake";
+in
 {
     networking.networkmanager.enable = true;
     networking.nftables.enable = true;
@@ -11,13 +14,11 @@
 
     serviceConfig = {
         Type = "simple";
-        ExecStart = "${pkgs.bash}/bin/bash /opt/zapret/main_script.sh -nointeractive";
+        ExecStart = "${pkgs.bash}/bin/bash ${nixosConfigDir}/zapret/main_script.sh -nointeractive";
         User = "root";
         Environment = [
         "PATH=${pkgs.git}/bin:${pkgs.nftables}/bin:${pkgs.gnugrep}/bin:${pkgs.gnused}/bin:${pkgs.coreutils}/bin:${pkgs.sudo}/bin"
-        "BASE_DIR=/opt/zapret/"
-        "CONF_FILE=/opt/zapret/conf.env"
-        "NFQWS_PATH=/opt/zapret/nfqws"
+        "BASE_DIR=${nixosConfigDir}/zapret"
         ];
     };
     };

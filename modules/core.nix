@@ -34,58 +34,17 @@
   services.systembus-notify.enable = true;
 
   environment.systemPackages = with pkgs; [
-    vim
-    wget
-    git
-    tree
+    bc
+    htop
     zip
     unzip
-    tmux
-    telegram-desktop
-    htop
-    obsidian
-    vivaldi
-    xray
-    nekoray
-    sing-box
-    qbittorrent
-    python3
-    go
-    distrobox
-    discord
-    wl-clipboard
-    zed-editor
-    nixd
-    nil
-    kdePackages.qtdeclarative
-    gh
-    spotify
-    playerctl
-    prismlauncher
-    jdk17
-    read-edid
-    edid-decode
-    fastfetch
-    waybar
-    nerd-fonts.caskaydia-cove
-    nerd-fonts.caskaydia-mono
-    nerd-fonts.ubuntu-sans
-    nerd-fonts.ubuntu-mono
-    swaybg
-    obs-studio
-    pavucontrol
-    upower
-    libnotify
-    bc
-    libqalculate
-    qalculate-gtk
-    pay-respects
-    termius
-    swaynotificationcenter
+    tree
+    wget
+    vim
+    git
   ];
 
   programs.zsh.enable = true;
-
   users.defaultUserShell = pkgs.zsh;
 
   system.stateVersion = "25.05";

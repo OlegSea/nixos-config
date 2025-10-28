@@ -6,6 +6,14 @@ in
 {
   networking.networkmanager.enable = true;
   networking.nftables.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    xray
+    nekoray
+    sing-box
+    qbittorrent
+  ];
+
   systemd.services.zapret = {
     description = "Zapret DPI Bypass";
     after = [ "network-online.target" ];

@@ -12,5 +12,18 @@
     swayidle
     swaybg
     xwayland-satellite
+    wl-clipboard
+    playerctl
+    fastfetch
+    waybar
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.caskaydia-mono
+    nerd-fonts.ubuntu-sans
+    nerd-fonts.ubuntu-mono
+    pavucontrol
+    upower
+    libnotify
+    swaynotificationcenter
+    libqalculate
   ];
 }

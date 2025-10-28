@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+  programs.niri.package = pkgs.niri;
   programs.niri.enable = true;
   security.polkit.enable = true; # polkit
   services.gnome.gnome-keyring.enable = true; # secret service

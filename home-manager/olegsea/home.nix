@@ -10,10 +10,10 @@
     ./modules/gnome.nix
     ./modules/git.nix
     ./modules/shell.nix
-    ./modules/niri.nix
     ./modules/dev.nix
     ./modules/gaming.nix
     ./modules/kitty.nix
+    ./modules/niri
     # TODO: убрать эти две строчки, когда починят qgnomeplatform
     inputs.stylix.homeModules.stylix
     ../../modules/stylix.nix
@@ -21,6 +21,7 @@
   stylix.targets.fuzzel.enable = false;
   stylix.targets.swaync.enable = false;
   stylix.targets.waybar.enable = false;
+  stylix.targets.niri.enable = false;
 
   # Базовые настройки
   home.username = "olegsea";

@@ -6,5 +6,8 @@
     nixd
     nil
     package-version-server
+    difftastic
+    jj
+    jq
   ];
 }

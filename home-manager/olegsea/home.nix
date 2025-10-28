@@ -20,6 +20,7 @@
   ];
   stylix.targets.fuzzel.enable = false;
   stylix.targets.swaync.enable = false;
+  stylix.targets.waybar.enable = false;
 
   # Базовые настройки
   home.username = "olegsea";

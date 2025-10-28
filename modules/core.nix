@@ -3,6 +3,7 @@
   pkgs,
   inputs,
   system,
+  lib,
   ...
 }:
 
@@ -33,6 +34,12 @@
 
   services.systembus-notify.enable = true;
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      qgnomeplatform = inputs.qgnome-fix.legacyPackages.${pkgs.system}.qgnomeplatform;
+    })
+  ];
+
   environment.systemPackages = with pkgs; [
     bc
     htop
@@ -42,6 +49,7 @@
     wget
     vim
     git
+
   ];
 
   programs.zsh.enable = true;

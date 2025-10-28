@@ -3,6 +3,7 @@
   pkgs,
   nixosConfigDir,
   inputs,
+  lib,
   ...
 }:
 
@@ -22,17 +23,13 @@
       show-screenshot-ui = [ "<Shift><Super>s" ];
     };
 
+    "org/gnome/desktop/interface".color-scheme = lib.mkForce "prefer-dark";
+
     # Обои
     # "org/gnome/desktop/background" = {
     #   # picture-uri-dark = "file://${nixosConfigDir}/home-manager/agegon/wallpaper/marine-tunnel.jpg";
     #   picture-uri-dark = "file://${nixosConfigDir}/home-manager/agegon/wallpaper/amber-l.jxl";
     # };
-
-    # Темная тема
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-      gtk-theme = "Adwaita-dark";
-    };
 
     # Фиксированные 5 рабочих стола
     "org/gnome/mutter" = {

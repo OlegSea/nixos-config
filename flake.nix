@@ -7,6 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -14,6 +18,7 @@
       self,
       nixpkgs,
       home-manager,
+      stylix,
       ...
     }@inputs:
     let
@@ -27,6 +32,7 @@
           inherit nixosConfigDir;
           inherit inputs;
           inherit system;
+          inherit stylix;
         };
         modules = [
           # Импортируем основной конфиг хоста
@@ -40,6 +46,10 @@
           ./modules/audio.nix
           ./modules/users.nix
           ./modules/power.nix
+          # TODO: Вернуть, когда починят qgnomeplatform
+          # ./modules/stylix.nix
+
+          stylix.nixosModules.stylix
 
           # Подключаем Home Manager
           home-manager.nixosModules.home-manager
@@ -51,7 +61,11 @@
               inherit inputs;
               inherit system;
             };
-            home-manager.users.olegsea = import ./home-manager/olegsea/home.nix;
+            home-manager.users.olegsea = {
+              imports = [
+                ./home-manager/olegsea/home.nix
+              ];
+            };
           }
         ];
       };

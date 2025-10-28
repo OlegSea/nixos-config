@@ -1,9 +1,7 @@
 {
+  inputs,
   config,
   pkgs,
-  nixosConfigDir,
-  inputs,
-  system,
   ...
 }:
 
@@ -15,7 +13,13 @@
     ./modules/niri.nix
     ./modules/dev.nix
     ./modules/gaming.nix
+    ./modules/kitty.nix
+    # TODO: убрать эти две строчки, когда починят qgnomeplatform
+    inputs.stylix.homeModules.stylix
+    ../../modules/stylix.nix
   ];
+  stylix.targets.fuzzel.enable = false;
+  stylix.targets.swaync.enable = false;
 
   # Базовые настройки
   home.username = "olegsea";

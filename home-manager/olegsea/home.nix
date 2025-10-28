@@ -1,6 +1,16 @@
-{ config, pkgs, nixosConfigDir, ... }:
+{
+  config,
+  pkgs,
+  nixosConfigDir,
+  inputs,
+  system,
+  ...
+}:
 
 {
+  imports = [
+  ];
+
   # Базовые настройки
   home.username = "olegsea";
   home.homeDirectory = "/home/olegsea";
@@ -12,12 +22,12 @@
   # Настройки GNOME
   dconf.settings = {
     "org/gnome/shell/keybindings" = {
-      switch-to-application-1 = [];
-      switch-to-application-2 = [];
-      switch-to-application-3 = [];
-      switch-to-application-4 = [];
-      switch-to-application-5 = [];
-      show-screenshot-ui = ["<Shift><Super>s"];
+      switch-to-application-1 = [ ];
+      switch-to-application-2 = [ ];
+      switch-to-application-3 = [ ];
+      switch-to-application-4 = [ ];
+      switch-to-application-5 = [ ];
+      show-screenshot-ui = [ "<Shift><Super>s" ];
     };
 
     # Обои
@@ -48,21 +58,21 @@
     # Настройки клавиш
     "org/gnome/desktop/wm/keybindings" = {
       # Закрытие окна
-      close = ["<Shift><Super>q"];
+      close = [ "<Shift><Super>q" ];
 
       # Переключение между рабочими столами
-      switch-to-workspace-1 = ["<Super>1"];
-      switch-to-workspace-2 = ["<Super>2"];
-      switch-to-workspace-3 = ["<Super>3"];
-      switch-to-workspace-4 = ["<Super>4"];
-      switch-to-workspace-last = ["<Super>5"];
+      switch-to-workspace-1 = [ "<Super>1" ];
+      switch-to-workspace-2 = [ "<Super>2" ];
+      switch-to-workspace-3 = [ "<Super>3" ];
+      switch-to-workspace-4 = [ "<Super>4" ];
+      switch-to-workspace-last = [ "<Super>5" ];
 
       # Перемещение окон
-      move-to-workspace-1 = ["<Shift><Super>1"];
-      move-to-workspace-2 = ["<Shift><Super>2"];
-      move-to-workspace-3 = ["<Shift><Super>3"];
-      move-to-workspace-4 = ["<Shift><Super>4"];
-      move-to-workspace-last = ["<Shift><Super>5"];
+      move-to-workspace-1 = [ "<Shift><Super>1" ];
+      move-to-workspace-2 = [ "<Shift><Super>2" ];
+      move-to-workspace-3 = [ "<Shift><Super>3" ];
+      move-to-workspace-4 = [ "<Shift><Super>4" ];
+      move-to-workspace-last = [ "<Shift><Super>5" ];
     };
 
     # Отключение аппаратного ускорения мыши
@@ -100,11 +110,57 @@
   };
 
   programs.gh = {
-      enable = true;
-      gitCredentialHelper = {
+    enable = true;
+    gitCredentialHelper = {
       enable = true;
     };
   };
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      ll = "ls -l";
+      update = "sudo nixos-rebuild switch";
+      cl = "clear";
+      cd = "z";
+    };
+    history.size = 10000;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+      ];
+      theme = "robbyrussell";
+    };
+    initContent = ''
+      if [[ -z "$TMUX" ]] && [[ "$TERM" != "linux" ]]; then
+            tmux attach -t default || tmux new -s default
+          fi
+    '';
+  };
+
+  programs.tmux = {
+    enable = true;
+    keyMode = "vi";
+    plugins = with pkgs.tmuxPlugins; [
+      yank
+    ];
+    extraConfig = ''
+      set-option -g default-shell "${pkgs.zsh}/bin/zsh"
+      # Example:
+      set -g mouse on
+    '';
+
+  };
+
+  programs.pay-respects.enableZshIntegration = true;
+
+  programs.zoxide.enable = true;
+  programs.zoxide.enableZshIntegration = true;
 
   # Включение Home Manager
   programs.home-manager.enable = true;

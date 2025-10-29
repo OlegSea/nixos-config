@@ -16,11 +16,11 @@
 
     serviceConfig = {
       Type = "simple";
-      ExecStart = "${pkgs.bash}/bin/bash ${nixosConfigDir}/scripts/battery_check.sh";
+      ExecStart = "${pkgs.bash}/bin/bash ${nixosConfigDir}/scripts/battery/battery_check.sh";
       User = "root";
       Environment = [
         "PATH=${pkgs.gawk}/bin:${pkgs.upower}/bin:${pkgs.bash}/bin:${pkgs.gnugrep}/bin:${pkgs.coreutils}/bin:${pkgs.sudo}/bin"
-        "BASE_DIR=${nixosConfigDir}/scripts"
+        "BASE_DIR=${nixosConfigDir}/scripts/battery"
       ];
     };
   };

@@ -15,11 +15,11 @@
       };
       "Mod+C" = {
         hotkey-overlay.title = "Run an Application: fuzzel calc";
-        action.spawn = [ "${nixosConfigDir}/scripts/fuzzel_calculator.sh" ];
+        action.spawn = [ "${nixosConfigDir}/scripts/fuzzel/fuzzel_calculator.sh" ];
       };
       "Mod+Escape" = {
         hotkey-overlay.title = "Power menu";
-        action.spawn = [ "${nixosConfigDir}/scripts/fuzzel_powermenu.sh" ];
+        action.spawn = [ "${nixosConfigDir}/scripts/fuzzel/fuzzel_powermenu.sh" ];
       };
       "Super+Alt+L" = {
         hotkey-overlay.title = "Lock the Screen: swaylock";

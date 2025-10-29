@@ -1,4 +1,4 @@
-{ ... }:
+{ nixosConfigDir, ... }:
 
 {
   programs.waybar = {
@@ -108,7 +108,7 @@
           tooltip-format-discharging = "{power:>1.0f}W↓ {capacity}%";
           tooltip-format-charging = "{power:>1.0f}W↑ {capacity}%";
           interval = 5;
-          on-click = "omarchy-menu power";
+          on-click = "${nixosConfigDir}/scripts/fuzzel_powerprofiles.sh";
           states = {
             warning = 20;
             critical = 10;

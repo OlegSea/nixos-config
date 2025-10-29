@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nixosConfigDir, ... }:
 {
 
   programs.zsh = {
@@ -9,7 +9,7 @@
 
     shellAliases = {
       ll = "ls -l";
-      update = "sudo nixos-rebuild switch";
+      update = "nh os switch ${nixosConfigDir}";
       cl = "clear";
       cd = "z";
     };

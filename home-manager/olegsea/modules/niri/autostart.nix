@@ -1,7 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, nixosConfigDir, ... }:
 {
   programs.niri.settings = {
     spawn-at-startup = [
+      {
+        argv = [
+          "${pkgs.swaybg}/bin/swaybg"
+          "-i"
+          "${nixosConfigDir}/resources/wallpaper.jpeg"
+        ];
+      }
       { argv = [ "${pkgs.waybar}/bin/waybar" ]; }
       { argv = [ "${pkgs.swaynotificationcenter}/bin/swaync" ]; }
       { argv = [ "${pkgs.vivaldi}/bin/vivaldi" ]; }

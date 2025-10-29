@@ -1,6 +1,6 @@
 BATTERY_THRESHOLD=10
 NOTIFICATION_FLAG="/run/user/$UID/battery_notified"
-BATTERY_LEVEL=$(bash /home/olegsea/flake/scripts/battery_remaining.sh)
+BATTERY_LEVEL=$(bash $(dirname "$0")/battery_remaining.sh)
 BATTERY_STATE=$(upower -i $(upower -e | grep 'BAT') | grep -E "state" | awk '{print $2}')
 
 send_notification() {

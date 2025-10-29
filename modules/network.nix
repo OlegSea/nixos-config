@@ -1,8 +1,10 @@
-{ config, pkgs, ... }:
+{
+  config,
+  nixosConfigDir,
+  pkgs,
+  ...
+}:
 
-let
-  nixosConfigDir = "/home/olegsea/flake";
-in
 {
   networking.networkmanager.enable = true;
   networking.nftables.enable = true;

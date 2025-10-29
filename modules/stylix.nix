@@ -6,17 +6,17 @@
     fonts = {
       serif = {
         package = nerd-fonts.caskaydia-mono;
-        name = "CaskaydiaCove NF";
+        name = "CaskaydiaMono NF";
       };
 
       sansSerif = {
         package = nerd-fonts.caskaydia-mono;
-        name = "CaskaydiaCove NF";
+        name = "CaskaydiaMono NF";
       };
 
       monospace = {
         package = nerd-fonts.caskaydia-mono;
-        name = "CaskaydiaCove NF";
+        name = "CaskaydiaMono NF";
       };
 
       emoji = {

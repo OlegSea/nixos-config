@@ -1,6 +1,8 @@
 { pkgs, nixosConfigDir, ... }:
 {
-
+  home.packages = with pkgs; [
+    eza
+  ];
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -12,6 +14,10 @@
       update = "nh os switch ${nixosConfigDir}";
       cl = "clear";
       cd = "z";
+      ls = "eza -lh --group-directories-first --icons=auto";
+      lsa = "ls -a";
+      lt = "eza --tree --level=2 --long --icons --git";
+      lta = "lt -a";
     };
     history.size = 10000;
     oh-my-zsh = {

@@ -52,6 +52,7 @@
           ./modules/audio.nix
           ./modules/users.nix
           ./modules/power.nix
+          ./modules/containers.nix
           # TODO: Вернуть, когда починят qgnomeplatform
           # ./modules/stylix.nix
 

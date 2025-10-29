@@ -4,26 +4,29 @@
     enable = true;
     settings = {
       main = {
-        font = "CaskaydiaCove NF:size=14";
-        line-height = 20;
-        fields = "name,generic,comment,categories,filename,keywords";
+        font = "CaskaydiaCove NF:size=16";
         terminal = "${pkgs.kitty}/bin/kitty";
         prompt = "❯   ";
         layer = "overlay";
-        lines = 10;
+        lines = 15;
+        width = 50;
+        horizontal-pad = 20;
+        vertical-pad = 10;
+        inner-pad = 10;
+        line-height = 24;
       };
       colors = {
-        background = "3c3836e6";
-        text = "d79921ff";
-        match = "b16286ff";
-        selection = "bdae93bf";
-        selection-match = "b16286ff";
-        selection-text = "fabd2fff";
-        border = "FFC300ff";
+        background = "282828ff";
+        text = "ebdbb2ff";
+        match = "fe8019ff";
+        selection = "3c3836ff";
+        selection-match = "fabd2fff";
+        selection-text = "ebdbb2ff";
+        border = "504945ff";
       };
       border = {
-        radius = 5;
-        width = 1;
+        radius = 8;
+        width = 2;
       };
 
     };

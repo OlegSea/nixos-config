@@ -221,12 +221,12 @@
         action.move-window-to-monitor-right = { };
       };
 
-      "Mod+Page_Down" = {
-        action.focus-workspace-down = { };
-      };
-      "Mod+Page_Up" = {
-        action.focus-workspace-up = { };
-      };
+      # "Mod+Page_Down" = {
+      #   action.focus-workspace-down = { };
+      # };
+      # "Mod+Page_Up" = {
+      #   action.focus-workspace-up = { };
+      # };
       "Mod+U" = {
         action.focus-workspace-down = { };
       };
@@ -246,10 +246,10 @@
         action.move-column-to-workspace-up = { };
       };
 
-      "Mod+Ctrl+Page_Down" = {
+      "Mod+Page_Down" = {
         action.move-workspace-down = { };
       };
-      "Mod+Ctrl+Page_Up" = {
+      "Mod+Page_Up" = {
         action.move-workspace-up = { };
       };
       "Mod+Ctrl+U" = {

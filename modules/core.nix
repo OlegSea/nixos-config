@@ -8,11 +8,25 @@
 }:
 
 {
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelParams = [
+    "hugepages=2048"
+    "elevator=mq-deadline"
+  ];
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
   nixpkgs.config.allowUnfree = true;
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  environment.variables = {
+    GSK_RENDERER = "ngl";
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Moscow";
@@ -50,6 +64,7 @@
     vim
     git
     pciutils
+    lshw
   ];
 
   programs.zsh.enable = true;

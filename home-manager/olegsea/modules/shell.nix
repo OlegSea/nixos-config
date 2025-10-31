@@ -8,6 +8,9 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    localVariables = {
+      ZSH_DISABLE_COMPFIX = "true";
+    };
 
     shellAliases = {
       ll = "ls -l";
@@ -18,6 +21,7 @@
       lsa = "ls -a";
       lt = "eza --tree --level=2 --long --icons --git";
       lta = "lt -a";
+      arch = "distrobox enter arch";
     };
     history.size = 10000;
     oh-my-zsh = {
@@ -25,7 +29,8 @@
       plugins = [
         "git"
       ];
-      theme = "robbyrussell";
+      custom = "${nixosConfigDir}/resources/zsh";
+      theme = "theme";
     };
     initContent = ''
       if [[ -z "$TMUX" ]] && [[ "$TERM" != "linux" ]]; then
@@ -52,5 +57,4 @@
 
   programs.zoxide.enable = true;
   programs.zoxide.enableZshIntegration = true;
-
 }

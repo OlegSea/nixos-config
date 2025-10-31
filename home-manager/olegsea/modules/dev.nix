@@ -9,5 +9,6 @@
     difftastic
     jj
     jq
+    ruff
   ];
 }

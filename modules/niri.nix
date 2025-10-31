@@ -26,5 +26,6 @@
     libnotify
     swaynotificationcenter
     libqalculate
+    brightnessctl
   ];
 }

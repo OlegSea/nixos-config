@@ -200,11 +200,25 @@
         action.move-column-to-monitor-right = { };
       };
 
+      "Mod+Comma" = {
+        action.focus-monitor-left = { };
+      };
+      "Mod+Period" = {
+        action.focus-monitor-right = { };
+      };
+
       "Mod+Shift+Comma" = {
         action.move-workspace-to-monitor-left = { };
       };
       "Mod+Shift+Period" = {
         action.move-workspace-to-monitor-right = { };
+      };
+
+      "Mod+Ctrl+Comma" = {
+        action.move-window-to-monitor-left = { };
+      };
+      "Mod+Ctrl+Period" = {
+        action.move-window-to-monitor-right = { };
       };
 
       "Mod+Page_Down" = {
@@ -344,12 +358,12 @@
         action.consume-or-expel-window-right = { };
       };
 
-      "Mod+Comma" = {
-        action.consume-window-into-column = { };
-      };
-      "Mod+Period" = {
-        action.expel-window-from-column = { };
-      };
+      # "Mod+Comma" = {
+      #   action.consume-window-into-column = { };
+      # };
+      # "Mod+Period" = {
+      #   action.expel-window-from-column = { };
+      # };
 
       "Mod+R" = {
         action.switch-preset-column-width = { };

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Константы
-# BASE_DIR="$(realpath "$(dirname "$0")")"
+BASE_DIR="$(realpath "$(dirname "$0")")"
 REPO_DIR="$BASE_DIR/zapret-latest"
 REPO_URL="https://github.com/Flowseal/zapret-discord-youtube"
 NFQWS_PATH="$BASE_DIR/nfqws"
@@ -51,10 +51,10 @@ load_config() {
     if [ ! -f "$CONF_FILE" ]; then
         handle_error "Файл конфигурации $CONF_FILE не найден"
     fi
-    
+
     # Чтение переменных из конфигурационного файла
     source "$CONF_FILE"
-    
+
     # Проверка обязательных переменных
     if [ -z "$interface" ] || [ -z "$auto_update" ] || [ -z "$strategy" ]; then
         handle_error "Отсутствуют обязательные параметры в конфигурационном файле"
@@ -68,7 +68,7 @@ setup_repository() {
             log "Использование существующей версии репозитория."
             return
         fi
-        
+
         read -p "Репозиторий уже существует. Обновить его? (y/n): " choice
         if [[ "$choice" =~ ^[Yy]$ ]] || $NOINTERACTIVE && [ "$auto_update" == "true" ]; then
             log "Обновление репозитория..."
@@ -102,7 +102,7 @@ find_bat_files() {
 # Функция для выбора стратегии
 select_strategy() {
     cd "$REPO_DIR" || handle_error "Не удалось перейти в директорию $REPO_DIR"
-    
+
     if $NOINTERACTIVE; then
         if [ ! -f "$strategy" ]; then
             handle_error "Указанный .bat файл стратегии $strategy не найден"
@@ -111,16 +111,16 @@ select_strategy() {
         cd ..
         return
     fi
-    
+
     # Обычный выбор стратегии для интерактивного режима
     local IFS=$'\n'
     local bat_files=($(find_bat_files "general*.bat" | xargs -0 -n1 echo) $(find_bat_files "discord.bat" | xargs -0 -n1 echo))
-    
+
     if [ ${#bat_files[@]} -eq 0 ]; then
         cd ..
         handle_error "Не найдены подходящие .bat файлы"
     fi
-    
+
     echo "Доступные стратегии:"
     select strategy in "${bat_files[@]}"; do
         if [ -n "$strategy" ]; then
@@ -130,7 +130,7 @@ select_strategy() {
         fi
         echo "Неверный выбор. Попробуйте еще раз."
     done
-    
+
     parse_bat_file "$REPO_DIR/$strategy"
 }
 
@@ -140,28 +140,28 @@ parse_bat_file() {
     local queue_num=0
     local bin_path="bin/"
     debug_log "Parsing .bat file: $file"
-    
+
     while IFS= read -r line; do
         debug_log "Processing line: $line"
-        
+
         [[ "$line" =~ ^[:space:]*:: || -z "$line" ]] && continue
-        
+
         line="${line//%BIN%/$bin_path}"
         line="${line//%GameFilter/}"
-        
+
         if [[ "$line" =~ --filter-(tcp|udp)=([0-9,-]+)[[:space:]](.*?)(--new|$) ]]; then
             local protocol="${BASH_REMATCH[1]}"
             local ports="${BASH_REMATCH[2]}"
             local nfqws_args="${BASH_REMATCH[3]}"
-            
+
             # Replace %LISTS% with 'lists/' in nfqws_args
             nfqws_args="${nfqws_args//%LISTS%/lists/}"
-            
+
             nft_rules+=("$protocol dport {$ports} counter queue num $queue_num bypass")
             nfqws_params+=("$nfqws_args")
             debug_log "Matched protocol: $protocol, ports: $ports, queue: $queue_num"
             debug_log "NFQWS parameters for queue $queue_num: $nfqws_args"
-            
+
             ((queue_num++))
         fi
     done < <(grep -v "^@echo" "$file" | grep -v "^chcp" | tr -d '\r')
@@ -173,20 +173,20 @@ setup_nftables() {
     local table_name="inet zapretunix"
     local chain_name="output"
     local rule_comment="Added by zapret script"
-    
+
     log "Настройка nftables с очисткой только помеченных правил..."
-    
+
     # Удаляем существующую таблицу, если она была создана этим скриптом
     if sudo nft list tables | grep -q "$table_name"; then
         sudo nft flush chain $table_name $chain_name
         sudo nft delete chain $table_name $chain_name
         sudo nft delete table $table_name
     fi
-    
+
     # Добавляем таблицу и цепочку
     sudo nft add table $table_name
     sudo nft add chain $table_name $chain_name { type filter hook output priority 0\; }
-    
+
     local oif_clause=""
     if [ -n "$interface" ] && [ "$interface" != "any" ]; then
         oif_clause="oifname \"$interface\""
@@ -229,10 +229,10 @@ main() {
                 ;;
         esac
     done
-    
+
     check_dependencies
     setup_repository
-    
+
     if $NOINTERACTIVE; then
         select_strategy
         setup_nftables "$interface"

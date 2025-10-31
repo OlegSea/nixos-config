@@ -31,7 +31,7 @@
       nixosConfigDir = "/home/olegsea/flake";
     in
     {
-      nixosConfigurations.oleg-desktop = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.oleg-laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
           inherit nixosConfigDir;
@@ -41,7 +41,7 @@
         };
         modules = [
           # Импортируем основной конфиг хоста
-          ./hosts/desktop/configuration.nix
+          ./hosts/laptop/configuration.nix
 
           # Подключаем модули NixOS
           ./modules/core.nix

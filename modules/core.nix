@@ -49,7 +49,7 @@
     wget
     vim
     git
-
+    pciutils
   ];
 
   programs.zsh.enable = true;

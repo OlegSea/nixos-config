@@ -38,6 +38,8 @@
 
     obsidian
     spotify
+
+    onlyoffice-bin
   ];
 
   # Включение Home Manager

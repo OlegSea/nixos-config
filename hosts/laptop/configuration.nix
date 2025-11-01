@@ -1,4 +1,9 @@
-{ config, pkgs, nixosConfigDir, ... }:
+{
+  config,
+  pkgs,
+  nixosConfigDir,
+  ...
+}:
 
 {
   imports = [
@@ -10,4 +15,9 @@
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Lid
+  services.logind.lidSwitch = "suspend";
+  services.logind.lidSwitchExternalPower = "lock";
+  services.logind.lidSwitchDocked = "ignore";
 }

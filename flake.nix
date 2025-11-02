@@ -45,6 +45,7 @@
 
           # Подключаем модули NixOS
           ./modules/core.nix
+          ./modules/cachix.nix
           ./modules/nh.nix
           ./modules/network.nix
           ./modules/gnome.nix

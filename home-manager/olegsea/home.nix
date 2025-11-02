@@ -1,6 +1,5 @@
 {
   inputs,
-  config,
   pkgs,
   ...
 }:
@@ -13,6 +12,7 @@
     ./modules/kitty.nix
     ./modules/niri
     ./modules/dev
+    ./modules/discord.nix
     # TODO: убрать эти две строчки, когда починят qgnomeplatform
     inputs.stylix.homeModules.stylix
     ../../modules/stylix.nix
@@ -33,7 +33,6 @@
     vivaldi
 
     telegram-desktop
-    discord
     fluffychat
 
     obsidian

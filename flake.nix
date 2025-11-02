@@ -15,6 +15,10 @@
     };
 
     niri.url = "github:sodiboo/niri-flake";
+
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+    };
   };
 
   outputs =

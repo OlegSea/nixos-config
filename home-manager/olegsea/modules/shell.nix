@@ -22,6 +22,9 @@
       lt = "eza --tree --level=2 --long --icons --git";
       lta = "lt -a";
       arch = "distrobox enter arch";
+      edit = "zeditor";
+      flake = "cd ${nixosConfigDir} && zeditor .";
+      ta = "tmux attach";
     };
     history.size = 10000;
     oh-my-zsh = {

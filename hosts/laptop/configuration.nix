@@ -20,4 +20,6 @@
   services.logind.lidSwitch = "suspend";
   services.logind.lidSwitchExternalPower = "lock";
   services.logind.lidSwitchDocked = "ignore";
+
+  nixpkgs.config.cudaSupport = true;
 }

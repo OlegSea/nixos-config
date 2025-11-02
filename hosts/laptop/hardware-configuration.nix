@@ -19,8 +19,6 @@
     "xhci_pci"
     "thunderbolt"
     "usbhid"
-    "usb_storage"
-    "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
@@ -30,31 +28,6 @@
     device = "/dev/disk/by-uuid/4f614dd6-db30-4bca-a93d-3e202fae5616";
     fsType = "ext4";
   };
-
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    powerManagement.finegrained = false;
-    open = true;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
-    prime = {
-      offload = {
-        enable = true;
-        enableOffloadCmd = true;
-      };
-      amdgpuBusId = "PCI:100:0:0";
-      nvidiaBusId = "PCI:1:0:0";
-    };
-  };
-
-  # a hack to fix random stutters on niri
-  boot.kernelParams = [
-    "nvidia.NVreg_EnableGpuFirmware=1"
-    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
-    "nvidia.NVreg_RegistryDwords=\"PowerMizerEnable=0x1; PowerMizerDefault=0x1; PowerMizerDefaultAC=0x1; PerfLevelSrc=0x2222\""
-  ];
 
   swapDevices = [ ];
 

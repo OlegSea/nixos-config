@@ -13,6 +13,7 @@
     ./modules/niri
     ./modules/dev
     ./modules/discord.nix
+    ./modules/spotify.nix
     # TODO: убрать эти две строчки, когда починят qgnomeplatform
     inputs.stylix.homeModules.stylix
     ../../modules/stylix.nix
@@ -36,7 +37,6 @@
     fluffychat
 
     obsidian
-    spotify
 
     onlyoffice-desktopeditors
     zathura

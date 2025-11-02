@@ -40,6 +40,7 @@
     spotify
 
     onlyoffice-desktopeditors
+    zathura
   ];
 
   # Включение Home Manager

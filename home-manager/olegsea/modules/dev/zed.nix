@@ -38,6 +38,8 @@
         use_system_clipboard = "on_yank";
       };
 
+      autosave.after_delay.milliseconds = 500;
+
       languages = {
         Python = {
           language_servers = [ "ruff" ];

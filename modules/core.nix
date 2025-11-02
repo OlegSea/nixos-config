@@ -57,6 +57,7 @@
   environment.systemPackages = with pkgs; [
     bc
     htop
+    btop
     zip
     unzip
     tree

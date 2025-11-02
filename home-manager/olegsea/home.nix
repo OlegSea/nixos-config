@@ -10,7 +10,6 @@
     ./modules/gnome.nix
     ./modules/git.nix
     ./modules/shell.nix
-    ./modules/gaming.nix
     ./modules/kitty.nix
     ./modules/niri
     ./modules/dev
@@ -39,7 +38,7 @@
     obsidian
     spotify
 
-    onlyoffice-bin
+    onlyoffice-desktopeditors
   ];
 
   # Включение Home Manager

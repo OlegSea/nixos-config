@@ -50,6 +50,8 @@
           ./modules/gnome.nix
           ./modules/niri.nix
           ./modules/audio.nix
+          ./modules/gaming.nix
+          ./modules/devices.nix
           ./modules/users.nix
           ./modules/power.nix
           ./modules/containers.nix

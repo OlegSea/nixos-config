@@ -17,7 +17,9 @@
         tap = true;
         natural-scroll = true;
       };
-      mouse = { };
+      mouse = {
+        accel-profile = "flat";
+      };
       trackpoint = { };
     };
   };

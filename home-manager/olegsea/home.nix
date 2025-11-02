@@ -34,6 +34,7 @@
 
     telegram-desktop
     discord
+    fluffychat
 
     obsidian
     spotify

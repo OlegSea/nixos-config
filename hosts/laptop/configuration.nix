@@ -17,9 +17,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Lid
-  services.logind.lidSwitch = "suspend";
-  services.logind.lidSwitchExternalPower = "lock";
-  services.logind.lidSwitchDocked = "ignore";
+  services.logind.settings.Login.HandleLidSwitch = "suspend";
+  services.logind.settings.Login.HandleLidSwitchExternalPower = "lock";
+  services.logind.settings.Login.HandleLidSwitchDocked = "ignore";
 
   nixpkgs.config.cudaSupport = true;
 }

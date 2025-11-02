@@ -50,7 +50,6 @@
     ];
     extraConfig = ''
       set-option -g default-shell "${pkgs.zsh}/bin/zsh"
-      # Example:
       set -g mouse on
     '';
 

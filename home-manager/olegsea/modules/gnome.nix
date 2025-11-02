@@ -9,10 +9,8 @@
 
 {
 
-  # Включение управления GNOME через dconf
   dconf.enable = true;
 
-  # Настройки GNOME
   dconf.settings = {
     "org/gnome/shell/keybindings" = {
       switch-to-application-1 = [ ];
@@ -25,13 +23,6 @@
 
     "org/gnome/desktop/interface".color-scheme = lib.mkForce "prefer-dark";
 
-    # Обои
-    # "org/gnome/desktop/background" = {
-    #   # picture-uri-dark = "file://${nixosConfigDir}/home-manager/agegon/wallpaper/marine-tunnel.jpg";
-    #   picture-uri-dark = "file://${nixosConfigDir}/home-manager/agegon/wallpaper/amber-l.jxl";
-    # };
-
-    # Фиксированные 5 рабочих стола
     "org/gnome/mutter" = {
       dynamic-workspaces = false;
     };
@@ -39,24 +30,19 @@
       num-workspaces = 5;
     };
 
-    # Запуск приложений на текущем рабочем столе
     "org/gnome/shell/app-switcher" = {
       current-workspace-only = false;
     };
 
-    # Настройки клавиш
     "org/gnome/desktop/wm/keybindings" = {
-      # Закрытие окна
       close = [ "<Shift><Super>q" ];
 
-      # Переключение между рабочими столами
       switch-to-workspace-1 = [ "<Super>1" ];
       switch-to-workspace-2 = [ "<Super>2" ];
       switch-to-workspace-3 = [ "<Super>3" ];
       switch-to-workspace-4 = [ "<Super>4" ];
       switch-to-workspace-last = [ "<Super>5" ];
 
-      # Перемещение окон
       move-to-workspace-1 = [ "<Shift><Super>1" ];
       move-to-workspace-2 = [ "<Shift><Super>2" ];
       move-to-workspace-3 = [ "<Shift><Super>3" ];
@@ -64,12 +50,10 @@
       move-to-workspace-last = [ "<Shift><Super>5" ];
     };
 
-    # Отключение аппаратного ускорения мыши
     "org/gnome/desktop/peripherals/mouse" = {
       accel-profile = "flat";
     };
 
-    # Кастомные команды
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"

@@ -46,10 +46,8 @@
           inherit stylix;
         };
         modules = [
-          # Импортируем основной конфиг хоста
           ./hosts/laptop/configuration.nix
 
-          # Подключаем модули NixOS
           ./modules/core.nix
           ./modules/cachix.nix
           ./modules/nh.nix
@@ -68,7 +66,6 @@
           stylix.nixosModules.stylix
           niri.nixosModules.niri
 
-          # Подключаем Home Manager
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

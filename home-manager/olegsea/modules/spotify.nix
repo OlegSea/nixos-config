@@ -7,6 +7,5 @@
     in
     {
       enable = true;
-      # theme = spicePkgs.themes.catppuccin;
     };
 }

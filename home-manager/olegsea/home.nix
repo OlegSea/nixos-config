@@ -24,12 +24,10 @@
   stylix.targets.niri.enable = false;
   stylix.targets.zed.enable = false;
 
-  # Базовые настройки
   home.username = "olegsea";
   home.homeDirectory = "/home/olegsea";
   home.stateVersion = "25.05";
 
-  # Установка необходимых пакетов
   home.packages = with pkgs; [
     vivaldi
 
@@ -42,6 +40,5 @@
     zathura
   ];
 
-  # Включение Home Manager
   programs.home-manager.enable = true;
 }

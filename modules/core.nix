@@ -13,10 +13,31 @@
     "hugepages=2048"
     "elevator=mq-deadline"
   ];
+
+  nixpkgs.overlays = [
+    (final: prev: {
+      inherit (prev.lixPackageSets.stable)
+        nixpkgs-review
+        nix-eval-jobs
+        nix-fast-build
+        colmena
+        ;
+    })
+  ];
+
+  nix.package = pkgs.lixPackageSets.stable.lix;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
+
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 16 * 1024; # 16GB
+    }
+  ];
+
   nixpkgs.config.allowUnfree = true;
 
   hardware.graphics = {
@@ -47,12 +68,6 @@
   };
 
   services.systembus-notify.enable = true;
-
-  nixpkgs.overlays = [
-    (final: prev: {
-      qgnomeplatform = inputs.qgnome-fix.legacyPackages.${pkgs.system}.qgnomeplatform;
-    })
-  ];
 
   environment.systemPackages = with pkgs; [
     bc

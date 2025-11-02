@@ -4,14 +4,18 @@
     ./zed.nix
   ];
   home.packages = with pkgs; [
-    termius
+    # language servers
     nixd
     nil
+    ruff
+    tinymist
     package-version-server
+
+    # other utils
+    termius
     difftastic
     jj
     jq
-    ruff
     postman
   ];
 }

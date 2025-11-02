@@ -10,6 +10,7 @@
       "toml"
       "rust"
       "html"
+      "typst"
     ];
     userSettings = {
       theme = {

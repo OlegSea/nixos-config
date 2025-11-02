@@ -13,7 +13,7 @@
   environment.systemPackages = with pkgs; [
     mangohud
     vulkan-tools
-    # heroic
+    heroic
 
     # Minecartf
     jdk17

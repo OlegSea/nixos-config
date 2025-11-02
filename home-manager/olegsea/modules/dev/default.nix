@@ -12,5 +12,6 @@
     jj
     jq
     ruff
+    postman
   ];
 }

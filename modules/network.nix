@@ -14,6 +14,7 @@
     nekoray
     sing-box
     qbittorrent
+    networkmanager-openvpn
   ];
 
   systemd.services.zapret = {

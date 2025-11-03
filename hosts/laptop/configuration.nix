@@ -27,7 +27,7 @@
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true;
-    powerManagement.finegrained = false;
+    powerManagement.finegrained = true;
     open = true;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.latest;
@@ -45,6 +45,5 @@
   boot.kernelParams = [
     "nvidia.NVreg_EnableGpuFirmware=1"
     "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
-    "nvidia.NVreg_RegistryDwords=\"PowerMizerEnable=0x1; PowerMizerDefault=0x1; PowerMizerDefaultAC=0x1; PerfLevelSrc=0x2222\""
   ];
 }

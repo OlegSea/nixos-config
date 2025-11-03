@@ -5,7 +5,7 @@
       keyboard = {
         xkb = {
           layout = "us,ru";
-          options = "grp:win_space_toggle";
+          options = "grp:win_space_toggle,caps:escape";
         };
         numlock = true;
       };

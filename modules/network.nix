@@ -6,15 +6,31 @@
 }:
 
 {
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    plugins = with pkgs; [
+      networkmanager-openvpn
+    ];
+  };
   networking.nftables.enable = true;
+
+  security.pki.certificates =
+    let
+      dir = ../resources/certificates;
+      files = builtins.readDir dir;
+    in
+    map (name: builtins.readFile (dir + "/${name}")) (
+      builtins.filter (name: files.${name} == "regular") (builtins.attrNames files)
+    );
 
   environment.systemPackages = with pkgs; [
     xray
     nekoray
     sing-box
     qbittorrent
-    networkmanager-openvpn
+    networkmanagerapplet
+    remmina
+    virt-viewer
   ];
 
   systemd.services.zapret = {

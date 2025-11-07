@@ -10,6 +10,7 @@
     ruff
     tinymist
     package-version-server
+    clang-tools
 
     # other utils
     termius

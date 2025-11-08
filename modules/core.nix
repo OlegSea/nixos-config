@@ -77,6 +77,8 @@
     wget
     vim
     git
+    git-crypt
+    gnupg
     pciutils
     lshw
   ];

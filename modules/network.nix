@@ -1,5 +1,5 @@
 {
-  config,
+  inputs,
   nixosConfigDir,
   pkgs,
   ...
@@ -14,14 +14,14 @@
   };
   networking.nftables.enable = true;
 
-  security.pki.certificates =
-    let
-      dir = ../resources/certificates;
-      files = builtins.readDir dir;
-    in
-    map (name: builtins.readFile (dir + "/${name}")) (
-      builtins.filter (name: files.${name} == "regular") (builtins.attrNames files)
-    );
+  # security.pki.certificates =
+  #   let
+  #     dir = inputs.certificates;
+  #     files = builtins.readDir dir;
+  #   in
+  #   map (name: builtins.readFile (dir + "/${name}")) (
+  #     builtins.filter (name: files.${name} == "regular") (builtins.attrNames files)
+  #   );
 
   environment.systemPackages = with pkgs; [
     xray
@@ -29,8 +29,7 @@
     sing-box
     qbittorrent
     networkmanagerapplet
-    remmina
-    virt-viewer
+    yt-dlp
   ];
 
   systemd.services.zapret = {

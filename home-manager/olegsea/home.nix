@@ -10,8 +10,10 @@
     ./modules/git.nix
     ./modules/shell.nix
     ./modules/kitty.nix
+    ./modules/security.nix
     ./modules/niri
     ./modules/dev
+    ./modules/work.nix
     ./modules/discord.nix
     ./modules/spotify.nix
     # TODO: убрать эти две строчки, когда починят qgnomeplatform

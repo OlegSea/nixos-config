@@ -8,6 +8,5 @@
     ./niri.nix
     ./power.nix
     ./stylix.nix
-    ./syncthing.nix
   ];
 }

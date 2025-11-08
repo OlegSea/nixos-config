@@ -7,5 +7,6 @@
     ./network.nix
     ./users.nix
     ./containers.nix
+    ./syncthing.nix
   ];
 }

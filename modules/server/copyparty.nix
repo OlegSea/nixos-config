@@ -19,6 +19,8 @@
       p = [
         3210
         3211
+        80
+        443
       ];
       no-reload = true;
       ignored-flag = false;
@@ -56,4 +58,7 @@
     };
     openFilesLimit = 8192;
   };
+  networking.firewall.allowedTCPPorts = [
+    80
+  ];
 }

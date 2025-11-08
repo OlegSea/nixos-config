@@ -33,6 +33,7 @@
       ...
     }@inputs:
     let
+      b = builtins;
       system = "x86_64-linux";
       nixosConfigDir = "/home/olegsea/flake";
     in
@@ -47,20 +48,6 @@
         };
         modules = [
           ./hosts/laptop/configuration.nix
-
-          ./modules/core.nix
-          ./modules/cachix.nix
-          ./modules/nh.nix
-          ./modules/network.nix
-          ./modules/gnome.nix
-          ./modules/niri.nix
-          ./modules/audio.nix
-          ./modules/gaming.nix
-          ./modules/devices.nix
-          ./modules/users.nix
-          ./modules/power.nix
-          ./modules/containers.nix
-          ./modules/stylix.nix
 
           stylix.nixosModules.stylix
           niri.nixosModules.niri

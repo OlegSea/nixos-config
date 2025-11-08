@@ -40,14 +40,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-
-  environment.variables = {
-    GSK_RENDERER = "ngl";
-  };
+  
 
   time.timeZone = "Europe/Moscow";
 

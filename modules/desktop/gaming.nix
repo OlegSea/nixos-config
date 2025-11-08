@@ -1,5 +1,14 @@
 { pkgs, ... }:
 {
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  environment.variables = {
+    GSK_RENDERER = "ngl";
+  };
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;

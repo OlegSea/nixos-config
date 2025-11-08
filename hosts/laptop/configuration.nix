@@ -1,13 +1,13 @@
 {
   config,
-  pkgs,
-  nixosConfigDir,
   ...
 }:
 
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/common
+    ../../modules/desktop
   ];
 
   networking.hostName = "oleg-laptop";

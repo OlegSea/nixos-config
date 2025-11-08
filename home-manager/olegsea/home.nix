@@ -40,6 +40,8 @@
 
     yt-dlp
     ffmpeg
+
+    qbittorrent
   ];
 
   programs.home-manager.enable = true;

@@ -13,6 +13,7 @@
     serverProperties = {
       motd = "OlegSea's PVP server";
       allow-flight = true;
+      view-distance = 12;
     };
   };
 }

@@ -24,7 +24,7 @@
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
-    inputs.copyparty.url = "github:9001/copyparty";
+    copyparty.url = "github:9001/copyparty";
   };
 
   outputs =

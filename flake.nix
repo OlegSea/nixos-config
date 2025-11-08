@@ -21,6 +21,8 @@
     };
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
   };
 
   outputs =

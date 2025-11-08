@@ -12,6 +12,7 @@
       networkmanager-openvpn
     ];
   };
+  networking.firewall.enable = true;
   networking.nftables.enable = true;
 
   # security.pki.certificates =

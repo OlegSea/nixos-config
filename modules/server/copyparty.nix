@@ -14,7 +14,6 @@
     enable = true;
     user = "copyparty";
     group = "copyparty";
-    serviceConfig.AmbientCapabilities = "CAP_NET_BIND_SERVICE";
     settings = {
       i = "0.0.0.0";
       p = [
@@ -62,4 +61,5 @@
   networking.firewall.allowedTCPPorts = [
     80
   ];
+  systemd.services.copyparty.serviceConfig.AmbientCapabilities = "CAP_NET_BIND_SERVICE";
 }

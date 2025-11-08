@@ -16,9 +16,6 @@
     ./modules/work.nix
     ./modules/discord.nix
     ./modules/spotify.nix
-    # TODO: убрать эти две строчки, когда починят qgnomeplatform
-    inputs.stylix.homeModules.stylix
-    ../../modules/stylix.nix
   ];
   stylix.targets.fuzzel.enable = false;
   stylix.targets.swaync.enable = false;

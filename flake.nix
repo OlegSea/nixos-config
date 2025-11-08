@@ -60,8 +60,7 @@
           ./modules/users.nix
           ./modules/power.nix
           ./modules/containers.nix
-          # TODO: Вернуть, когда починят qgnomeplatform
-          # ./modules/stylix.nix
+          ./modules/stylix.nix
 
           stylix.nixosModules.stylix
           niri.nixosModules.niri

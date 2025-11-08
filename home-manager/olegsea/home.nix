@@ -40,6 +40,8 @@
 
     onlyoffice-desktopeditors
     zathura
+
+    yt-dlp
   ];
 
   programs.home-manager.enable = true;

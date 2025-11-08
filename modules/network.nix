@@ -29,7 +29,6 @@
     sing-box
     qbittorrent
     networkmanagerapplet
-    yt-dlp
   ];
 
   services.syncthing =

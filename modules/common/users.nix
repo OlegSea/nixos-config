@@ -14,8 +14,7 @@
       "podman"
     ];
     packages = with pkgs; [
-      #  thunderbird
-
+      keepassxc
     ];
   };
 }

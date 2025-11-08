@@ -42,6 +42,7 @@
     zathura
 
     yt-dlp
+    ffmpeg
   ];
 
   programs.home-manager.enable = true;

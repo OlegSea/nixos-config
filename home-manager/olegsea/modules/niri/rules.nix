@@ -14,6 +14,10 @@
         name = "social";
         open-on-output = "eDP-1";
       };
+      "4" = {
+        name = "misc";
+        open-on-output = "eDP-1";
+      };
     };
     window-rules = [
       {
@@ -36,18 +40,17 @@
           { app-id = "^discord$"; }
           { app-id = "^org.telegram.desktop$"; }
           { app-id = "^Spotify$"; }
-          { app-id = "^nekoray$"; }
         ];
         open-on-workspace = "social";
+        open-maximized = true;
       }
 
       {
         matches = [
-          { app-id = "^discord$"; }
-          { app-id = "^org.telegram.desktop$"; }
-          { app-id = "^Spotify$"; }
+          { app-id = "^nekoray$"; }
+          { app-id = "^org.keepassxc.KeePassXC$"; }
         ];
-        open-maximized = true;
+        open-on-workspace = "misc";
       }
 
       {

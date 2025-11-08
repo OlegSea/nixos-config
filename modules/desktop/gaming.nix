@@ -23,6 +23,8 @@
     mangohud
     vulkan-tools
     heroic
+    pciutils
+    lshw
 
     # Minecartf
     jdk17

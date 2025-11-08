@@ -40,8 +40,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  
-
   time.timeZone = "Europe/Moscow";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -72,8 +70,7 @@
     git
     git-crypt
     gnupg
-    pciutils
-    lshw
+    just
   ];
 
   programs.zsh.enable = true;

@@ -2,6 +2,6 @@
 {
   imports = [
     ./ssh.nix
-    ./minecraft.nix
+    ./minecraft
   ];
 }

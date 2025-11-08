@@ -1,8 +1,15 @@
-{ config, pkgs, nixosConfigDir, ... }:
+{
+  config,
+  pkgs,
+  nixosConfigDir,
+  ...
+}:
 
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/common
+    ../../modules/server
   ];
 
   networking.hostName = "oleg-desktop";

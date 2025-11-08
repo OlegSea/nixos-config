@@ -69,5 +69,17 @@
           }
         ];
       };
+
+      nixosConfigurations.oleg-desktop = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit nixosConfigDir;
+          inherit inputs;
+          inherit system;
+        };
+        modules = [
+          ./hosts/desktop/configuration.nix
+        ];
+      };
     };
 }

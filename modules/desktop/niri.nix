@@ -5,6 +5,11 @@
   programs.niri.enable = true;
   security.polkit.enable = true; # polkit
   security.pam.services.swaylock = { };
+
+  environment.sessionVariables = {
+    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+  };
+
   environment.systemPackages = with pkgs; [
     kitty
     fuzzel

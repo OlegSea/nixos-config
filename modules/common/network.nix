@@ -15,14 +15,19 @@
   networking.firewall.enable = true;
   networking.nftables.enable = true;
 
-  # security.pki.certificates =
-  #   let
-  #     dir = inputs.certificates;
-  #     files = builtins.readDir dir;
-  #   in
-  #   map (name: builtins.readFile (dir + "/${name}")) (
-  #     builtins.filter (name: files.${name} == "regular") (builtins.attrNames files)
-  #   );
+  networking.extraHosts = ''
+    10.252.207.6 engine.olegsea.local
+    10.252.207.5 engine.olegsea-repl.local
+  '';
+
+  security.pki.certificates =
+    let
+      dir = ../../resources/certificates;
+      files = builtins.readDir dir;
+    in
+    map (name: builtins.readFile (dir + "/${name}")) (
+      builtins.filter (name: files.${name} == "regular") (builtins.attrNames files)
+    );
 
   environment.systemPackages = with pkgs; [
     xray

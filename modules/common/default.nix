@@ -8,5 +8,6 @@
     ./users.nix
     ./containers.nix
     ./syncthing.nix
+    ./virtualization.nix
   ];
 }

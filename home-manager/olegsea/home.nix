@@ -35,9 +35,6 @@
 
     obsidian
 
-    onlyoffice-desktopeditors
-    zathura
-
     yt-dlp
     ffmpeg
 

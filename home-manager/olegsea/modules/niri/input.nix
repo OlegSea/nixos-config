@@ -16,6 +16,7 @@
       touchpad = {
         tap = true;
         natural-scroll = true;
+        scroll-factor = 0.7;
       };
       mouse = {
         accel-profile = "flat";

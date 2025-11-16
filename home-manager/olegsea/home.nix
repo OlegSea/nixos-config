@@ -32,6 +32,7 @@
 
     telegram-desktop
     fluffychat
+    teamspeak6-client
 
     obsidian
 

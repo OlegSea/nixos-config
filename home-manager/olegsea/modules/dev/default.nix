@@ -2,6 +2,7 @@
 {
   imports = [
     ./zed.nix
+    ./nvim.nix
   ];
   home.packages = with pkgs; [
     # language servers

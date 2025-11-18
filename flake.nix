@@ -22,6 +22,8 @@
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
+    lazyvim.url = "github:pfassina/lazyvim-nix";
+
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     copyparty.url = "github:9001/copyparty";

@@ -7,11 +7,14 @@
   ];
 
   networking.firewall.allowedTCPPorts = [
-    3000
+    80
+    443
   ];
 
   networking.firewall.allowedUDPPorts = [
-    3000
+    80
+    443
   ];
 
+  boot.kernel.sysctl."net.ipv4.ip_unprivileged_port_start" = 0;
 }

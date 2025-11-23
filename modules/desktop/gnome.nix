@@ -19,4 +19,7 @@
     layout = "us,ru";
     variant = "";
   };
+
+  # Disable Orca screen reader
+  systemd.user.services.orca.enable = false;
 }

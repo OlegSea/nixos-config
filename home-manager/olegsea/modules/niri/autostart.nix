@@ -16,7 +16,7 @@
       { argv = [ "${pkgs.spotify}/bin/spotify" ]; }
       { argv = [ "${pkgs.telegram-desktop}/bin/Telegram" ]; }
       { argv = [ "${pkgs.discord}/bin/discord" ]; }
-      { argv = [ "${pkgs.nekoray}/bin/nekoray" ]; }
+      { argv = [ "${pkgs.throne}/bin/throne" ]; }
     ];
     hotkey-overlay = {
       skip-at-startup = true;

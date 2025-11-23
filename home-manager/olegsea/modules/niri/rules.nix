@@ -47,7 +47,7 @@
 
       {
         matches = [
-          { app-id = "^nekoray$"; }
+          { app-id = "^throne$"; }
           { app-id = "^org.keepassxc.KeePassXC$"; }
         ];
         open-on-workspace = "misc";

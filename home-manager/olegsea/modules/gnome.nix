@@ -68,5 +68,9 @@
       command = "kgx";
       binding = "<Super>Return";
     };
+
+    "org/gnome/desktop/a11y/applications" = {
+      screen-reader-enabled = false;
+    };
   };
 }

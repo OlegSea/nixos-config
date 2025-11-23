@@ -3,6 +3,7 @@ alias u := update
 alias f := fetch
 
 deploy:
+    git add .
     nh os switch .
 
 fetch: && deploy

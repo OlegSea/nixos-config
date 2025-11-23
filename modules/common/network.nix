@@ -20,6 +20,8 @@
     10.252.207.5 engine.olegsea-repl.local
   '';
 
+  networking.firewall.trustedInterfaces = [ "tun" ];
+
   security.pki.certificates =
     let
       dir = ../../resources/certificates;
@@ -31,10 +33,16 @@
 
   environment.systemPackages = with pkgs; [
     xray
-    nekoray
     sing-box
     networkmanagerapplet
+    throne
   ];
+
+  # Если хочется перманентный впн - раскоментировать
+  # services.sing-box = {
+  #   enable = true;
+  #   settings = builtins.fromJSON (builtins.readFile ../../resources/vpn/box.json);
+  # };
 
   systemd.services.zapret = {
     description = "Zapret DPI Bypass";
@@ -52,13 +60,28 @@
       ];
     };
   };
+  programs.throne.tunMode.enable = true;
+  services.resolved.enable = true;
 
-  programs.nekoray.tunMode.enable = true;
   security.wrappers = {
-    nekobox_core = {
+    xray = {
       owner = "root";
       group = "root";
-      source = "${pkgs.nekoray.nekobox-core}/bin/nekobox_core";
+      source = "${pkgs.xray}/bin/xray";
+      capabilities = "cap_net_admin=ep";
+    };
+
+    sing-box = {
+      owner = "root";
+      group = "root";
+      source = "${pkgs.sing-box}/bin/sing-box";
+      capabilities = "cap_net_admin=ep";
+    };
+
+    throne-core = {
+      owner = "root";
+      group = "root";
+      source = "${pkgs.throne.core}/bin/Core";
       capabilities = "cap_net_admin=ep";
     };
   };

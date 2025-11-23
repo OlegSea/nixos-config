@@ -1,1 +1,2 @@
 /resources/certificates/** filter=git-crypt diff=git-crypt
+/resources/vpn/** filter=git-crypt diff=git-crypt

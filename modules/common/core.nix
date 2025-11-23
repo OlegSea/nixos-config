@@ -71,6 +71,7 @@
     git-crypt
     gnupg
     just
+    psmisc
   ];
 
   programs.zsh.enable = true;

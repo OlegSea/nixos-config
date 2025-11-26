@@ -46,4 +46,8 @@
     "nvidia.NVreg_EnableGpuFirmware=1"
     "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
   ];
+
+  # bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 }

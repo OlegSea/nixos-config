@@ -14,6 +14,8 @@
         max-scroll-amount = "0%";
       };
       touchpad = {
+        # disabled-on-external-mouse = true;
+        # dwt = true;
         tap = true;
         natural-scroll = true;
         scroll-factor = 0.7;

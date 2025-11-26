@@ -15,6 +15,7 @@
         modules-center = [ "clock" ];
         modules-right = [
           "group/tray-expander"
+          "niri/language"
           "bluetooth"
           "network"
           "pulseaudio"
@@ -39,6 +40,12 @@
             "9" = "9";
             active = "";
           };
+        };
+
+        "hyprland/language" = {
+          "format" = "{}";
+          "format-en" = "US";
+          "format-ru" = "RU";
         };
 
         cpu = {

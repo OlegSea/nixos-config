@@ -72,6 +72,7 @@
     gnupg
     just
     psmisc
+    usbutils
   ];
 
   programs.zsh.enable = true;

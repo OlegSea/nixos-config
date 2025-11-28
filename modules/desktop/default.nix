@@ -8,5 +8,6 @@
     ./niri.nix
     ./power.nix
     ./stylix.nix
+    ./fingerprint.nix
   ];
 }

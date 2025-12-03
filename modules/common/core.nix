@@ -73,6 +73,8 @@
     just
     psmisc
     usbutils
+    file
+    traceroute
   ];
 
   programs.zsh.enable = true;

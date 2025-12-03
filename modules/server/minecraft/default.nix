@@ -3,6 +3,7 @@
   imports = [
     inputs.nix-minecraft.nixosModules.minecraft-servers
     ./pvp.nix
+    ./smp.nix
   ];
   nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
 

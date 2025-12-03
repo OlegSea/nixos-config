@@ -6,7 +6,7 @@
 {
   services.minecraft-servers.servers.smp = {
     enable = true;
-    package = pkgs.fabric-1_21_10;
+    package = pkgs.fabricServers.fabric-1_21_10;
 
     operators = {
       olegsea = "f423d004-b056-4f79-87b3-a0fc33cb9acf";

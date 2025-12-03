@@ -3,6 +3,7 @@
   imports = [
     ./zed.nix
     ./nvim.nix
+    ./direnv.nix
   ];
   home.packages = with pkgs; [
     # language servers
@@ -19,5 +20,7 @@
     jj
     jq
     postman
+
+    vscode.fhs
   ];
 }

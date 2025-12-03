@@ -18,6 +18,7 @@
   networking.extraHosts = ''
     10.252.207.6 engine.olegsea.local
     10.252.207.5 engine.olegsea-repl.local
+    10.255.4.200 engine.ps.local
   '';
 
   networking.firewall.trustedInterfaces = [ "tun" ];

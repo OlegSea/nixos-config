@@ -45,10 +45,6 @@
             url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/NsswKiwi/lithium-fabric-0.20.1%2Bmc1.21.10.jar";
             sha512 = "79b2892d123f3bb12649927dd8fccc25c955ff38a19f3aba7cd0180c4cf5506c2a76d49418b13050f90bba7bb59f3623af06e8a275e2ae8c63808084043902bb";
           };
-          moonrise = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/KOHu7RCS/versions/QgsfFMkW/Moonrise-Fabric-0.8.0-beta.4%2Bc0e63e9.jar";
-            sha512 = "00201c53757e15ef0a0720194a0acf25e400ef5b7b8146b7ff001a8b4fcb5ea728c4d0041f59da29e6fb0cc379f448d7f7d9b2c0c30856b983692a5b539e0946";
-          };
           krypton = pkgs.fetchurl {
             url = "https://cdn.modrinth.com/data/fQEb0iXm/versions/O9LmWYR7/krypton-0.2.10.jar";
             sha512 = "4dcd7228d1890ddfc78c99ff284b45f9cf40aae77ef6359308e26d06fa0d938365255696af4cc12d524c46c4886cdcd19268c165a2bf0a2835202fe857da5cab";
@@ -60,6 +56,14 @@
           sit = pkgs.fetchurl {
             url = "https://cdn.modrinth.com/data/VKXzIykF/versions/bWn9qA6T/sit-1.21.10-29.jar";
             sha512 = "b07a645287f9ab40ca37f151f9124ecc2359914badce7c666ec24942be71e030d2746b3ea46b7f49234c065b337c9b6ddd8e6f9ddfe7ec75a5ae49571f9dc644";
+          };
+          fabric-api = pkgs.fetchurl {
+            url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/dQ3p80zK/fabric-api-0.138.3%2B1.21.10.jar";
+            sha512 = "dc73a3653c299476d1f70cb692c4e35ac3f694b3b0873e3d0b729e952e992b878d1a8e0b1d1049a442a0d483d3068073194f15af52ea9938544616e20433cc38";
+          };
+          cloth-config = pkgs.fetchurl {
+            url = "https://cdn.modrinth.com/data/9s6osm5g/versions/qMxkrrmq/cloth-config-20.0.149-fabric.jar";
+            sha512 = "df1d9e0349dc64fc0859f17b65b67b0d7745a26b4905e87fc148ddebc0285de51a3255848599f0d5ee24f6aab00fbac4849d40bb9052936eaa452d216c7ada62";
           };
         }
       );

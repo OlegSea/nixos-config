@@ -36,18 +36,16 @@
     };
 
     symlinks = {
-      world.datapacks = pkgs.linkFarmFromDrvs "datapacks" (
-        builtins.attrValues {
-          afk-display = ../../../../resources/minecraft/datapacks/afk-display.zip;
-          anti-enderman-grief = ../../../../resources/minecraft/datapacks/anti-enderman-grief.zip;
-          armor-statuses = ../../../../resources/minecraft/datapacks/armor-statuses.zip;
-          multiplayer-sleep = ../../../../resources/minecraft/datapacks/multiplayer-sleep.zip;
-          player-head-drops = ../../../../resources/minecraft/datapacks/player-head-drops.zip;
-          silence-mobs = ../../../../resources/minecraft/datapacks/silence-mobs.zip;
-          track-raw-satistics = ../../../../resources/minecraft/datapacks/track-raw-satistics.zip;
-          wandering-traders = ../../../../resources/minecraft/datapacks/wandering-traders.zip;
-        }
-      );
+      world.datapacks = {
+        "afk-display.zip" = ../../../../resources/minecraft/datapacks/afk-display.zip;
+        "anti-enderman-grief.zip" = ../../../../resources/minecraft/datapacks/anti-enderman-grief.zip;
+        "armor-statuses.zip" = ../../../../resources/minecraft/datapacks/armor-statuses.zip;
+        "multiplayer-sleep.zip" = ../../../../resources/minecraft/datapacks/multiplayer-sleep.zip;
+        "player-head-drops.zip" = ../../../../resources/minecraft/datapacks/player-head-drops.zip;
+        "silence-mobs.zip" = ../../../../resources/minecraft/datapacks/silence-mobs.zip;
+        "track-raw-satistics.zip" = ../../../../resources/minecraft/datapacks/track-raw-satistics.zip;
+        "wandering-traders.zip" = ../../../../resources/minecraft/datapacks/wandering-traders.zip;
+      };
       mods = pkgs.linkFarmFromDrvs "mods" (
         builtins.attrValues {
           emoji = pkgs.fetchurl {

@@ -4,6 +4,13 @@
 }:
 
 {
+  networking.firewall.allowedTCPPorts = [
+    25500
+  ];
+
+  networking.firewall.allowedUDPPorts = [
+    25500
+  ];
   services.minecraft-servers.servers.smp = {
     enable = true;
     package = pkgs.fabricServers.fabric-1_21_10;

@@ -31,7 +31,7 @@
     serverProperties = {
       motd = "Candycane kingdom!";
       allow-flight = true;
-      view-distance = 16;
+      view-distance = 12;
       white-list = true;
       server-port = 25500;
       level-seed = 8883383888011263481;

@@ -32,9 +32,22 @@
       view-distance = 16;
       white-list = true;
       server-port = 25500;
+      initial-enabled-packs = "vanilla,afk-display,anti-enderman-grief,armor-statuses,multiplayer-sleep,player-head-drops,wandering-traders";
     };
 
     symlinks = {
+      world.datapacks = pkgs.linkFarmFromDrvs "datapacks" (
+        builtins.attrValues {
+          afk-display = ../../../../resources/minecraft/datapacks/afk-display.zip;
+          anti-enderman-grief = ../../../../resources/minecraft/datapacks/anti-enderman-grief.zip;
+          armor-statuses = ../../../../resources/minecraft/datapacks/armor-statuses.zip;
+          multiplayer-sleep = ../../../../resources/minecraft/datapacks/multiplayer-sleep.zip;
+          player-head-drops = ../../../../resources/minecraft/datapacks/player-head-drops.zip;
+          silence-mobs = ../../../../resources/minecraft/datapacks/silence-mobs.zip;
+          track-raw-satistics = ../../../../resources/minecraft/datapacks/track-raw-satistics.zip;
+          wandering-traders = ../../../../resources/minecraft/datapacks/wandering-traders.zip;
+        }
+      );
       mods = pkgs.linkFarmFromDrvs "mods" (
         builtins.attrValues {
           emoji = pkgs.fetchurl {

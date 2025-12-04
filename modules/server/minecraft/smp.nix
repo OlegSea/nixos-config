@@ -48,8 +48,8 @@
             sha512 = "4d079c872ab910fd65a6c9e8709c7050178626f7125c849389ca38388e19995bd874e071e86e6acf6fbefaa2f294fdbebecb9af8444a908b9a3de894d807c4db";
           };
           sit = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/VKXzIykF/versions/bWn9qA6T/sit-1.21.10-29.jar";
-            sha512 = "b07a645287f9ab40ca37f151f9124ecc2359914badce7c666ec24942be71e030d2746b3ea46b7f49234c065b337c9b6ddd8e6f9ddfe7ec75a5ae49571f9dc644";
+            url = "https://cdn.modrinth.com/data/EsYqsGV4/versions/wOMpgPKm/sit%21-1.2.5.1%2B1.21.9-1.21.10.jar";
+            sha512 = "85cc5c0881aaf803a2df9ea89e05602b2bac4bd1871c7c04eddb5b6e1afd5c8c12ecac3d55aec236f280a1f34af69efded8596365cbb34ca55a3eaeab8d57741";
           };
           fabric-api = pkgs.fetchurl {
             url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/dQ3p80zK/fabric-api-0.138.3%2B1.21.10.jar";

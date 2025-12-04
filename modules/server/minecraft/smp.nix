@@ -59,6 +59,10 @@
             url = "https://cdn.modrinth.com/data/9s6osm5g/versions/qMxkrrmq/cloth-config-20.0.149-fabric.jar";
             sha512 = "df1d9e0349dc64fc0859f17b65b67b0d7745a26b4905e87fc148ddebc0285de51a3255848599f0d5ee24f6aab00fbac4849d40bb9052936eaa452d216c7ada62";
           };
+          otter-lib = pkgs.fetchurl {
+            url = "https://cdn.modrinth.com/data/zVVpzurY/versions/zlJvj7Xn/otterlib-0.2.2.1%2B1.21.10-fabric.jar";
+            sha512 = "d421fbd9c3fa10dc4afcd54687dfb1099e735a695015716356ed7a554c98a519cb94a6a22a28195c5ce4ffded3d415423659abd82368dacf0cbbf8df817c87ed";
+          };
         }
       );
     };

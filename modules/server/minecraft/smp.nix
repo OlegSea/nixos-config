@@ -45,8 +45,8 @@
       "world/datapacks/player-head-drops.zip" =
         ../../../resources/minecraft/datapacks/player-head-drops.zip;
       "world/datapacks/silence-mobs.zip" = ../../../resources/minecraft/datapacks/silence-mobs.zip;
-      "world/datapacks/track-raw-satistics.zip" =
-        ../../../resources/minecraft/datapacks/track-raw-satistics.zip;
+      "world/datapacks/track-raw-statistics.zip" =
+        ../../../resources/minecraft/datapacks/track-raw-statistics.zip;
       "world/datapacks/wandering-traders.zip" =
         ../../../resources/minecraft/datapacks/wandering-traders.zip;
 

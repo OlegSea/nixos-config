@@ -16,6 +16,16 @@
     whitelist = {
       olegsea = "f423d004-b056-4f79-87b3-a0fc33cb9acf";
       bushbush = "7523d0d5-1640-45d1-bc38-12155a8efd30";
+      Renter512 = "92e653a3ca1e4adc929f3e58a0c48a8c";
+      LessiPlay = "57975c41701e46eba4a4a739ab25cdfd";
+      doomNL = "70adda3c65b14ae9b5a32c9d8244e0c8";
+      lasl = "53ff5fbc33614b4e9b7c8ea41e90e49f";
+      kricostro = "77767908994d4f41a28652686cbd5c9b";
+      whoatethefruit = "45a959153f68471d8436ffb512c17810";
+      ifen7 = "c4dd4a066f3a4324bd45a4fcea18f7c8";
+      TurtleTortois = "ea7603266b04417191652a028986c5e0";
+      koivas = "fc68532bca8349d58fe43b1cd974a4ad";
+      whodaddy = "230ab83784d546f4a374f1c7b18e65f7";
     };
 
     serverProperties = {

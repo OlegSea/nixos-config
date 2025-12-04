@@ -32,6 +32,7 @@
       view-distance = 16;
       white-list = true;
       server-port = 25500;
+      level-seed = 8883383888011263481;
       initial-enabled-packs = "vanilla,afk-display,anti-enderman-grief,armor-statuses,multiplayer-sleep,player-head-drops,wandering-traders";
     };
 

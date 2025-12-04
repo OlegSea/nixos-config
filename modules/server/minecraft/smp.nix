@@ -16,7 +16,6 @@
     whitelist = {
       olegsea = "f423d004-b056-4f79-87b3-a0fc33cb9acf";
       bushbush = "7523d0d5-1640-45d1-bc38-12155a8efd30";
-      lessiplay = "57975c41-701e-46eb-a4a4-a739ab25cdfd";
     };
 
     serverProperties = {

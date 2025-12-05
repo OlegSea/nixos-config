@@ -47,8 +47,8 @@
             sha512 = "9cefcc830d8ab6c2e8c28d4c26b7a7c97c1bd8ee27ca409f8c684b992408b6d52c2a7d22e452277dc76ff05c632112dc0eaf5df7df74a460b6533b5aba884ad9";
           };
           owo-lib = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/ccKDOlHs/versions/TY022mTW/owo-lib-neoforge-0.12.28%2B1.21.10.jar";
-            sha512 = "cd490e1465dba2e3f33d0903c47d886dff03cd0c60808218c5c6ab1440066bd18a22b5d9a5173e7ee56fa9b2b4890859d1284f9ae655d3c1c50d845c66f4e6bb";
+            url = "https://cdn.modrinth.com/data/ccKDOlHs/versions/dZPuIa4j/owo-lib-0.12.24%2B1.21.9.jar";
+            sha512 = "2313b8bfb79a098e5bbb6642eed4f76feb464dd65b320668f9146588973f3f236e9644fb77dd3b4a8e2057fd63037dcc1d969da7944b8388e69321e9a1f2b21d";
           };
           emoji = pkgs.fetchurl {
             url = "https://cdn.modrinth.com/data/q7vRRpxU/versions/nR4TD20V/emoji-type-2.3.3-1.21.10-fabric.jar";

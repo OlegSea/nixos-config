@@ -33,6 +33,7 @@
       allow-flight = true;
       view-distance = 12;
       white-list = true;
+      difficulty = "hard";
       server-port = 25500;
       level-seed = 8883383888011263481;
       initial-enabled-packs = "vanilla,afk-display,anti-enderman-grief,armor-statuses,multiplayer-sleep,player-head-drops,wandering-traders";

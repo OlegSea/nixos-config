@@ -41,6 +41,14 @@
     symlinks = {
       mods = pkgs.linkFarmFromDrvs "mods" (
         builtins.attrValues {
+          disable-end = pkgs.fetchurl {
+            url = "https://cdn.modrinth.com/data/26FOsJLr/versions/M9RRh6lk/noend-0.5-1.21.10-BETA.jar";
+            sha512 = "9cefcc830d8ab6c2e8c28d4c26b7a7c97c1bd8ee27ca409f8c684b992408b6d52c2a7d22e452277dc76ff05c632112dc0eaf5df7df74a460b6533b5aba884ad9";
+          };
+          owo-lib = pkgs.fetchurl {
+            url = "https://cdn.modrinth.com/data/ccKDOlHs/versions/TY022mTW/owo-lib-neoforge-0.12.28%2B1.21.10.jar";
+            sha512 = "cd490e1465dba2e3f33d0903c47d886dff03cd0c60808218c5c6ab1440066bd18a22b5d9a5173e7ee56fa9b2b4890859d1284f9ae655d3c1c50d845c66f4e6bb";
+          };
           emoji = pkgs.fetchurl {
             url = "https://cdn.modrinth.com/data/q7vRRpxU/versions/nR4TD20V/emoji-type-2.3.3-1.21.10-fabric.jar";
             sha512 = "014c9e232c77ddd7f196273950bd8e62cd1a45206c67af418024e0fa57b958902a08ac9e811291db939a3f91d13e21c0c0cfa8aca3d73db98bf5dfd82e935ce9";

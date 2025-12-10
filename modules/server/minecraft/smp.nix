@@ -82,6 +82,10 @@
             url = "https://cdn.modrinth.com/data/zVVpzurY/versions/zlJvj7Xn/otterlib-0.2.2.1%2B1.21.10-fabric.jar";
             sha512 = "d421fbd9c3fa10dc4afcd54687dfb1099e735a695015716356ed7a554c98a519cb94a6a22a28195c5ce4ffded3d415423659abd82368dacf0cbbf8df817c87ed";
           };
+          armor-stands = pkgs.fetchurl {
+            url = "https://cdn.modrinth.com/data/PFwYNrHb/versions/7Bjl145c/ArmorPoser-fabric-1.21.10-12.3.0.jar";
+            sha512 = "964bcf694c690e45250eeebc67bbc34b5a96605cfb61e35ada6a20679159369cd8ef0efab7d5eb364c6db5b520d52c9190a5397d08cab8580276755149d23db8";
+          };
         }
       );
     };

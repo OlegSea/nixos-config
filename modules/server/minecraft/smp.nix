@@ -90,7 +90,10 @@
             url = "https://cdn.modrinth.com/data/TQTTVgYE/versions/oiUqSOMA/fabric-carpet-1.21.10-1.4.188%2Bv251016.jar";
             sha512 = "dfab93784fcaa73b20854857063025d36a2f7c27397cc64b141fe2c85024993a87936016ac823c2c945f27314b9938aa57e06b55676a1c349c121b445ecfe213";
           };
-
+          servux = pkgs.fetchurl {
+            url = "https://cdn.modrinth.com/data/zQhsx8KF/versions/l6kw0FSN/servux-fabric-1.21.10-0.8.5.jar";
+            sha512 = "13e67184315122f4b5411c78d2c6f3bf77b5dba05dd0c59732089a4916afce1a0b3dba548fc298c5f561fda15dd08ab521f9e98c22bed90c319cf2fe6b2feaf6";
+          };
         }
       );
     };

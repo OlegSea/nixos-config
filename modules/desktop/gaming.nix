@@ -34,13 +34,14 @@
     obs-studio
 
     # osu
-    osu-lazer-bin
   ];
 
   networking.firewall.allowedTCPPorts = [
     34197
+    25566
   ];
   networking.firewall.allowedUDPPorts = [
     34197
+    25566
   ];
 }

@@ -10,9 +10,11 @@
     nixd
     nil
     ruff
+    pyright
     tinymist
     package-version-server
     clang-tools
+    notepad-next
 
     # other utils
     termius
@@ -20,6 +22,8 @@
     jj
     jq
     postman
+    claude-code
+    claude-code-acp
 
     vscode.fhs
   ];

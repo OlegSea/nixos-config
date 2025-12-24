@@ -16,6 +16,16 @@
 
     niri.url = "github:sodiboo/niri-flake";
 
+    # hyprland.url = "github:hyprwm/Hyprland";
+    hyprland = {
+      url = "github:hyprwm/Hyprland/71a1216abcc7031776630a6d88f105605c4dc1c9";
+    };
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
+
     nixcord = {
       url = "github:kaylorben/nixcord";
     };

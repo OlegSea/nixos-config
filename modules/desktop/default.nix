@@ -5,9 +5,9 @@
     ./devices.nix
     ./gaming.nix
     ./gnome.nix
-    ./niri.nix
+    ./tiling.nix
     ./power.nix
     ./stylix.nix
-    ./fingerprint.nix
+    # ./fingerprint.nix
   ];
 }

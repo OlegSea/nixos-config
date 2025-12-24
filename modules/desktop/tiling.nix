@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   programs.niri.package = pkgs.niri;
@@ -30,5 +30,6 @@
     swaynotificationcenter
     libqalculate
     brightnessctl
+    cliphist
   ];
 }

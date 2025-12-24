@@ -14,8 +14,8 @@
     ];
     userSettings = {
       theme = {
-        mode = "system";
-        dark = "Gruvbox Dark Soft";
+        mode = "dark";
+        dark = "Gruvbox Dark";
         light = "One Light";
       };
       buffer_font_family = "CaskaydiaCove NF";
@@ -42,7 +42,7 @@
 
       languages = {
         Python = {
-          language_servers = [ "ruff" ];
+          language_servers = [ "pyright" ];
         };
       };
     };

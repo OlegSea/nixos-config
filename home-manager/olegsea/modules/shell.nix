@@ -25,7 +25,7 @@
       edit = "zeditor";
       flake = "cd ${nixosConfigDir} && zeditor .";
       ta = "tmux attach";
-      vpn = "sing-box run -c ${nixosConfigDir}/resources/vpn/box.json";
+      vpn = "sing-box run -c ${nixosConfigDir}/resources/vpn/box1.json";
       nixenv = "echo \"use flake\" >> .envrc && direnv allow";
     };
     history.size = 10000;

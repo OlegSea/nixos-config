@@ -4,6 +4,7 @@
   inputs,
   system,
   lib,
+  options,
   ...
 }:
 
@@ -41,6 +42,11 @@
   nixpkgs.config.allowUnfree = true;
 
   time.timeZone = "Europe/Moscow";
+
+  services.ntp.enable = true;
+
+  networking.timeServers = options.networking.timeServers.default ++ [ "0.ru.pool.ntp.org" ];
+  time.hardwareClockInLocalTime = false;
 
   i18n.defaultLocale = "en_US.UTF-8";
 

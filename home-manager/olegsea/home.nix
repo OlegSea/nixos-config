@@ -16,6 +16,8 @@
     ./modules/work.nix
     ./modules/discord.nix
     ./modules/spotify.nix
+    ./modules/noctalia
+    ./modules/mango
   ];
   stylix.targets.fuzzel.enable = false;
   stylix.targets.swaync.enable = false;

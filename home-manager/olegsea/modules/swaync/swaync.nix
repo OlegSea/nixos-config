@@ -1,7 +1,7 @@
 { ... }:
 {
   services.swaync = {
-    enable = true;
+    enable = false;
     settings = {
       layer = "top";
       control-center-layer = "top";

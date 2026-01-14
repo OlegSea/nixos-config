@@ -11,7 +11,9 @@
         position = "top";
         spacing = 0;
         height = 26;
-        modules-left = [ "niri/workspaces" ];
+        modules-left = [
+          "niri/workspaces"
+        ];
         modules-center = [ "clock" ];
         modules-right = [
           "group/tray-expander"
@@ -41,12 +43,30 @@
             active = "";
           };
         };
-
-        "hyprland/language" = {
-          "format" = "{}";
-          "format-en" = "US";
-          "format-ru" = "RU";
+        "hyprland/workspaces" = {
+          on-click = "activate";
+          active-only = false;
+          format = "{icon}";
+          format-icons = {
+            default = "0";
+            "1" = "1";
+            "2" = "2";
+            "3" = "3";
+            "4" = "4";
+            "5" = "5";
+            "6" = "6";
+            "7" = "7";
+            "8" = "8";
+            "9" = "9";
+            active = "";
+          };
         };
+
+        # "hyprland/language" = {
+        #   "format" = "{}";
+        #   "format-en" = "US";
+        #   "format-ru" = "RU";
+        # };
 
         cpu = {
           interval = 5;

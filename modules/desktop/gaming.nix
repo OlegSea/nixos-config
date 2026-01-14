@@ -32,6 +32,7 @@
 
     # recording n stuff
     obs-studio
+    gpu-screen-recorder
 
     # osu
   ];

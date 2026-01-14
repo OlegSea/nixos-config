@@ -16,16 +16,6 @@
 
     niri.url = "github:sodiboo/niri-flake";
 
-    # hyprland.url = "github:hyprwm/Hyprland";
-    hyprland = {
-      url = "github:hyprwm/Hyprland/71a1216abcc7031776630a6d88f105605c4dc1c9";
-    };
-
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     nixcord = {
       url = "github:kaylorben/nixcord";
     };
@@ -37,6 +27,18 @@
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     copyparty.url = "github:9001/copyparty";
+
+    zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -46,6 +48,7 @@
       home-manager,
       stylix,
       niri,
+      mango,
       ...
     }@inputs:
     let
@@ -67,6 +70,7 @@
 
           stylix.nixosModules.stylix
           niri.nixosModules.niri
+          mango.nixosModules.mango
 
           home-manager.nixosModules.home-manager
           {
@@ -80,6 +84,7 @@
             home-manager.users.olegsea = {
               imports = [
                 ./home-manager/olegsea/home.nix
+                mango.hmModules.mango
               ];
             };
           }

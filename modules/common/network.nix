@@ -13,13 +13,23 @@
     ];
   };
   networking.firewall.enable = true;
-  networking.nftables.enable = true;
 
   networking.extraHosts = ''
     10.252.207.6 engine.olegsea.local
     10.252.207.5 engine.olegsea-repl.local
     10.255.4.200 engine.ps.local
+    172.25.1.100 repo-zvirt.orionsoft.ru
   '';
+
+  imports = [
+    inputs.zapret-discord-youtube.nixosModules.default
+    {
+      services.zapret-discord-youtube = {
+        enable = true;
+        config = "general (SIMPLE FAKE)";
+      };
+    }
+  ];
 
   networking.firewall.trustedInterfaces = [ "tun" ];
 
@@ -45,22 +55,6 @@
   #   settings = builtins.fromJSON (builtins.readFile ../../resources/vpn/box.json);
   # };
 
-  systemd.services.zapret = {
-    description = "Zapret DPI Bypass";
-    after = [ "network-online.target" ];
-    wants = [ "network-online.target" ];
-    wantedBy = [ "multi-user.target" ];
-
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = "${pkgs.bash}/bin/bash ${nixosConfigDir}/zapret/main_script.sh -nointeractive";
-      User = "root";
-      Environment = [
-        "PATH=${pkgs.git}/bin:${pkgs.nftables}/bin:${pkgs.gnugrep}/bin:${pkgs.gnused}/bin:${pkgs.coreutils}/bin:${pkgs.sudo}/bin"
-        "BASE_DIR=${nixosConfigDir}/zapret"
-      ];
-    };
-  };
   programs.throne.tunMode.enable = true;
   services.resolved.enable = true;
 

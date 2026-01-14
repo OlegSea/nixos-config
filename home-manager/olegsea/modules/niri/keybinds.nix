@@ -10,16 +10,44 @@
         action.spawn = [ "kitty" ];
       };
       "Mod+D" = {
-        hotkey-overlay.title = "Run an Application: fuzzel";
-        action.spawn = [ "fuzzel" ];
+        hotkey-overlay.title = "Run an Application launcher";
+        action.spawn = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "launcher"
+          "toggle"
+        ];
       };
       "Mod+C" = {
-        hotkey-overlay.title = "Run an Application: fuzzel calc";
-        action.spawn = [ "${nixosConfigDir}/scripts/fuzzel/fuzzel_calculator.sh" ];
+        hotkey-overlay.title = "See clipboard history";
+        action.spawn = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "launcher"
+          "clipboard"
+        ];
       };
       "Mod+Escape" = {
         hotkey-overlay.title = "Power menu";
-        action.spawn = [ "${nixosConfigDir}/scripts/fuzzel/fuzzel_powermenu.sh" ];
+        action.spawn = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "sessionMenu"
+          "toggle"
+        ];
+      };
+      "Mod+Alt+L" = {
+        hotkey-overlay.title = "Lock the Screen";
+        action.spawn = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "lockScreen"
+          "lock"
+        ];
       };
       "Super+Alt+L" = {
         hotkey-overlay.title = "Lock the Screen: swaylock";

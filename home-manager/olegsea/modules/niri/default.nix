@@ -9,7 +9,7 @@
     ./rules.nix
 
     ../fuzzel/fuzzel.nix
-    ../swaync/swaync.nix
+    # ../swaync/swaync.nix
     ../waybar/waybar.nix
   ];
   home.packages = with pkgs; [

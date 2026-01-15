@@ -56,24 +56,25 @@
       bind=SUPER+SHIFT,Down,exchange_client,d
 
       # Monitor focus
-      bind=SUPER+CTRL,h,focusmon,l
-      bind=SUPER+CTRL,j,focusmon,d
-      bind=SUPER+CTRL,k,focusmon,u
-      bind=SUPER+CTRL,l,focusmon,r
-      bind=SUPER+CTRL,Left,focusmon,l
-      bind=SUPER+CTRL,Right,focusmon,r
-      bind=SUPER+CTRL,Up,focusmon,u
-      bind=SUPER+CTRL,Down,focusmon,d
+      # bind=SUPER,Comma,spawn_shell,notify-send hello
+      bind=SUPER,comma,focusmon,eDP-1
+      bind=SUPER,period,focusmon,HDMI-A-1
+      # bind=SUPER+CTRL,k,focusmon,u
+      # bind=SUPER+CTRL,l,focusmon,r
+      # bind=SUPER+CTRL,Left,focusmon,l
+      # bind=SUPER+CTRL,Right,focusmon,r
+      # bind=SUPER+CTRL,Up,focusmon,u
+      # bind=SUPER+CTRL,Down,focusmon,d
 
       # Move windows to monitors
-      bind=SUPER+SHIFT+CTRL,h,tagmon,l,0
-      bind=SUPER+SHIFT+CTRL,j,tagmon,d,0
-      bind=SUPER+SHIFT+CTRL,k,tagmon,u,0
-      bind=SUPER+SHIFT+CTRL,l,tagmon,r,0
-      bind=SUPER+SHIFT+CTRL,Left,tagmon,l,0
-      bind=SUPER+SHIFT+CTRL,Right,tagmon,r,0
-      bind=SUPER+SHIFT+CTRL,Up,tagmon,u,0
-      bind=SUPER+SHIFT+CTRL,Down,tagmon,d,0
+      bind=SUPER+SHIFT,comma,tagmon,eDP-1,0
+      bind=SUPER+SHIFT,period,tagmon,HDMI-A-1,0
+      # bind=SUPER+SHIFT+CTRL,k,tagmon,u,0
+      # bind=SUPER+SHIFT+CTRL,l,tagmon,r,0
+      # bind=SUPER+SHIFT+CTRL,Left,tagmon,l,0
+      # bind=SUPER+SHIFT+CTRL,Right,tagmon,r,0
+      # bind=SUPER+SHIFT+CTRL,Up,tagmon,u,0
+      # bind=SUPER+SHIFT+CTRL,Down,tagmon,d,0
 
       # Tag/workspace switching
       bind=SUPER,1,comboview,1

@@ -30,6 +30,8 @@
 
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
 
+    nix-gaming.url = "github:fufexan/nix-gaming";
+
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";

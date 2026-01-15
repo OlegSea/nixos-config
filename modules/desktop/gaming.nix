@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   hardware.graphics = {
     enable = true;
@@ -35,6 +35,7 @@
     gpu-screen-recorder
 
     # osu
+    inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-lazer-bin
   ];
 
   networking.firewall.allowedTCPPorts = [

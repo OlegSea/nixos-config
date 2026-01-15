@@ -176,7 +176,7 @@
               enableColorization = false;
               icon = "noctalia";
               id = "ControlCenter";
-              useDistroLogo = true;
+              useDistroLogo = false;
             }
           ];
         };
@@ -359,7 +359,7 @@
         enabled = true;
         location = "top_right";
         lowUrgencyDuration = 3;
-        monitors = [ ];
+        monitors = [ "eDP-1" ];
         normalUrgencyDuration = 8;
         overlayLayer = true;
         respectExpireTimeout = false;

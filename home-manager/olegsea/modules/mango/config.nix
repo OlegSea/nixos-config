@@ -7,11 +7,16 @@
       # Input configuration
       xkb_rules_layout=us,ru
       xkb_rules_options=grp:win_space_toggle,caps:escape
+      accel_profile=1
+      trackpad_natural_scrolling=1
 
       # Monitor configuration
       monitorrule=eDP-1,0.55,1,scroller,0,2,0,0,2880,1620,120
       #monitorrule=DP-1,0.55,1,scroller,0,1,0,0,1920,1080,165
       monitorrule=HDMI-A-1,0.55,1,scroller,0,1,1440,0,1920,1080,180
+      adaptive_sync=1
+      allow_tearing=1
+      syncobj_enable=1
 
       # Environment variables
       env=GTK_THEME,Adwaita:dark
@@ -44,6 +49,19 @@
       windowrule=tags:4,appid:throne
       windowrule=tags:4,appid:org.keepassxc.KeePassXC
 
+      windowrule=monitor:HDMI-A-1,title:Vivaldi
+      windowrule=monitor:HDMI-A-1,appid:vivaldi-stable
+
+      windowrule=monitor:HDMI-A-1,appid:dev.zed.Zed
+      windowrule=monitor:HDMI-A-1,appid:kitty
+
+      windowrule=monitor:eDP-1,appid:discord
+      windowrule=monitor:eDP-1,appid:org.telegram.desktop
+      windowrule=monitor:eDP-1,appid:Spotify
+
+      windowrule=monitor:eDP-1,appid:throne
+      windowrule=monitor:eDP-1,appid:org.keepassxc.KeePassXC
+
       # Floating windows
       windowrule=float,title:Picture in picture
       windowrule=float,appid:mpv
@@ -52,6 +70,10 @@
       windowrule=float,title:Open File
       windowrule=float,title:Save File
 
+      # Games
+      windowrule=force_tearing:1,title:Minecraft.*
+      windowrule=force_tearing:1,appid:osu!
+
       # Autostart applications
       exec-once=swaybg -i /home/olegsea/flake/resources/wallpaper.jpeg
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
@@ -59,9 +81,8 @@
       exec-once=vivaldi
       exec-once=kitty
       exec-once=spotify
-      exec-once=telegram-desktop
+      exec-once=Telegram
       exec-once=discord
-      exec-once=throne
     '';
   };
 }

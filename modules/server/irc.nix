@@ -102,6 +102,7 @@
     };
   };
 
+  # Enable nginx for ACME certificate validation
   services.nginx = {
     enable = true;
     virtualHosts."irc.olegsea.ru" = {
@@ -113,13 +114,22 @@
     };
   };
 
+  # Enable ACME for SSL certificates
   security.acme = {
     acceptTerms = true;
     defaults.email = "ta.alexashow@ya.ru";
     certs."irc.olegsea.ru" = {
-      group = "ergochat";
+      group = "acme";
       reloadServices = [ "ergochat" ];
     };
+  };
+
+  # Create ergochat user and group, add to acme group
+  users.groups.ergochat = { };
+  users.users.ergochat = {
+    group = "ergochat";
+    isSystemUser = true;
+    extraGroups = [ "acme" ];
   };
 
   networking.firewall.allowedTCPPorts = [

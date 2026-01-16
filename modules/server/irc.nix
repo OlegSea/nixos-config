@@ -43,6 +43,13 @@
           auto-away = "opt-out";
           enabled = true;
         };
+        nick-enforcement = {
+          enabled = true;
+          method = "strict";
+          allow-custom-enforcement = true;
+          auto-ghost = true;
+          timeout = "30s";
+        };
         registration = {
           allow-before-connect = true;
           bcrypt-cost = 4;
@@ -50,11 +57,6 @@
             enabled = false;
           };
           enabled = true;
-          nick-reservation = {
-            enabled = false;
-            method = "optional";
-            allow-custom-enforcement = true;
-          };
           throttling = {
             duration = "10m";
             enabled = true;

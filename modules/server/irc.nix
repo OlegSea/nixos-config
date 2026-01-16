@@ -43,7 +43,7 @@
           auto-away = "opt-out";
           enabled = true;
         };
-        nick-enforcement = {
+        nick-reservation = {
           enabled = true;
           method = "strict";
           allow-custom-enforcement = true;

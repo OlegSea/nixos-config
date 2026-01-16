@@ -25,7 +25,7 @@
           hidden = false;
           whois-line = "is the server administrator";
           vhost = "staff";
-          password = "$2a$04$hXtRes.mn8ThRSJ0CZ9hNekAT/dgMsE.yq.NuYG3iK6jY27TMGQqi";
+          password = "$2a$04$kVpUqx9arbXKuulRpFlm1e4y5PXHCk/pbTEwVsyI2tL.WG5UjegMS";
         };
       };
       accounts = {

@@ -3,38 +3,6 @@
   services.ergochat = {
     enable = true;
     settings = {
-      accounts = {
-        authentication-enabled = true;
-        multiclient = {
-          allowed-by-default = true;
-          always-on = "opt-out";
-          auto-away = "opt-out";
-          enabled = true;
-        };
-        registration = {
-          allow-before-connect = true;
-          bcrypt-cost = 4;
-          email-verification = {
-            enabled = false;
-          };
-          enabled = true;
-          throttling = {
-            duration = "10m";
-            enabled = true;
-            max-attempts = 30;
-          };
-        };
-      };
-      channels = {
-        default-modes = "+ntC";
-        registration = {
-          enabled = true;
-        };
-      };
-      datastore = {
-        autoupgrade = true;
-        path = "/var/lib/ergo/ircd.db";
-      };
       opers = {
         admin = {
           class = "server-admin";
@@ -43,6 +11,39 @@
           vhost = "staff";
           password = "$2a$04$X0DJ2XGmBof8rFtKaNhEuO9DZQ2AzKvVHNMb734HV3WCSYwIEXe.y";
         };
+        accounts = {
+          authentication-enabled = true;
+          multiclient = {
+            allowed-by-default = true;
+            always-on = "opt-out";
+            auto-away = "opt-out";
+            enabled = true;
+          };
+          registration = {
+            allow-before-connect = true;
+            bcrypt-cost = 4;
+            email-verification = {
+              enabled = false;
+            };
+            enabled = true;
+            throttling = {
+              duration = "10m";
+              enabled = true;
+              max-attempts = 30;
+            };
+          };
+        };
+        channels = {
+          default-modes = "+ntC";
+          registration = {
+            enabled = true;
+          };
+        };
+        datastore = {
+          autoupgrade = true;
+          path = "/var/lib/ergo/ircd.db";
+        };
+
       };
       history = {
         autoreplay-on-join = 0;

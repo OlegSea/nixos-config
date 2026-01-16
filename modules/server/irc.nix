@@ -140,4 +140,8 @@
     6667
     6697
   ];
+
+  environment.systemPackages = with pkgs; [
+    ergochat
+  ];
 }

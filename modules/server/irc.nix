@@ -16,6 +16,13 @@
             "samode"
             "snomasks"
             "roleplay"
+            "rehash"
+            "accreg"
+            "chanreg"
+            "history"
+            "defcon"
+            "massmessage"
+            "metadata"
           ];
         };
       };

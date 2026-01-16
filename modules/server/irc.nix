@@ -119,17 +119,20 @@
     acceptTerms = true;
     defaults.email = "ta.alexashow@ya.ru";
     certs."irc.olegsea.ru" = {
-      group = "acme";
-      reloadServices = [ "ergochat" ];
+      group = "nginx";
+      reloadServices = [
+        "ergochat"
+        "nginx"
+      ];
     };
   };
 
-  # Create ergochat user and group, add to acme group
+  # Create ergochat user and group, add to nginx group for certificate access
   users.groups.ergochat = { };
   users.users.ergochat = {
     group = "ergochat";
     isSystemUser = true;
-    extraGroups = [ "acme" ];
+    extraGroups = [ "nginx" ];
   };
 
   networking.firewall.allowedTCPPorts = [

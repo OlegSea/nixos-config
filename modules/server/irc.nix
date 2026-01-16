@@ -50,6 +50,11 @@
             enabled = false;
           };
           enabled = true;
+          nick-reservation = {
+            enabled = true;
+            method = "optional";
+            allow-custom-enforcement = true;
+          };
           throttling = {
             duration = "10m";
             enabled = true;

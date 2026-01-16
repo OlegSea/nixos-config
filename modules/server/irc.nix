@@ -122,8 +122,6 @@
     };
   };
 
-  users.users.ergochat.extraGroups = [ "acme" ];
-
   networking.firewall.allowedTCPPorts = [
     80
     6667

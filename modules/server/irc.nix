@@ -51,7 +51,7 @@
           };
           enabled = true;
           nick-reservation = {
-            enabled = true;
+            enabled = false;
             method = "optional";
             allow-custom-enforcement = true;
           };

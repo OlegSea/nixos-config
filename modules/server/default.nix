@@ -3,6 +3,7 @@
   imports = [
     ./ssh.nix
     ./copyparty.nix
+    ./irc.nix
     ./minecraft
   ];
 

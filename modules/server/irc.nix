@@ -35,6 +35,15 @@
         autoupgrade = true;
         path = "/var/lib/ergo/ircd.db";
       };
+      opers = {
+        admin = {
+          class = "server-admin";
+          hidden = false;
+          whois-line = "is the server administrator";
+          vhost = "staff";
+          password = "$2a$04$X0DJ2XGmBof8rFtKaNhEuO9DZQ2AzKvVHNMb734HV3WCSYwIEXe.y";
+        };
+      };
       history = {
         autoreplay-on-join = 0;
         autoresize-window = "3d";
@@ -102,7 +111,6 @@
     };
   };
 
-  # Enable nginx for ACME certificate validation
   services.nginx = {
     enable = true;
     virtualHosts."irc.olegsea.ru" = {
@@ -114,7 +122,6 @@
     };
   };
 
-  # Enable ACME for SSL certificates
   security.acme = {
     acceptTerms = true;
     defaults.email = "ta.alexashow@ya.ru";
@@ -127,7 +134,6 @@
     };
   };
 
-  # Create ergochat user and group, add to nginx group for certificate access
   users.groups.ergochat = { };
   users.users.ergochat = {
     group = "ergochat";

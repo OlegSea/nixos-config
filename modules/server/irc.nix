@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   services.ergochat = {
     enable = true;
@@ -85,6 +85,12 @@
         };
         listeners = {
           ":6667" = { };
+          ":6697" = {
+            tls = {
+              cert = "/var/lib/acme/irc.olegsea.ru/cert.pem";
+              key = "/var/lib/acme/irc.olegsea.ru/key.pem";
+            };
+          };
         };
         lookup-hostnames = false;
         max-sendq = "1M";
@@ -95,4 +101,32 @@
       };
     };
   };
+
+  services.nginx = {
+    enable = true;
+    virtualHosts."irc.olegsea.ru" = {
+      enableACME = true;
+      forceSSL = false;
+      locations."/" = {
+        return = "404";
+      };
+    };
+  };
+
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "ta.alexashow@ya.ru";
+    certs."irc.olegsea.ru" = {
+      group = "ergochat";
+      reloadServices = [ "ergochat" ];
+    };
+  };
+
+  users.users.ergochat.extraGroups = [ "acme" ];
+
+  networking.firewall.allowedTCPPorts = [
+    80
+    6667
+    6697
+  ];
 }

@@ -3,6 +3,22 @@
   services.ergochat = {
     enable = true;
     settings = {
+      oper-classes = {
+        server-admin = {
+          title = "Admin";
+          capabilities = [
+            "kill"
+            "ban"
+            "nofakelag"
+            "relaymsg"
+            "vhosts"
+            "sajoin"
+            "samode"
+            "snomasks"
+            "roleplay"
+          ];
+        };
+      };
       opers = {
         admin = {
           class = "server-admin";

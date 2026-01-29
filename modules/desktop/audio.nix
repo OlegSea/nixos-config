@@ -2,6 +2,7 @@
 
 {
   # services.pulseaudio.enable = false;
+  programs.noisetorch.enable = true;
   environment.systemPackages = with pkgs; [
     guitarix
     qjackctl

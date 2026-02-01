@@ -20,6 +20,7 @@
     ./modules/mango
   ];
   stylix.targets.niri.enable = false;
+  stylix.targets.noctalia-shell.enable = false;
   stylix.targets.zed.enable = false;
 
   home.username = "olegsea";

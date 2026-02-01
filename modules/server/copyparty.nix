@@ -62,6 +62,7 @@
     80
     3210
     3211
+    3921
   ];
   systemd.services.copyparty.serviceConfig.AmbientCapabilities = "CAP_NET_BIND_SERVICE";
 }

@@ -43,7 +43,7 @@
       "/" = {
         path = "/srv/copyparty";
         access = {
-          rw = [
+          a = [
             "olegsea"
           ];
         };

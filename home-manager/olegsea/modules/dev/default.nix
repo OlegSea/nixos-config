@@ -26,6 +26,5 @@
     claude-code-acp
 
     vscode.fhs
-    lapce
   ];
 }

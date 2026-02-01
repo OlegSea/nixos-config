@@ -60,6 +60,8 @@
   };
   networking.firewall.allowedTCPPorts = [
     80
+    3210
+    3211
   ];
   systemd.services.copyparty.serviceConfig.AmbientCapabilities = "CAP_NET_BIND_SERVICE";
 }

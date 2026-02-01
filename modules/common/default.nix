@@ -4,7 +4,7 @@
     ./core.nix
     ./cachix.nix
     ./nh.nix
-    ./network.nix
+    ./network
     ./users.nix
     ./containers.nix
     ./syncthing.nix

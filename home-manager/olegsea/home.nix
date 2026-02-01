@@ -19,9 +19,6 @@
     ./modules/noctalia
     ./modules/mango
   ];
-  stylix.targets.fuzzel.enable = false;
-  stylix.targets.swaync.enable = false;
-  stylix.targets.waybar.enable = false;
   stylix.targets.niri.enable = false;
   stylix.targets.zed.enable = false;
 

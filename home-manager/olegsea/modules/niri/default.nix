@@ -7,10 +7,6 @@
     ./keybinds.nix
     ./outputs.nix
     ./rules.nix
-
-    ../fuzzel/fuzzel.nix
-    # ../swaync/swaync.nix
-    ../waybar/waybar.nix
   ];
   home.packages = with pkgs; [
     qalculate-gtk

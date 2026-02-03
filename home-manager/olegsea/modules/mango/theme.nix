@@ -59,6 +59,7 @@
       scratchpad_width_ratio=0.8
       scratchpad_height_ratio=0.9
 
+      # Tag animation direction (1=horizontal, 0=vertical)
       tag_animation_direction=0
     '';
   };

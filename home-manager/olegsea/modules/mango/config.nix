@@ -10,13 +10,11 @@
       accel_profile=1
       trackpad_natural_scrolling=1
 
-      # Monitor configuration
-      monitorrule=eDP-1,0.55,1,scroller,0,2,0,0,2880,1620,120
-      #monitorrule=DP-1,0.55,1,scroller,0,1,0,0,1920,1080,165
-      monitorrule=HDMI-A-1,0.55,1,scroller,0,1,1440,0,1920,1080,180
-      adaptive_sync=1
+      # Monitor configuration (new format: name:VALUE,width:VALUE,height:VALUE,refresh:VALUE,x:VALUE,y:VALUE,scale:VALUE,vrr:VALUE)
+      monitorrule=name:eDP-1,width:2880,height:1620,refresh:120,x:0,y:0,scale:2,vrr:1
+      #monitorrule=name:DP-1,width:1920,height:1080,refresh:165,x:0,y:0,scale:1,vrr:1
+      monitorrule=name:HDMI-A-1,width:1920,height:1080,refresh:180,x:1440,y:0,scale:1,vrr:1
       allow_tearing=1
-      syncobj_enable=1
 
       # Environment variables
       env=GTK_THEME,Adwaita:dark
@@ -24,13 +22,21 @@
       env=QT_AUTO_SCREEN_SCALE_FACTOR,1
 
       # Layout settings
-      default_layout=scroller
-      incnmaster=1
+      nmaster=1
       mfact=0.55
       scroller_default_proportion=1.0
       scroller_proportion_preset=0.5,1.0
-      edge_scroller_pointer_focus=0
       scroller_structs=3
+
+      tagrule=id:1,layout_name:scroller
+      tagrule=id:2,layout_name:scroller
+      tagrule=id:3,layout_name:scroller
+      tagrule=id:4,layout_name:scroller
+      tagrule=id:5,layout_name:scroller
+      tagrule=id:6,layout_name:scroller
+      tagrule=id:7,layout_name:scroller
+      tagrule=id:8,layout_name:scroller
+      tagrule=id:9,layout_name:scroller
 
       # Focus settings
       cursor_follows_focus=1

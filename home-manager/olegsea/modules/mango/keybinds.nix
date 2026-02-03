@@ -77,15 +77,15 @@
       # bind=SUPER+SHIFT+CTRL,Down,tagmon,d,0
 
       # Tag/workspace switching
-      bind=SUPER,1,comboview,1
-      bind=SUPER,2,comboview,2
-      bind=SUPER,3,comboview,3
-      bind=SUPER,4,comboview,4
-      bind=SUPER,5,comboview,5
-      bind=SUPER,6,comboview,6
-      bind=SUPER,7,comboview,7
-      bind=SUPER,8,comboview,8
-      bind=SUPER,9,comboview,9
+      bind=SUPER,1,view,1
+      bind=SUPER,2,view,2
+      bind=SUPER,3,view,3
+      bind=SUPER,4,view,4
+      bind=SUPER,5,view,5
+      bind=SUPER,6,view,6
+      bind=SUPER,7,view,7
+      bind=SUPER,8,view,8
+      bind=SUPER,9,view,9
 
       # Move windows to tags
       bind=SUPER+SHIFT,1,tag,1

@@ -5,6 +5,21 @@
     inputs.noctalia.nixosModules.default
   ];
 
+  services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.deviceSection = ''
+    Option "TearFree" "False"
+    Option "VariableRefresh" "True"
+  '';
+  services.xserver.xkb = {
+    layout = "us,ru";
+    variant = "";
+  };
+
+  systemd.user.services.orca.enable = false;
+
+  services.displayManager.gdm.enable = true;
+
   programs.niri.package = pkgs.niri;
   programs.niri.enable = true;
   security.polkit.enable = true; # polkit
@@ -28,24 +43,14 @@
   };
 
   environment.systemPackages = with pkgs; [
-    kitty
-    fuzzel
     swaylock
     swayidle
     xwayland-satellite
     wl-clipboard
     playerctl
-    fastfetch
-    waybar
-    nerd-fonts.caskaydia-cove
-    nerd-fonts.caskaydia-mono
-    nerd-fonts.ubuntu-sans
-    nerd-fonts.ubuntu-mono
     pavucontrol
     upower
     libnotify
-    # swaynotificationcenter
-    libqalculate
     brightnessctl
     cliphist
     hyprshot

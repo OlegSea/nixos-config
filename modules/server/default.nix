@@ -4,6 +4,7 @@
     ./ssh.nix
     ./copyparty.nix
     ./irc.nix
+    ./matrix.nix
     ./minecraft
   ];
 

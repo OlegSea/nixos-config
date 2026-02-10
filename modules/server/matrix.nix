@@ -16,6 +16,7 @@ in
         allow_encryption = true;
         allow_federation = true;
         trusted_servers = [ "matrix.org" ];
+        new_user_displayname_suffix = "";
       };
     };
   };
@@ -103,7 +104,7 @@ in
           };
 
           "/.well-known/matrix/client" = {
-            return = "200 '{\"m.homeserver\": {\"base_url\": \"http://matrix.olegsea.ru\"}}'";
+            return = "200 '{\"m.homeserver\": {\"base_url\": \"https://matrix.olegsea.ru\"}}'";
             extraConfig = ''
               add_header Content-Type application/json always;
               add_header Access-Control-Allow-Origin * always;

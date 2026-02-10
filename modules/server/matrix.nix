@@ -79,27 +79,29 @@
           "/.well-known/matrix/server" = {
             return = "200 '{\"m.server\": \"matrix.olegsea.ru:8448\"}'";
             extraConfig = ''
-              add_header Content-Type application/json;
-              add_header Access-Control-Allow-Origin *;
+              add_header Content-Type application/json always;
+              add_header Access-Control-Allow-Origin * always;
+              add_header X-Frame-Options DENY always;
+              add_header X-Content-Type-Options nosniff always;
+              add_header X-XSS-Protection "1; mode=block" always;
+              add_header Referrer-Policy "strict-origin-when-cross-origin" always;
             '';
           };
 
           "/.well-known/matrix/client" = {
             return = "200 '{\"m.homeserver\": {\"base_url\": \"https://matrix.olegsea.ru\"}}'";
             extraConfig = ''
-              add_header Content-Type application/json;
-              add_header Access-Control-Allow-Origin *;
+              add_header Content-Type application/json always;
+              add_header Access-Control-Allow-Origin * always;
+              add_header X-Frame-Options DENY always;
+              add_header X-Content-Type-Options nosniff always;
+              add_header X-XSS-Protection "1; mode=block" always;
+              add_header Referrer-Policy "strict-origin-when-cross-origin" always;
             '';
           };
         };
 
         extraConfig = ''
-          # Security headers
-          add_header X-Frame-Options DENY always;
-          add_header X-Content-Type-Options nosniff always;
-          add_header X-XSS-Protection "1; mode=block" always;
-          add_header Referrer-Policy "strict-origin-when-cross-origin" always;
-
           # Increase client body size for file uploads
           client_max_body_size 50M;
         '';

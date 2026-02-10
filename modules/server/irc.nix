@@ -154,7 +154,7 @@
 
   security.acme = {
     acceptTerms = true;
-    defaults.email = "ta.alexashow@ya.ru";
+    defaults.email = "olegsea1334@gmail.com";
     certs."irc.olegsea.ru" = {
       group = "nginx";
       reloadServices = [

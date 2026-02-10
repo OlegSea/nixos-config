@@ -26,7 +26,7 @@
     virtualHosts = {
       "matrix.olegsea.ru" = {
         enableACME = true;
-        forceSSL = true;
+        forceSSL = false;
 
         listen = [
           {

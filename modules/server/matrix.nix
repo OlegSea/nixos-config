@@ -77,7 +77,7 @@
 
           # Well-known delegation for Matrix
           "/.well-known/matrix/server" = {
-            return = ''200 '{"m.server": "matrix.olegsea.ru:8448"}'';
+            return = "200 '{\"m.server\": \"matrix.olegsea.ru:8448\"}'";
             extraConfig = ''
               add_header Content-Type application/json;
               add_header Access-Control-Allow-Origin *;
@@ -85,7 +85,7 @@
           };
 
           "/.well-known/matrix/client" = {
-            return = ''200 '{"m.homeserver": {"base_url": "https://matrix.olegsea.ru"}}'';
+            return = "200 '{\"m.homeserver\": {\"base_url\": \"https://matrix.olegsea.ru\"}}'";
             extraConfig = ''
               add_header Content-Type application/json;
               add_header Access-Control-Allow-Origin *;

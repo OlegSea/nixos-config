@@ -1,5 +1,8 @@
 { inputs, pkgs, ... }:
 
+let
+  matrixRegistrationToken = builtins.readFile ../../resources/secrets/matrix-registration-token;
+in
 {
   services.matrix-continuwuity = {
     enable = true;
@@ -9,6 +12,7 @@
         # Listening on localhost by default
         # address and port are handled automatically
         allow_registration = true;
+        registration_token = builtins.replaceStrings [ "\n" ] [ "" ] matrixRegistrationToken;
         allow_encryption = true;
         allow_federation = true;
         trusted_servers = [ "matrix.org" ];

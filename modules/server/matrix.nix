@@ -31,6 +31,16 @@
         listen = [
           {
             addr = "0.0.0.0";
+            port = 80;
+            ssl = false;
+          }
+          {
+            addr = "[::]";
+            port = 80;
+            ssl = false;
+          }
+          {
+            addr = "0.0.0.0";
             port = 443;
             ssl = true;
           }
@@ -89,7 +99,7 @@
           };
 
           "/.well-known/matrix/client" = {
-            return = "200 '{\"m.homeserver\": {\"base_url\": \"https://matrix.olegsea.ru\"}}'";
+            return = "200 '{\"m.homeserver\": {\"base_url\": \"http://matrix.olegsea.ru\"}}'";
             extraConfig = ''
               add_header Content-Type application/json always;
               add_header Access-Control-Allow-Origin * always;
@@ -107,11 +117,6 @@
         '';
       };
     };
-  };
-
-  security.acme = {
-    acceptTerms = true;
-    defaults.email = "olegsea1334@gmail.com";
   };
 
   networking.firewall = {

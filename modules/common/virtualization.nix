@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
   virtualisation.spiceUSBRedirection.enable = true;
@@ -34,5 +39,7 @@
     virtiofsd
     libguestfs
     virt-viewer
+    inputs.winapps.packages."${system}".winapps
+    inputs.winapps.packages."${system}".winapps-launcher
   ];
 }

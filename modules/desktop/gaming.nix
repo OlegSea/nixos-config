@@ -1,4 +1,5 @@
 { pkgs, inputs, ... }:
+
 {
   hardware.graphics = {
     enable = true;
@@ -35,7 +36,9 @@
     gpu-screen-recorder
 
     # osu
-    inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-lazer-bin
+    (inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-lazer-bin.override {
+      pipewire_latency = "128/44100";
+    })
   ];
 
   networking.firewall.allowedTCPPorts = [

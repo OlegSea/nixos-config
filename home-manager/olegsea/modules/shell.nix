@@ -27,6 +27,7 @@
       ta = "tmux attach";
       vpn1 = "sudo sing-box run -c ${nixosConfigDir}/resources/vpn/box1.json";
       vpn2 = "sudo sing-box run -c ${nixosConfigDir}/resources/vpn/box2.json";
+      vpn3 = "sudo sing-box run -c ${nixosConfigDir}/resources/vpn/box3.json";
       nixenv = "echo \"use flake\" >> .envrc && direnv allow";
     };
     history.size = 10000;

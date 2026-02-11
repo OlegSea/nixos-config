@@ -2,5 +2,6 @@
 {
   imports = [
     ./matrix.nix
+    ./element-call.nix
   ];
 }

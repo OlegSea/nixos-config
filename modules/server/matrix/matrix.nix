@@ -104,7 +104,17 @@ in
         extraConfig = ''
           default_type application/json;
           add_header Access-Control-Allow-Origin *;
-          return 200 '{"m.homeserver": {"base_url": "https://${matrixDomain}"}}';
+          return 200 '{
+            "m.homeserver": {
+              "base_url": "https://${matrixDomain}"
+            },
+            "org.matrix.msc4143.rtc_foci": [
+              {
+                "type": "livekit",
+                "livekit_service_url": "https://call.olegsea.ru/livekit/jwt"
+              }
+            ]
+          }';
         '';
       };
     };

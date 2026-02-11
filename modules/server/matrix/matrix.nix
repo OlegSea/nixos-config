@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }:
 
 let
-  matrixRegistrationToken = builtins.readFile ../../resources/secrets/matrix-registration-token;
+  matrixRegistrationToken = builtins.readFile ../../../resources/secrets/matrix-registration-token;
   matrixDomain = "matrix.olegsea.ru";
 in
 {

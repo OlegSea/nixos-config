@@ -59,7 +59,7 @@ in
         };
 
         # Logging level
-        log = "info";
+        log = "debug";
       };
     };
   };

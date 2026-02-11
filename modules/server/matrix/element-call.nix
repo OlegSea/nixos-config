@@ -138,14 +138,8 @@ in
       gawk
     ];
     script = ''
-      if [ ! -f "${livekitKeyFile}" ]; then
-        echo "Key missing, generating key"
-        KEYS=$(${pkgs.livekit}/bin/livekit-server generate-keys)
-        API_KEY=$(echo "$KEYS" | head -1 | awk '{print $3}')
-        API_SECRET=$(echo "$KEYS" | tail -1 | awk '{print $3}')
-        echo "$API_KEY: $API_SECRET" > "${livekitKeyFile}"
-        chmod 644 "${livekitKeyFile}"
-      fi
+      echo "Key missing, generating key"
+      echo "lk-jwt-service: $(livekit-server generate-keys | tail -1 | awk '{print $3}')" > "${livekitKeyFile}"
     '';
     serviceConfig = {
       Type = "oneshot";

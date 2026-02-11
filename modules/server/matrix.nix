@@ -47,6 +47,8 @@ in
 
         allow_public_room_directory_over_federation = false;
 
+        new_user_displayname_suffix = "";
+
         # Allow encryption
         allow_encryption = true;
 

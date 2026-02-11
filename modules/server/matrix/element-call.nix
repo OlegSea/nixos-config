@@ -103,12 +103,6 @@ in
         enable_loopback_candidate = false;
       };
       room.auto_create = false;
-      turn = {
-        enabled = true;
-        domain = turnDomain;
-        tls_port = 5349;
-        udp_port = 3478;
-      };
     };
     keyFile = livekitKeyFile;
   };

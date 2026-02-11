@@ -23,7 +23,7 @@ in
         server_name = matrixDomain;
 
         # Database path where tuwunel stores its data
-        database_path = "/var/lib/tuwunel";
+        # database_path = "/var/lib/tuwunel";
 
         # Address and port to listen on
         address = [

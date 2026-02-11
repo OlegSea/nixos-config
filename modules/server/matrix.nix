@@ -45,6 +45,8 @@ in
         # Trusted servers for key verification
         trusted_servers = [ "matrix.org" ];
 
+        allow_public_room_directory_over_federation = false;
+
         # Allow encryption
         allow_encryption = true;
 

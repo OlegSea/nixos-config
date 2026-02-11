@@ -31,7 +31,7 @@
     vivaldi
 
     telegram-desktop
-    fluffychat
+    element-desktop
     teamspeak6-client
     hexchat
 

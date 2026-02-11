@@ -107,6 +107,10 @@ in
     keyFile = livekitKeyFile;
   };
 
+  # Ensure livekit directory exists with correct permissions
+  systemd.services.livekit.serviceConfig.StateDirectory = "livekit";
+  systemd.services.livekit.serviceConfig.StateDirectoryMode = "0755";
+
   # LiveKit JWT service
   services.lk-jwt-service = {
     enable = true;
@@ -128,15 +132,16 @@ in
       gawk
     ];
     script = ''
-      mkdir -p "$(dirname "${livekitKeyFile}")"
       if [ ! -f "${livekitKeyFile}" ]; then
         echo "Key missing, generating key"
         echo "$(${pkgs.livekit}/bin/livekit-server generate-keys | tail -1 | awk '{print $3}')" > "${livekitKeyFile}"
-        chown livekit:livekit "${livekitKeyFile}"
-        chmod 600 "${livekitKeyFile}"
+        chmod 644 "${livekitKeyFile}"
       fi
     '';
-    serviceConfig.Type = "oneshot";
+    serviceConfig = {
+      Type = "oneshot";
+      User = "root";
+    };
     unitConfig.ConditionPathExists = "!${livekitKeyFile}";
   };
 

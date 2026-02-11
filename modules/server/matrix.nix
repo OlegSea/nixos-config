@@ -30,7 +30,7 @@ in
           "127.0.0.1"
           "::1"
         ];
-        port = 8008;
+        port = [ 8008 ];
 
         # Max request size for file uploads (100MB to match nginx config)
         max_request_size = 104857600; # 100 MiB in bytes

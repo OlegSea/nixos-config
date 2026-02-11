@@ -103,6 +103,12 @@ in
         enable_loopback_candidate = false;
       };
       room.auto_create = false;
+      turn = {
+        enabled = true;
+        domain = turnDomain;
+        tls_port = 5349;
+        udp_port = 3478;
+      };
     };
     keyFile = livekitKeyFile;
   };
@@ -134,7 +140,10 @@ in
     script = ''
       if [ ! -f "${livekitKeyFile}" ]; then
         echo "Key missing, generating key"
-        echo "$(${pkgs.livekit}/bin/livekit-server generate-keys | tail -1 | awk '{print $3}')" > "${livekitKeyFile}"
+        KEYS=$(${pkgs.livekit}/bin/livekit-server generate-keys)
+        API_KEY=$(echo "$KEYS" | head -1 | awk '{print $3}')
+        API_SECRET=$(echo "$KEYS" | tail -1 | awk '{print $3}')
+        echo "$API_KEY: $API_SECRET" > "${livekitKeyFile}"
         chmod 644 "${livekitKeyFile}"
       fi
     '';

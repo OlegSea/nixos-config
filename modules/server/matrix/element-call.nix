@@ -154,7 +154,7 @@ in
       # LiveKit JWT service endpoints
       "^~ /livekit/jwt/" = {
         priority = 400;
-        proxyPass = "http://[::1]:${toString config.services.lk-jwt-service.port}/";
+        proxyPass = "http://127.0.0.1:${toString config.services.lk-jwt-service.port}/";
         extraConfig = ''
           proxy_set_header Host $host;
           proxy_set_header X-Forwarded-Server $host;
@@ -166,7 +166,7 @@ in
 
       "^~ /livekit/sfu/" = {
         priority = 400;
-        proxyPass = "http://[::1]:${toString config.services.livekit.settings.port}/";
+        proxyPass = "http://127.0.0.1:${toString config.services.livekit.settings.port}/";
         proxyWebsockets = true;
         extraConfig = ''
           proxy_send_timeout 120;
@@ -186,7 +186,7 @@ in
 
       # Fallback for other paths
       "/" = {
-        proxyPass = "http://[::1]:${toString config.services.livekit.settings.port}";
+        proxyPass = "http://127.0.0.1:${toString config.services.livekit.settings.port}";
         proxyWebsockets = true;
         extraConfig = ''
           proxy_set_header Connection "upgrade";

@@ -29,7 +29,15 @@
 
     # Minecartf
     jdk17
-    prismlauncher
+    (prismlauncher.override {
+      additionalLibs = [
+        jemalloc
+        libxtst
+        libxkbcommon
+        libxt
+        libxinerama
+      ];
+    })
 
     # recording n stuff
     obs-studio

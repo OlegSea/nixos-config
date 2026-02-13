@@ -24,6 +24,6 @@
         name = "Noto Color Emoji";
       };
     };
-    image = ../../resources/wallpaper.jpeg;
+    image = ../../resources/wallpaper.png;
   };
 }

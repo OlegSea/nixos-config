@@ -14,7 +14,7 @@ in
         argv = [
           "${pkgs.swaybg}/bin/swaybg"
           "-i"
-          "${nixosConfigDir}/resources/wallpaper.jpeg"
+          "${nixosConfigDir}/resources/wallpaper.png"
         ];
       }
       # { argv = [ "${pkgs.waybar}/bin/waybar" ]; }

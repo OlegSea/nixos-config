@@ -81,7 +81,7 @@
       windowrule=force_tearing:1,appid:osu!
 
       # Autostart applications
-      exec-once=swaybg -i /home/olegsea/flake/resources/wallpaper.jpeg
+      exec-once=swaybg -i /home/olegsea/flake/resources/wallpaper.png
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
       exec-once=noctalia-shell
       exec-once=vivaldi

@@ -59,6 +59,7 @@
     btop
     zip
     unzip
+    p7zip
     tree
     wget
     vim

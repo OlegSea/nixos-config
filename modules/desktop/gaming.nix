@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }:
 
 {
+  imports = [ ./mcsr ];
   hardware.graphics = {
     enable = true;
     enable32Bit = true;

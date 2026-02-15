@@ -9,6 +9,8 @@ local Processes = require("waywork.processes")
 local scene = Scene.SceneManager.new(waywall)
 local ModeManager = Modes.ModeManager.new(waywall)
 
+local resolution = { w = 1920, h = 1080 }
+
 -- resolution is a magic global
 local thin_w = resolution.h * 0.28
 local tall_w = 384
@@ -29,13 +31,13 @@ local mc_eye_y = (tall_h - mc_eye_h) / 2
 
 -- https://arjuncgore.github.io/waywall-boat-eye-calc/
 -- https://github.com/Esensats/mcsr-calcsens
-local normal_sens = 13.117018998967824
-local tall_sens = 0.88486625532087
+local normal_sens = 12.31938415
+local tall_sens = 0.83105829
 
 for _, name in ipairs({ "wide", "thin", "tall" }) do
 	scene:register(name .. "_bg", {
 		kind = "image",
-		path = images[name],
+		path = files[name],
 		options = {
 			dst = { x = 0, y = 0, w = resolution.w, h = resolution.h },
 			depth = -1,
@@ -67,7 +69,7 @@ scene:register("eye_measure", {
 
 scene:register("eye_overlay", {
 	kind = "image",
-	path = images.eye_overlay,
+	path = files.eye_overlay,
 	options = { dst = eye_dst, depth = 1 },
 	groups = { "tall" },
 })
@@ -111,25 +113,30 @@ ModeManager:define("tall", {
 		scene:enable_group("tall", false)
 		waywall.set_sensitivity(0)
 	end,
-	toggle_guard = mode_guard,
+	toggle_guard = function()
+		return not waywall.get_key("F3") and waywall.state().screen == "inworld"
+	end,
 })
 
-local ensure_ninjabrain = Processes.ensure_application(waywall, ninb_path)("ninjabrain.*\\.jar")
+local ensure_ninjabrain = Processes.ensure_application(waywall, programs.ninjabrain_bot)("ninjabrain.*\\.jar")
 waywall.listen("load", ensure_ninjabrain)
 
 local config = {
 	input = {
-		layout = "ru",
+		-- layout = "en",
 		repeat_rate = 40,
 		repeat_delay = 300,
 
 		sensitivity = normal_sens,
 		confine_pointer = false,
+		remaps = {
+		    ["MB5"] = "F3",
+		}
 	},
 	theme = {
 		background = "#303030ff",
 		-- https://github.com/Smithay/smithay/issues/1894
-		ninb_anchor = "top",
+		ninb_anchor = "right",
 	},
 	window = {
 		fullscreen_width = resolution.w,
@@ -137,16 +144,16 @@ local config = {
 	},
 	actions = Keys.actions({
 		["Ctrl-Super-F"] = waywall.toggle_fullscreen,
-		["*-N"] = function()
+		["*-X"] = function()
 			return ModeManager:toggle("thin")
 		end,
-		["*-P"] = function()
+		["*-semicolon"] = function()
 			return ModeManager:toggle("tall")
 		end,
-		["*-G"] = function()
+		["*-Z"] = function()
 			return ModeManager:toggle("wide")
 		end,
-		["Ctrl-Shift-M"] = function()
+		["Ctrl-Shift-R"] = function()
 			ensure_ninjabrain()
 			helpers.toggle_floating()
 		end,

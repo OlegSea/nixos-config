@@ -78,6 +78,7 @@
 
       # Games
       windowrule=force_tearing:1,title:Minecraft.*
+      windowrule=force_tearing:1,appid:waywall
       windowrule=force_tearing:1,appid:osu!
 
       # Autostart applications

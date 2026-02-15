@@ -6,6 +6,9 @@ in
   imports = [
     inputs.mcsr-nixos.nixosModules.waywall
   ];
+  environment.systemPackages = [
+    mcsrPkgs.ninjabrain-bot
+  ];
   programs.waywall = {
     enable = true;
     config = {
@@ -13,9 +16,9 @@ in
       linkWithSystemd = true;
       programs = [ mcsrPkgs.ninjabrain-bot ];
       files = {
-        thin_bg = ../../../resources/minecraft/mcsr/thin.png;
-        wide_bg = ../../../resources/minecraft/mcsr/wide.png;
-        tall_bg = ../../../resources/minecraft/mcsr/tall.png;
+        thin = ../../../resources/minecraft/mcsr/thin.png;
+        wide = ../../../resources/minecraft/mcsr/wide.png;
+        tall = ../../../resources/minecraft/mcsr/tall.png;
         eye_overlay = ../../../resources/minecraft/mcsr/eye-overlay.png;
       };
 

@@ -37,6 +37,7 @@
         libxkbcommon
         libxt
         libxinerama
+        glfw3-minecraft
       ];
     })
 

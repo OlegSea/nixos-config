@@ -8,6 +8,7 @@
     nerd-fonts.caskaydia-mono
     nerd-fonts.ubuntu-sans
     nerd-fonts.ubuntu-mono
+    noto-fonts
     libqalculate
 
     nemo

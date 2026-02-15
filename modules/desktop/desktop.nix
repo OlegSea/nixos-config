@@ -9,11 +9,14 @@
     nerd-fonts.ubuntu-sans
     nerd-fonts.ubuntu-mono
     noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
     libqalculate
 
     nemo
     nemo-fileroller
     nemo-preview
+    kdePackages.ark
     vlc
     nomacs
   ];

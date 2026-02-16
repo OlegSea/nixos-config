@@ -14,7 +14,7 @@
     tinymist
     package-version-server
     clang-tools
-    notepad-next
+    lua-language-server
 
     # other utils
     termius
@@ -24,6 +24,7 @@
     postman
     claude-code
     claude-code-acp
+    notepad-next
 
     vscode.fhs
   ];

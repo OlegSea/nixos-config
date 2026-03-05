@@ -6,7 +6,7 @@
 
 {
   imports = [
-    ./modules/gnome.nix
+#    ./modules/gnome.nix
     ./modules/git.nix
     ./modules/shell.nix
     ./modules/kitty.nix

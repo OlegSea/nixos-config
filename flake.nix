@@ -109,9 +109,43 @@
           inherit nixosConfigDir;
           inherit inputs;
           inherit system;
+          inherit stylix;
         };
         modules = [
           ./hosts/desktop/configuration.nix
+
+          stylix.nixosModules.stylix
+          niri.nixosModules.niri
+          mango.nixosModules.mango
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {
+              inherit nixosConfigDir;
+              inherit inputs;
+              inherit system;
+            };
+            home-manager.users.olegsea = {
+              imports = [
+                ./home-manager/olegsea/home.nix
+                mango.hmModules.mango
+              ];
+            };
+          }
+        ];
+      };
+
+      nixosConfigurations.oleg-server = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit nixosConfigDir;
+          inherit inputs;
+          inherit system;
+        };
+        modules = [
+          ./hosts/server/configuration.nix
         ];
       };
     };

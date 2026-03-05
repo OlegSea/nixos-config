@@ -50,5 +50,8 @@
   # bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+
+  # power
+  services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
 }

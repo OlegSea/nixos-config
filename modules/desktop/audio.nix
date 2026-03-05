@@ -3,7 +3,7 @@
 {
 
   environment.systemPackages = with pkgs; [
-    guitarix
+    # guitarix
     qjackctl
     reaper
     helvum

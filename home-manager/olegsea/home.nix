@@ -18,6 +18,7 @@
     ./modules/spotify.nix
     ./modules/noctalia
     ./modules/mango
+    ./modules/mime.nix
   ];
   stylix.targets.niri.enable = false;
   stylix.targets.noctalia-shell.enable = false;

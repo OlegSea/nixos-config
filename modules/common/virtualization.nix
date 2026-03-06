@@ -7,11 +7,11 @@
 
 {
   virtualisation.spiceUSBRedirection.enable = true;
-  users.groups.libvirtd.members = [ "olegsea" ];
-  virtualisation.libvirtd = {
-    enable = true;
-    onBoot = "start";
-  };
+  # users.groups.libvirtd.members = [ "olegsea" ];
+  # virtualisation.libvirtd = {
+  #   enable = true;
+  #   onBoot = "start";
+  # };
 
   networking = {
     firewall = {

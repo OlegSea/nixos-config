@@ -46,14 +46,14 @@
       bind=SUPER,Down,focusstack,next
 
       # Window movement
-      bind=SUPER+SHIFT,h,exchange_client,l
-      bind=SUPER+SHIFT,j,exchange_client,d
-      bind=SUPER+SHIFT,k,exchange_client,u
-      bind=SUPER+SHIFT,l,exchange_client,r
-      bind=SUPER+SHIFT,Left,exchange_client,l
-      bind=SUPER+SHIFT,Right,exchange_client,r
-      bind=SUPER+SHIFT,Up,exchange_client,u
-      bind=SUPER+SHIFT,Down,exchange_client,d
+      bind=SUPER+SHIFT,h,exchange_client,left
+      bind=SUPER+SHIFT,j,exchange_client,down
+      bind=SUPER+SHIFT,k,exchange_client,up
+      bind=SUPER+SHIFT,l,exchange_client,right
+      bind=SUPER+SHIFT,Left,exchange_client,left
+      bind=SUPER+SHIFT,Right,exchange_client,right
+      bind=SUPER+SHIFT,Up,exchange_client,up
+      bind=SUPER+SHIFT,Down,exchange_client,down
 
       # Monitor focus
       # bind=SUPER,Comma,spawn_shell,notify-send hello

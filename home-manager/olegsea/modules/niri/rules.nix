@@ -28,7 +28,6 @@
 
       {
         matches = [
-          { app-id = "dev.zed.Zed"; }
           { app-id = "kitty"; }
         ];
         open-on-workspace = "dev";

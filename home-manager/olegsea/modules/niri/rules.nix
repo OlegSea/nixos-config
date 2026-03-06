@@ -4,19 +4,19 @@
     workspaces = {
       "1" = {
         name = "browser";
-        open-on-output = "HDMI-A-1";
+        open-on-output = "DP-1";
       };
       "2" = {
         name = "dev";
-        open-on-output = "HDMI-A-1";
+        open-on-output = "DP-1";
       };
       "3" = {
         name = "social";
-        open-on-output = "eDP-1";
+        open-on-output = "HDMI-A-1";
       };
       "4" = {
         name = "misc";
-        open-on-output = "eDP-1";
+        open-on-output = "HDMI-A-1";
       };
     };
     window-rules = [

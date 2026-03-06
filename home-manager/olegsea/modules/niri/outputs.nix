@@ -8,14 +8,14 @@
         height = 1080;
         refresh = 165.001;
       };
-      variable-refresh-rate = "on-demand";
+      variable-refresh-rate = true;
       scale = 1;
       transform = {
         rotation = 0;
         flipped = false;
       };
       position = {
-        x = 0;
+        x = 1920;
         y = 0;
       };
     };
@@ -24,16 +24,16 @@
       mode = {
         width = 1920;
         height = 1080;
-        refresh = 180.001;
+        refresh = 74.973;
       };
-      variable-refresh-rate = "on-demand";
+      variable-refresh-rate = true;
       scale = 1;
       transform = {
         rotation = 0;
         flipped = false;
       };
       position = {
-        x = 1440;
+        x = 0;
         y = 0;
       };
     };

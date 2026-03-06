@@ -19,11 +19,11 @@ in
       }
       # { argv = [ "${pkgs.waybar}/bin/waybar" ]; }
       # { argv = [ "${pkgs.swaynotificationcenter}/bin/swaync" ]; }
-      {
-        argv = [
-          "${noctalia}/bin/noctalia-shell"
-        ];
-      }
+      # {
+      #   argv = [
+      #     "${noctalia}/bin/noctalia-shell"
+      #   ];
+      # }
       { argv = [ "${pkgs.vivaldi}/bin/vivaldi" ]; }
       { argv = [ "${pkgs.kitty}/bin/kitty" ]; }
       { argv = [ "${pkgs.spotify}/bin/spotify" ]; }

@@ -21,6 +21,7 @@
       env=XCURSOR_SIZE,16
       env=QT_AUTO_SCREEN_SCALE_FACTOR,1
       env=XDG_PICTURES_DIR,/home/olegsea/Pictures
+      env=SDL_VIDEODRIVER,wayland
 
       # Layout settings
       nmaster=1

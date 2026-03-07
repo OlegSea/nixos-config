@@ -359,7 +359,7 @@
         enabled = true;
         location = "top_right";
         lowUrgencyDuration = 3;
-        monitors = [ "eDP-1" ];
+        monitors = [ "HDMI-A-1" ];
         normalUrgencyDuration = 8;
         overlayLayer = true;
         respectExpireTimeout = false;

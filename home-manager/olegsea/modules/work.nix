@@ -7,6 +7,8 @@
     zathura
     onlyoffice-desktopeditors
     libreoffice
+
+    lmstudio
   ];
 
   programs.zathura = {

@@ -27,6 +27,7 @@
     heroic
     pciutils
     lshw
+    nvtopPackages.full
 
     # Minecartf
     jdk17
@@ -54,9 +55,11 @@
   networking.firewall.allowedTCPPorts = [
     34197
     25566
+    1234
   ];
   networking.firewall.allowedUDPPorts = [
     34197
     25566
+    1234
   ];
 }

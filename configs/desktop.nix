@@ -10,6 +10,7 @@
     ../modules/desktop/niri
     ../modules/desktop/noctalia
     ../modules/desktop/theme
+    ../modules/desktop/dev
   ];
 
   # Packages

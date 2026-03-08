@@ -3,6 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../configs/desktop.nix
+    ../../modules/ai.nix
   ];
 
   nixpkgs.config.cudaSupport = true;

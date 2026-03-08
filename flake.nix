@@ -52,6 +52,8 @@
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
+    lazyvim.url = "github:pfassina/lazyvim-nix";
+
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
   };
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   environment.systemPackages = with pkgs; [
     remmina
@@ -19,12 +19,13 @@
     172.25.1.100 repo-zvirt.orionsoft.ru
   '';
 
-  security.pki.certificateFiles = [
-    ../secrets/cert-1.age
-    ../secrets/cert-2.age
-    ../secrets/cert-3.age
-    ../secrets/cert-4.age
-  ];
+  # TODO: enable when actually switching to this config
+  # security.pki.certificateFiles = [
+  #   config.age.secrets.cert-1.path
+  #   config.age.secrets.cert-2.path
+  #   config.age.secrets.cert-3.path
+  #   config.age.secrets.cert-4.path
+  # ];
 
   hm = {
     programs.zathura = {

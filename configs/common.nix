@@ -10,6 +10,7 @@
     ../modules/containers.nix
     ../modules/virtualization.nix
     ../modules/bypass.nix
+    ../modules/keepassxc.nix
   ];
 
   # System things
@@ -134,7 +135,5 @@
     btop
     psmisc
     usbutils
-
-    keepassxc
   ];
 }

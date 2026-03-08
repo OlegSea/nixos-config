@@ -15,6 +15,8 @@
     qjackctl
     reaper
     helvum
+
+    networkmanagerapplet
   ];
 
   # Notifications

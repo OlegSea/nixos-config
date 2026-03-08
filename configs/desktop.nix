@@ -12,6 +12,7 @@
     ../modules/desktop/desktop.nix
     ../modules/desktop/kitty.nix
     ../modules/desktop/obs.nix
+    ../modules/desktop/audio.nix
     ../modules/desktop/discord.nix
     ../modules/desktop/spotify.nix
 

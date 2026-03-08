@@ -6,7 +6,7 @@
     {
       services.zapret-discord-youtube = {
         enable = true;
-        config = "general (SIMPLE FAKE)";
+        configName = "general (SIMPLE FAKE)";
       };
     }
   ];

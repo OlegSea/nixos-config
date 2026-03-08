@@ -136,5 +136,6 @@
     btop
     psmisc
     usbutils
+    lshw
   ];
 }

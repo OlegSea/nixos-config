@@ -48,6 +48,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mcsr-nixos = {
+      url = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixcord.url = "github:FlameFlag/nixcord";
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";

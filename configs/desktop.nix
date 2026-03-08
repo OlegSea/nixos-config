@@ -2,24 +2,36 @@
 {
   imports = [
     ./common.nix
+
     ../modules/work.nix
     ../modules/rclone.nix
+
     ../modules/devices/tablet.nix
     ../modules/devices/logitech.nix
+
     ../modules/desktop/desktop.nix
     ../modules/desktop/kitty.nix
+    ../modules/desktop/obs.nix
     ../modules/desktop/discord.nix
     ../modules/desktop/spotify.nix
+
     ../modules/desktop/niri
     ../modules/desktop/noctalia
     ../modules/desktop/theme
     ../modules/desktop/dev
-    ../modules/desktop/dev
+
+    ../modules/desktop/games/tools.nix
+    ../modules/desktop/games/minecraft.nix
+    ../modules/desktop/games/steam.nix
+    ../modules/desktop/games/osu.nix
   ];
 
   # Packages
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
+
+    pciutils
+    nvtopPackages.full
   ];
 
   # Notifications
@@ -36,6 +48,16 @@
   };
 
   programs.noisetorch.enable = true;
+
+  # Graphics
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  environment.variables = {
+    GSK_RENDERER = "ngl";
+  };
 
   # Login
   services.displayManager.gdm.enable = true;

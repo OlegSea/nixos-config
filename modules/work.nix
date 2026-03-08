@@ -7,6 +7,7 @@
     zathura
     onlyoffice-desktopeditors
     libreoffice
+    obsidian
   ];
   networking.networkmanager.plugins = with pkgs; [
     networkmanager-openvpn

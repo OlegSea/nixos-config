@@ -55,28 +55,28 @@
 - [x] /flake/modules/common/core.nix
 - [x] /flake/modules/common/default.nix
 - [x] /flake/modules/common/nh.nix
-- [ ] /flake/modules/common/syncthing.nix
+- [x] /flake/modules/common/syncthing.nix
 - [x] /flake/modules/common/users.nix
 - [x] /flake/modules/common/virtualization.nix
 
 ## modules/common/network
 - [x] /flake/modules/common/network/default.nix
-- [ ] /flake/modules/common/network/extra.nix
+- [x] /flake/modules/common/network/extra.nix
 - [x] /flake/modules/common/network/vpn.nix
 - [x] /flake/modules/common/network/zapret.nix
 
 
 
 ## modules/desktop
-- [ ] /flake/modules/desktop/audio.nix
+- [x] /flake/modules/desktop/audio.nix
 - [ ] /flake/modules/desktop/default.nix
-- [ ] /flake/modules/desktop/desktop.nix
+- [x] /flake/modules/desktop/desktop.nix
 - [ ] /flake/modules/desktop/devices.nix
 - [ ] /flake/modules/desktop/fingerprint.nix
 - [ ] /flake/modules/desktop/gaming.nix
 - [ ] /flake/modules/desktop/rclone.nix
 - [ ] /flake/modules/desktop/stylix.nix
-- [ ] /flake/modules/desktop/tiling.nix
+- [x] /flake/modules/desktop/tiling.nix
 
 ## modules/desktop/mcsr
 - [ ] /flake/modules/desktop/mcsr/default.nix

@@ -4,19 +4,19 @@
 - [ ] /flake/flake.nix
 
 ## home-manager/olegsea
-- [ ] /flake/home-manager/olegsea/home.nix
+- [x] /flake/home-manager/olegsea/home.nix
 
 ## home-manager/olegsea/modules/dev
-- [ ] /flake/home-manager/olegsea/modules/dev/default.nix
-- [ ] /flake/home-manager/olegsea/modules/dev/direnv.nix
-- [ ] /flake/home-manager/olegsea/modules/dev/nvim.nix
-- [ ] /flake/home-manager/olegsea/modules/dev/zed.nix
+- [x] /flake/home-manager/olegsea/modules/dev/default.nix
+- [x] /flake/home-manager/olegsea/modules/dev/direnv.nix
+- [x] /flake/home-manager/olegsea/modules/dev/nvim.nix
+- [x] /flake/home-manager/olegsea/modules/dev/zed.nix
 
 ## home-manager/olegsea/modules
-- [ ] /flake/home-manager/olegsea/modules/discord.nix
-- [ ] /flake/home-manager/olegsea/modules/git.nix
-- [ ] /flake/home-manager/olegsea/modules/gnome.nix
-- [ ] /flake/home-manager/olegsea/modules/kitty.nix
+- [x] /flake/home-manager/olegsea/modules/discord.nix
+- [x] /flake/home-manager/olegsea/modules/git.nix
+- [x] /flake/home-manager/olegsea/modules/gnome.nix
+- [x] /flake/home-manager/olegsea/modules/kitty.nix
 - [x] /flake/home-manager/olegsea/modules/mime.nix
 - [x] /flake/home-manager/olegsea/modules/niri/appearance.nix
 - [x] /flake/home-manager/olegsea/modules/niri/autostart.nix
@@ -26,9 +26,9 @@
 - [x] /flake/home-manager/olegsea/modules/niri/outputs.nix
 - [x] /flake/home-manager/olegsea/modules/niri/rules.nix
 - [x] /flake/home-manager/olegsea/modules/noctalia/default.nix
-- [ ] /flake/home-manager/olegsea/modules/security.nix
+- [x] /flake/home-manager/olegsea/modules/security.nix
 - [x] /flake/home-manager/olegsea/modules/shell.nix
-- [ ] /flake/home-manager/olegsea/modules/spotify.nix
+- [x] /flake/home-manager/olegsea/modules/spotify.nix
 - [x] /flake/home-manager/olegsea/modules/work.nix
 
 ## home-manager/olegsea/modules/mango
@@ -69,17 +69,17 @@
 
 ## modules/desktop
 - [x] /flake/modules/desktop/audio.nix
-- [ ] /flake/modules/desktop/default.nix
+- [x] /flake/modules/desktop/default.nix
 - [x] /flake/modules/desktop/desktop.nix
-- [ ] /flake/modules/desktop/devices.nix
-- [ ] /flake/modules/desktop/fingerprint.nix
-- [ ] /flake/modules/desktop/gaming.nix
-- [ ] /flake/modules/desktop/rclone.nix
-- [ ] /flake/modules/desktop/stylix.nix
+- [x] /flake/modules/desktop/devices.nix
+- [x] /flake/modules/desktop/fingerprint.nix
+- [x] /flake/modules/desktop/gaming.nix
+- [x] /flake/modules/desktop/rclone.nix
+- [x] /flake/modules/desktop/stylix.nix
 - [x] /flake/modules/desktop/tiling.nix
 
 ## modules/desktop/mcsr
-- [ ] /flake/modules/desktop/mcsr/default.nix
+- [x] /flake/modules/desktop/mcsr/default.nix
 
 
 
@@ -101,4 +101,4 @@
 
 # random
 - [x] keepassxc
-- [ ] networkmanagerapplet
+- [x] networkmanagerapplet

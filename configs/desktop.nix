@@ -3,6 +3,9 @@
   imports = [
     ./common.nix
     ../modules/work.nix
+    ../modules/rclone.nix
+    ../modules/devices/tablet.nix
+    ../modules/devices/logitech.nix
     ../modules/desktop/desktop.nix
     ../modules/desktop/kitty.nix
     ../modules/desktop/discord.nix
@@ -11,15 +14,11 @@
     ../modules/desktop/noctalia
     ../modules/desktop/theme
     ../modules/desktop/dev
+    ../modules/desktop/dev
   ];
 
   # Packages
   environment.systemPackages = with pkgs; [
-    # guitarix
-    qjackctl
-    reaper
-    helvum
-
     networkmanagerapplet
   ];
 

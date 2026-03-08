@@ -4,6 +4,7 @@
     ./hardware-configuration.nix
     ../../configs/desktop.nix
     ../../modules/ai.nix
+    ../../modules/desktop/audio.nix
   ];
 
   nixpkgs.config.cudaSupport = true;

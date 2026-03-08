@@ -3,6 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../configs/desktop.nix
+    # ../../modules/devices/fingerprint.nix
   ];
 
   # Lid
@@ -46,8 +47,4 @@
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
 
-  # fingerprint - disabled for now
-  # services.fprintd.enable = true;
-  # services.fprintd.tod.enable = true;
-  # services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix;
 }

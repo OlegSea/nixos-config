@@ -11,6 +11,7 @@
     ../modules/virtualization.nix
     ../modules/bypass.nix
     ../modules/keepassxc.nix
+    ../modules/git.nix
   ];
 
   # System things

@@ -1,10 +1,10 @@
-{ inputs, pkgs, ... }:
+{ mcsr-nixos, pkgs, ... }:
 let
-  mcsrPkgs = inputs.mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system};
+  mcsrPkgs = mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system};
 in
 {
   imports = [
-    inputs.mcsr-nixos.nixosModules.waywall
+    mcsr-nixos.nixosModules.waywall
   ];
   environment.systemPackages = [
     mcsrPkgs.ninjabrain-bot

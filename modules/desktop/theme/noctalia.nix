@@ -1,6 +1,6 @@
-{ ... }:
+{ lib, ... }:
 {
-  hm.programs.noctalia-shell = {
+  hm.programs.noctalia-shell = lib.mkForce {
     settings = {
       colorSchemes = {
         darkMode = true;

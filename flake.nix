@@ -38,10 +38,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     winapps = {
       url = "github:winapps-org/winapps";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixcord.url = "github:FlameFlag/nixcord";
 
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
   };

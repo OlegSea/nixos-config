@@ -5,6 +5,7 @@
     ../modules/work.nix
     ../modules/desktop/desktop.nix
     ../modules/desktop/niri
+    ../modules/desktop/noctalia
     ../modules/desktop/theme
   ];
 

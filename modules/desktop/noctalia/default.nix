@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ noctalia, ... }:
 {
   imports = [
     ./bar.nix
@@ -9,7 +9,7 @@
 
   hm = {
     imports = [
-      inputs.noctalia.homeModules.default
+      noctalia.homeModules.default
     ];
 
     programs.noctalia-shell.enable = true;

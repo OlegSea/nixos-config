@@ -42,12 +42,6 @@ let
         (lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "olegsea" ])
 
         inputs.stylix.nixosModules.stylix
-        {
-          # TODO: remove or fix
-          # hm.stylix.targets.niri.enable = false;
-          # hm.stylix.targets.noctalia-shell.enable = false;
-          # hm.stylix.targets.zed.enable = false;
-        }
 
         { networking.hostName = name; }
       ];

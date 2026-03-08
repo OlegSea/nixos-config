@@ -4,6 +4,9 @@
     ./common.nix
     ../modules/work.nix
     ../modules/desktop/desktop.nix
+    ../modules/desktop/kitty.nix
+    ../modules/desktop/discord.nix
+    ../modules/desktop/spotify.nix
     ../modules/desktop/niri
     ../modules/desktop/noctalia
     ../modules/desktop/theme

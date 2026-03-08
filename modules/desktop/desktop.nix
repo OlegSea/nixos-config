@@ -2,7 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     vivaldi
-    kitty
     nemo
     nemo-fileroller
     nemo-preview

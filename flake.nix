@@ -50,6 +50,8 @@
 
     nixcord.url = "github:FlameFlag/nixcord";
 
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
   };
 }

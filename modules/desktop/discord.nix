@@ -1,4 +1,4 @@
-{ pkgs, nixcord }:
+{ pkgs, nixcord, ... }:
 {
   hm = {
     imports = [ nixcord.homeModules.nixcord ];
@@ -16,12 +16,12 @@
           betterGifPicker.enable = true;
           betterGifAltText.enable = true;
           betterSettings.enable = true;
-          blurNSFW.enable = true;
-          clearURLs.enable = true;
+          BlurNSFW.enable = true;
+          ClearURLs.enable = true;
           copyEmojiMarkdown.enable = true;
           copyFileContents.enable = true;
           copyStickerLinks.enable = true;
-          copyUserURLs.enable = true;
+          CopyUserURLs.enable = true;
           crashHandler.enable = true;
           experiments.enable = true;
           expressionCloner.enable = true;
@@ -31,18 +31,18 @@
           fixImagesQuality.enable = true;
           fullSearchContext.enable = true;
           friendsSince.enable = true;
-          fullUserInChatBox.enable = true;
+          fullUserInChatbox.enable = true;
           imageLink.enable = true;
           imageZoom.enable = true;
           memberCount.enable = true;
           messageLogger.enable = true;
-          mutualGroupDMs.enable = true;
+          MutualGroupDMs.enable = true;
           messageLinkEmbeds.enable = true;
           messageClickActions.enable = true;
           mentionAvatars.enable = true;
           noF1.enable = true;
           noOnboardingDelay.enable = true;
-          onePingPerDM = {
+          OnePingPerDM = {
             enable = true;
             allowEveryone = true;
             allowMentions = true;

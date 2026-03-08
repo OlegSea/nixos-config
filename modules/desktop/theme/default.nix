@@ -1,6 +1,9 @@
 { pkgs, ... }:
 {
-  imports = [ ./niri.nix ];
+  imports = [
+    ./niri.nix
+    ./noctalia.nix
+  ];
 
   stylix = with pkgs; {
     enable = true;

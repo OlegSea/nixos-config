@@ -17,25 +17,25 @@
 - [ ] /flake/home-manager/olegsea/modules/git.nix
 - [ ] /flake/home-manager/olegsea/modules/gnome.nix
 - [ ] /flake/home-manager/olegsea/modules/kitty.nix
-- [ ] /flake/home-manager/olegsea/modules/mime.nix
-- [ ] /flake/home-manager/olegsea/modules/niri/appearance.nix
-- [ ] /flake/home-manager/olegsea/modules/niri/autostart.nix
-- [ ] /flake/home-manager/olegsea/modules/niri/default.nix
-- [ ] /flake/home-manager/olegsea/modules/niri/input.nix
-- [ ] /flake/home-manager/olegsea/modules/niri/keybinds.nix
-- [ ] /flake/home-manager/olegsea/modules/niri/outputs.nix
-- [ ] /flake/home-manager/olegsea/modules/niri/rules.nix
-- [ ] /flake/home-manager/olegsea/modules/noctalia/default.nix
+- [x] /flake/home-manager/olegsea/modules/mime.nix
+- [x] /flake/home-manager/olegsea/modules/niri/appearance.nix
+- [x] /flake/home-manager/olegsea/modules/niri/autostart.nix
+- [x] /flake/home-manager/olegsea/modules/niri/default.nix
+- [x] /flake/home-manager/olegsea/modules/niri/input.nix
+- [x] /flake/home-manager/olegsea/modules/niri/keybinds.nix
+- [x] /flake/home-manager/olegsea/modules/niri/outputs.nix
+- [x] /flake/home-manager/olegsea/modules/niri/rules.nix
+- [x] /flake/home-manager/olegsea/modules/noctalia/default.nix
 - [ ] /flake/home-manager/olegsea/modules/security.nix
 - [x] /flake/home-manager/olegsea/modules/shell.nix
 - [ ] /flake/home-manager/olegsea/modules/spotify.nix
 - [x] /flake/home-manager/olegsea/modules/work.nix
 
 ## home-manager/olegsea/modules/mango
-- [ ] /flake/home-manager/olegsea/modules/mango/config.nix
-- [ ] /flake/home-manager/olegsea/modules/mango/default.nix
-- [ ] /flake/home-manager/olegsea/modules/mango/keybinds.nix
-- [ ] /flake/home-manager/olegsea/modules/mango/theme.nix
+- [x] /flake/home-manager/olegsea/modules/mango/config.nix
+- [x] /flake/home-manager/olegsea/modules/mango/default.nix
+- [x] /flake/home-manager/olegsea/modules/mango/keybinds.nix
+- [x] /flake/home-manager/olegsea/modules/mango/theme.nix
 
 ## hosts/desktop
 - [x] /flake/hosts/desktop/configuration.nix

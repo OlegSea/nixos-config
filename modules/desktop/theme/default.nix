@@ -3,10 +3,12 @@
   imports = [
     ./niri.nix
     ./noctalia.nix
+    ./gnome.nix
   ];
 
   stylix = with pkgs; {
     enable = true;
+    polarity = "dark";
     base16Scheme = "${base16-schemes}/share/themes/gruvbox-dark.yaml";
     fonts = {
       serif = {

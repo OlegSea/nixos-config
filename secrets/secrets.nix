@@ -7,6 +7,10 @@ let
   };
   secrets = [
     "rclone-pass"
+    "cert-1"
+    "cert-2"
+    "cert-3"
+    "cert-4"
   ];
 
 in

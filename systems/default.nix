@@ -18,7 +18,8 @@ let
         {
           age.secrets =
             let
-              files = builtins.attrNames (builtins.readDir ../secrets);
+              readDir = dir: builtins.attrNames (builtins.readDir dir);
+              files = readDir ../secrets ++ readDir ../secrets/certificates;
               secrets = builtins.filter (f: lib.hasSuffix ".age" f) files;
             in
             builtins.listToAttrs (

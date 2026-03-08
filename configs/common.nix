@@ -134,5 +134,7 @@
     btop
     psmisc
     usbutils
+
+    keepassxc
   ];
 }

@@ -100,5 +100,5 @@
 - [ ] /flake/modules/server/minecraft/smp.nix
 
 # random
-- [ ] keepassxc
+- [x] keepassxc
 - [ ] networkmanagerapplet

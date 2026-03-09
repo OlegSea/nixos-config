@@ -16,16 +16,19 @@
 
     whitelist = {
       aromaxia = "2b180110-2325-489f-922f-b5e9a1fcbfbc";
-      Renter512 = "92e653a3ca1e4adc929f3e58a0c48a8c";
-      LessiPlay = "57975c41701e46eba4a4a739ab25cdfd";
-      nDoom = "70adda3c65b14ae9b5a32c9d8244e0c8";
-      lasl = "53ff5fbc33614b4e9b7c8ea41e90e49f";
-      kricostro = "77767908994d4f41a28652686cbd5c9b";
-      whoatethefruit = "45a959153f68471d8436ffb512c17810";
-      ifen7 = "c4dd4a066f3a4324bd45a4fcea18f7c8";
-      TurtleTortois = "ea7603266b04417191652a028986c5e0";
-      koivas = "fc68532bca8349d58fe43b1cd974a4ad";
-      whodaddy = "230ab83784d546f4a374f1c7b18e65f7";
+      renter512 = "92e653a3-ca1e-4adc-929f-3e58a0c48a8c";
+      ndoom = "70adda3c-65b1-4ae9-b5a3-2c9d8244e0c8";
+      whodaddy = "230ab837-84d5-46f4-a374-f1c7b18e65f7";
+      lessiplay = "57975c41-701e-46eb-a4a4-a739ab25cdfd";
+      softi = "cd2780d0-252d-47e9-836a-37cf1eed2bb2";
+      lasl = "53ff5fbc-3361-4b4e-9b7c-8ea41e90e49f";
+      styl102 = "550766e8-1ee2-4ab8-9512-abf14911c199";
+      kricostro = "77767908-994d-4f41-a286-52686cbd5c9b";
+      whoatethefruit = "45a95915-3f68-471d-8436-ffb512c17810";
+      turtletortois = "ea760326-6b04-4171-9165-2a028986c5e0";
+      ifen7 = "c4dd4a06-6f3a-4324-bd45-a4fcea18f7c8";
+      koivas = "fc68532b-ca83-49d5-8fe4-3b1cd974a4ad";
+      speed_addict = "a48f177d-1cb1-4a0a-ae27-dec0371c5585";
     };
 
     serverProperties = {

@@ -1,6 +1,7 @@
 { pkgs, noctalia, ... }:
 {
   imports = [
+    noctalia.nixosModules.default
     ./bar.nix
     ./launcher.nix
     ./system.nix
@@ -10,6 +11,8 @@
   environment.systemPackages = with pkgs; [
     gpu-screen-recorder
   ];
+
+  services.noctalia-shell.enable = true;
 
   hm = {
     imports = [

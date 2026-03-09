@@ -36,18 +36,4 @@
       };
     };
   };
-
-  fileSystems."/mnt/olegdesktop-dav" = {
-    device = "olegdesktop-dav:";
-    fsType = "rclone";
-    options = [
-      "nodev"
-      "nofail"
-      "allow_other"
-      "args2env"
-      "config=/etc/rclone-mnt.conf"
-      "vfs-cache-mode=writes"
-      "dir-cache-time=5s"
-    ];
-  };
 }

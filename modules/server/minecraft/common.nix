@@ -11,4 +11,6 @@
     openFirewall = true;
     managementSystem.systemd-socket.enable = true;
   };
+
+  networking.firewall.allowedUDPPorts = [ 24454 ];
 }

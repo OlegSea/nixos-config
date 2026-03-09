@@ -8,8 +8,14 @@
   imports = [
     copyparty.nixosModules.default
   ];
+
   nixpkgs.overlays = [ copyparty.overlays.default ];
   environment.systemPackages = [ pkgs.copyparty ];
+
+  config.age.secrets.copyparty-pass.owner = "copyparty";
+  config.age.secrets.copyparty-pass.group = "copyparty";
+  config.age.secrets.copyparty-pass.mode = "770";
+
   services.copyparty = {
     enable = true;
     user = "copyparty";

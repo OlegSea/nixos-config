@@ -20,14 +20,15 @@
     172.25.1.100 repo-zvirt.orionsoft.ru
   '';
 
-  security.pki.certificates =
-    let
-      dir = ../resources/certificates;
-      files = builtins.readDir dir;
-    in
-    map (name: builtins.readFile (dir + "/${name}")) (
-      builtins.filter (name: files.${name} == "regular") (builtins.attrNames files)
-    );
+  # TODO: add it back when needed
+  # security.pki.certificates =
+  #   let
+  #     dir = ../resources/certificates;
+  #     files = builtins.readDir dir;
+  #   in
+  #   map (name: builtins.readFile (dir + "/${name}")) (
+  #     builtins.filter (name: files.${name} == "regular") (builtins.attrNames files)
+  #   );
 
   hm = {
     programs.zathura = {

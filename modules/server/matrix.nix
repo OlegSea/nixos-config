@@ -12,9 +12,9 @@ in
     ];
   };
 
-  age.secrets.copyparty-pass.owner = "tuwunel";
-  age.secrets.copyparty-pass.group = "tuwunel";
-  age.secrets.copyparty-pass.mode = "770";
+  age.secrets.matrix-registration-token.owner = "tuwunel";
+  age.secrets.matrix-registration-token.group = "tuwunel";
+  age.secrets.matrix-registration-token.mode = "770";
 
   services.matrix-tuwunel = {
     enable = true;

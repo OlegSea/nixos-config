@@ -7,6 +7,8 @@ let
   };
   secrets = [
     "rclone-pass"
+    "copyparty-pass"
+    "matrix-registration-token"
     "cert-1"
     "cert-2"
     "cert-3"

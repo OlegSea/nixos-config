@@ -60,6 +60,10 @@
 
     lazyvim.url = "github:pfassina/lazyvim-nix";
 
+    copyparty.url = "github:9001/copyparty";
+
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
   };
 }

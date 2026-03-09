@@ -76,6 +76,7 @@
 
   networking.timeServers = options.networking.timeServers.default ++ [ "0.ru.pool.ntp.org" ];
   time.hardwareClockInLocalTime = false;
+  time.timeZone = "Europe/Moscow";
 
   i18n.defaultLocale = "en_US.UTF-8";
 

@@ -8,7 +8,7 @@
       ...
     }@inputs:
     let
-      flakeDir = toString ./.;
+      flakeDir = "/home/olegsea/nixos-config";
       lib = nixpkgs.lib;
     in
     {

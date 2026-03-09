@@ -9,6 +9,9 @@ let
     "rclone-pass"
     "copyparty-pass"
     "matrix-registration-token"
+    "vpn1"
+    "vpn2"
+    "vpn3"
   ];
 
 in

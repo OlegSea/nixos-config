@@ -1,4 +1,9 @@
-{ pkgs, flakeDir, ... }:
+{
+  pkgs,
+  config,
+  flakeDir,
+  ...
+}:
 {
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
@@ -15,7 +20,6 @@
 
       shellAliases = {
         ll = "ls -l";
-        update = "nh os switch ${flakeDir}";
         cl = "clear";
         cd = "z";
         ls = "eza -lh --group-directories-first --icons=auto";
@@ -26,9 +30,9 @@
         edit = "zeditor";
         flake = "cd ${flakeDir} && zeditor .";
         ta = "tmux attach";
-        vpn1 = "sudo sing-box run -c ${flakeDir}/resources/vpn/box1.json";
-        vpn2 = "sudo sing-box run -c ${flakeDir}/resources/vpn/box2.json";
-        vpn3 = "sudo sing-box run -c ${flakeDir}/resources/vpn/box3.json";
+        vpn1 = "sudo sing-box run -c ${config.age.secrets.vpn1.path}";
+        vpn2 = "sudo sing-box run -c ${config.age.secrets.vpn2.path}";
+        vpn3 = "sudo sing-box run -c ${config.age.secrets.vpn3.path}";
         nixenv = "echo \"use flake\" >> .envrc && direnv allow";
       };
       history.size = 10000;

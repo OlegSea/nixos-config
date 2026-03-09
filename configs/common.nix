@@ -132,6 +132,7 @@
     bc
     wget
     traceroute
+    dnsutils
 
     htop
     btop

@@ -9,12 +9,20 @@
     vlc
     nomacs
     yt-dlp
+    qbittorrent
     ffmpeg
+    font-manager
 
+    libqalculate
+    qalculate-qt
+  ];
+
+  fonts.packages = with pkgs; [
     nerd-fonts.caskaydia-cove
     nerd-fonts.caskaydia-mono
     nerd-fonts.ubuntu-sans
     nerd-fonts.ubuntu-mono
+    intel-one-mono
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
@@ -25,7 +33,7 @@
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
-    libqalculate
+    ibm-plex
   ];
 
   hm = {

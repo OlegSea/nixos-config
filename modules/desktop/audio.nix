@@ -5,6 +5,6 @@
     nixpkgs-stable.legacyPackages.x86_64-linux.guitarix
     reaper
     qjackctl
-    helvum
+    crosspipe
   ];
 }

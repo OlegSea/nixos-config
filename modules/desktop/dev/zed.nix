@@ -29,7 +29,7 @@
           light = "One Light";
         };
         buffer_font_family = lib.mkForce "CaskaydiaCove NF";
-        # ui_font_family = "CaskaydiaMono NF";
+        ui_font_family = lib.mkForce "IBM Plex Sans";
 
         agent = {
           always_allow_tool_actions = true;

@@ -16,10 +16,10 @@ in
       linkWithSystemd = true;
       programs = [ mcsrPkgs.ninjabrain-bot ];
       files = {
-        thin = ../../../resources/minecraft/mcsr/thin.png;
-        wide = ../../../resources/minecraft/mcsr/wide.png;
-        tall = ../../../resources/minecraft/mcsr/tall.png;
-        eye_overlay = ../../../resources/minecraft/mcsr/eye-overlay.png;
+        thin = ../../../../resources/minecraft/mcsr/thin.png;
+        wide = ../../../../resources/minecraft/mcsr/wide.png;
+        tall = ../../../../resources/minecraft/mcsr/tall.png;
+        eye_overlay = ../../../../resources/minecraft/mcsr/eye-overlay.png;
       };
 
       source = ./waywall.lua;

@@ -30,6 +30,9 @@ let
                 };
               }) secrets
             );
+          age.identityPaths = [
+            "/home/olegsea/.ssh/id_ed25519"
+          ];
         }
 
         inputs.home-manager.nixosModules.home-manager

@@ -15,6 +15,7 @@
     ../modules/desktop/audio.nix
     ../modules/desktop/discord.nix
     ../modules/desktop/spotify.nix
+    ../modules/desktop/social.nix
 
     ../modules/desktop/niri
     ../modules/desktop/noctalia

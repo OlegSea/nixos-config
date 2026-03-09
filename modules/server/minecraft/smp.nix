@@ -7,7 +7,7 @@
 
   services.minecraft-servers.servers.smp = {
     enable = true;
-    package = pkgs.fabricServers.fabric-1_21_10;
+    package = pkgs.fabricServers.fabric-1_21_11;
 
     operators = {
       olegsea = "f423d004-b056-4f79-87b3-a0fc33cb9acf";
@@ -19,7 +19,7 @@
       bushbush = "7523d0d5-1640-45d1-bc38-12155a8efd30";
       Renter512 = "92e653a3ca1e4adc929f3e58a0c48a8c";
       LessiPlay = "57975c41701e46eba4a4a739ab25cdfd";
-      doomNL = "70adda3c65b14ae9b5a32c9d8244e0c8";
+      nDoom = "70adda3c65b14ae9b5a32c9d8244e0c8";
       lasl = "53ff5fbc33614b4e9b7c8ea41e90e49f";
       kricostro = "77767908994d4f41a28652686cbd5c9b";
       whoatethefruit = "45a959153f68471d8436ffb512c17810";
@@ -44,56 +44,57 @@
       mods = pkgs.linkFarmFromDrvs "mods" (
         builtins.attrValues {
           disable-end = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/26FOsJLr/versions/M9RRh6lk/noend-0.5-1.21.10-BETA.jar";
-            sha512 = "9cefcc830d8ab6c2e8c28d4c26b7a7c97c1bd8ee27ca409f8c684b992408b6d52c2a7d22e452277dc76ff05c632112dc0eaf5df7df74a460b6533b5aba884ad9";
+            url = "https://cdn.modrinth.com/data/26FOsJLr/versions/kYuqbqon/Disable%20End-0.7-1.21.11-BETA.jar";
+            sha512 = "fc7170a96f720bd69e77c5d440e381f22f8fe5a106e34d39598ddac23503893d83a0bc9d16b1873e236d18e936a7d7303ed28484d59caf517e5e1fea7b7a79ea";
           };
+
           owo-lib = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/ccKDOlHs/versions/dZPuIa4j/owo-lib-0.12.24%2B1.21.9.jar";
-            sha512 = "2313b8bfb79a098e5bbb6642eed4f76feb464dd65b320668f9146588973f3f236e9644fb77dd3b4a8e2057fd63037dcc1d969da7944b8388e69321e9a1f2b21d";
+            url = "https://cdn.modrinth.com/data/ccKDOlHs/versions/33Ei8Thm/owo-lib-0.13.0%2B1.21.11.jar";
+            sha512 = "acdd14f068a1751ec9e9baa4c6febc1a807a522ada80c2d999abf07e4a5693892fc92497f13043fbb7fc6e04c1eb42fb59a364a6ef813302f60833355a489c2e";
           };
           emoji = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/q7vRRpxU/versions/nR4TD20V/emoji-type-2.3.3-1.21.10-fabric.jar";
-            sha512 = "014c9e232c77ddd7f196273950bd8e62cd1a45206c67af418024e0fa57b958902a08ac9e811291db939a3f91d13e21c0c0cfa8aca3d73db98bf5dfd82e935ce9";
+            url = "https://cdn.modrinth.com/data/q7vRRpxU/versions/6RHnbOv3/emoji-type-3.0.0-1.21.10-fabric.jar";
+            sha512 = "ee26d2592e2f783b98a0faaacc1688ed7268da5c2c70a5c455b8d2dcb1cec4584175c89431440ecb3d785bb53b251585eeddfa5b2bdc42dd6e030662b5cbfdb3";
           };
           lithium = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/NsswKiwi/lithium-fabric-0.20.1%2Bmc1.21.10.jar";
-            sha512 = "79b2892d123f3bb12649927dd8fccc25c955ff38a19f3aba7cd0180c4cf5506c2a76d49418b13050f90bba7bb59f3623af06e8a275e2ae8c63808084043902bb";
+            url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/qvNsoO3l/lithium-fabric-0.21.3%2Bmc1.21.11.jar";
+            sha512 = "2883739303f0bb602d3797cc601ed86ce6833e5ec313ddce675f3d6af3ee6a40b9b0a06dafe39d308d919669325e95c0aafd08d78c97acd976efde899c7810fd";
           };
           krypton = pkgs.fetchurl {
             url = "https://cdn.modrinth.com/data/fQEb0iXm/versions/O9LmWYR7/krypton-0.2.10.jar";
             sha512 = "4dcd7228d1890ddfc78c99ff284b45f9cf40aae77ef6359308e26d06fa0d938365255696af4cc12d524c46c4886cdcd19268c165a2bf0a2835202fe857da5cab";
           };
           c2me = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/VSNURh3q/versions/uNick7oj/c2me-fabric-mc1.21.10-0.3.5.1.0.jar";
-            sha512 = "4d079c872ab910fd65a6c9e8709c7050178626f7125c849389ca38388e19995bd874e071e86e6acf6fbefaa2f294fdbebecb9af8444a908b9a3de894d807c4db";
+            url = "https://cdn.modrinth.com/data/VSNURh3q/versions/vsiqVtu6/c2me-fabric-mc1.21.11-0.3.7%2Balpha.0.9.jar";
+            sha512 = "b2f92ef8a6dc7473305211c43dd54d509cb8a0dc2bbbd89e9267efb35b0a9871d0bb1a9b3c3e5c349bafa1a60567915e19f50d2b58bb90608556f93b290d72f6";
           };
           sit = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/EsYqsGV4/versions/wOMpgPKm/sit%21-1.2.5.1%2B1.21.9-1.21.10.jar";
-            sha512 = "85cc5c0881aaf803a2df9ea89e05602b2bac4bd1871c7c04eddb5b6e1afd5c8c12ecac3d55aec236f280a1f34af69efded8596365cbb34ca55a3eaeab8d57741";
+            url = "https://cdn.modrinth.com/data/EsYqsGV4/versions/xy4C23w4/sit%21-1.2.5.2%2B1.21.11.jar";
+            sha512 = "2c53a85dcaf9db9866e99e06bec8b0f678b47ab2dc055ea02dd1aac14edd870043ade70e90e6628304f451d97f0c7aeee124863d5bef3d5678999d315ed678c5";
           };
           fabric-api = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/dQ3p80zK/fabric-api-0.138.3%2B1.21.10.jar";
-            sha512 = "dc73a3653c299476d1f70cb692c4e35ac3f694b3b0873e3d0b729e952e992b878d1a8e0b1d1049a442a0d483d3068073194f15af52ea9938544616e20433cc38";
+            url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/yGAe1owa/fabric-api-0.116.9%2B1.21.1.jar";
+            sha512 = "e643876079b950aef9aad3eee8d27046305895e8d0f595f7f95010839adeaa25c55a6dc8624ccfba1201194d6598fcbc11f23a7a553ccefbb8c0ceacf388bb79";
           };
           cloth-config = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/9s6osm5g/versions/qMxkrrmq/cloth-config-20.0.149-fabric.jar";
-            sha512 = "df1d9e0349dc64fc0859f17b65b67b0d7745a26b4905e87fc148ddebc0285de51a3255848599f0d5ee24f6aab00fbac4849d40bb9052936eaa452d216c7ada62";
+            url = "https://cdn.modrinth.com/data/9s6osm5g/versions/xuX40TN5/cloth-config-21.11.153-fabric.jar";
+            sha512 = "8f455489d4b71069e998568cf4e1450116f4360a4eb481cd89117f629c6883164886cf63ca08ac4fc929dd13d1112152755a6216d4a1498ee6406ef102093e51";
           };
           otter-lib = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/zVVpzurY/versions/zlJvj7Xn/otterlib-0.2.2.1%2B1.21.10-fabric.jar";
-            sha512 = "d421fbd9c3fa10dc4afcd54687dfb1099e735a695015716356ed7a554c98a519cb94a6a22a28195c5ce4ffded3d415423659abd82368dacf0cbbf8df817c87ed";
+            url = "https://cdn.modrinth.com/data/zVVpzurY/versions/97STrMee/otterlib-0.2.2.1%2B1.21.11-fabric.jar";
+            sha512 = "3f62f95d620f5e5a476120b97232847607edb2e2559e0ef282650ce033e4d778a586539614fc3222975999b380f1c1d782813bb190a2677c7ab1f828ce575aac";
           };
           armor-stands = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/PFwYNrHb/versions/7Bjl145c/ArmorPoser-fabric-1.21.10-12.3.0.jar";
-            sha512 = "964bcf694c690e45250eeebc67bbc34b5a96605cfb61e35ada6a20679159369cd8ef0efab7d5eb364c6db5b520d52c9190a5397d08cab8580276755149d23db8";
+            url = "https://cdn.modrinth.com/data/PFwYNrHb/versions/pqoCZONH/ArmorPoser-fabric-1.21.11-13.2.0.jar";
+            sha512 = "7d83b60cde24e5ffd00f14a3adc333cdbdedc2cdebff9249de1ca33bc190479b1b5adb8d0c9903bf32bb5938608d8ab0121edbfca0f6eb77380b72729b7f59fc";
           };
           carpet = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/TQTTVgYE/versions/oiUqSOMA/fabric-carpet-1.21.10-1.4.188%2Bv251016.jar";
-            sha512 = "dfab93784fcaa73b20854857063025d36a2f7c27397cc64b141fe2c85024993a87936016ac823c2c945f27314b9938aa57e06b55676a1c349c121b445ecfe213";
+            url = "https://cdn.modrinth.com/data/TQTTVgYE/versions/HzPcczDK/fabric-carpet-1.21.11-1.4.194%2Bv251223.jar";
+            sha512 = "1135807e44b34a628c89674a4df94d617120aea932c24c7d4a375410103884e94713b4252d29035d1722d149cc65465afef24eafbfc476c51bc64b6fffff57e0";
           };
           servux = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/zQhsx8KF/versions/l6kw0FSN/servux-fabric-1.21.10-0.8.5.jar";
-            sha512 = "13e67184315122f4b5411c78d2c6f3bf77b5dba05dd0c59732089a4916afce1a0b3dba548fc298c5f561fda15dd08ab521f9e98c22bed90c319cf2fe6b2feaf6";
+            url = "https://cdn.modrinth.com/data/zQhsx8KF/versions/wdbe92T5/servux-fabric-1.21.11-0.9.2.jar";
+            sha512 = "0f5efd7707007aa7ecb502e7140baff78919b3c37bb85cb8fd9673442d0446e88e36bc151ecaccf0ef223aca957dbcfb0ef0454d3733ed05349fd562014df544";
           };
         }
       );

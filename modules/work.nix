@@ -20,13 +20,14 @@
     172.25.1.100 repo-zvirt.orionsoft.ru
   '';
 
-  # TODO: enable when actually switching to this config
-  # security.pki.certificateFiles = [
-  #   config.age.secrets.cert-1.path
-  #   config.age.secrets.cert-2.path
-  #   config.age.secrets.cert-3.path
-  #   config.age.secrets.cert-4.path
-  # ];
+  security.pki.certificates =
+    let
+      dir = ../resources/certificates;
+      files = builtins.readDir dir;
+    in
+    map (name: builtins.readFile (dir + "/${name}")) (
+      builtins.filter (name: files.${name} == "regular") (builtins.attrNames files)
+    );
 
   hm = {
     programs.zathura = {

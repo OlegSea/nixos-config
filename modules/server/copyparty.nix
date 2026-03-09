@@ -12,9 +12,9 @@
   nixpkgs.overlays = [ copyparty.overlays.default ];
   environment.systemPackages = [ pkgs.copyparty ];
 
-  config.age.secrets.copyparty-pass.owner = "copyparty";
-  config.age.secrets.copyparty-pass.group = "copyparty";
-  config.age.secrets.copyparty-pass.mode = "770";
+  age.secrets.copyparty-pass.owner = "copyparty";
+  age.secrets.copyparty-pass.group = "copyparty";
+  age.secrets.copyparty-pass.mode = "770";
 
   services.copyparty = {
     enable = true;

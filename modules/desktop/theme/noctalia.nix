@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ ... }:
 {
   hm.stylix.targets.noctalia-shell.enable = false;
   hm.programs.noctalia-shell = {

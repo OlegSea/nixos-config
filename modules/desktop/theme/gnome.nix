@@ -1,8 +1,4 @@
 {
-  config,
-  pkgs,
-  nixosConfigDir,
-  inputs,
   lib,
   ...
 }:

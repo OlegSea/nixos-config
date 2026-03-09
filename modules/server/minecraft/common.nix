@@ -9,5 +9,6 @@
     enable = true;
     eula = true;
     openFirewall = true;
+    managementSystem.systemd-socket.enable = true;
   };
 }

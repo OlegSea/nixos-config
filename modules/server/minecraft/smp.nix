@@ -15,8 +15,7 @@
     };
 
     whitelist = {
-      olegsea = "f423d004-b056-4f79-87b3-a0fc33cb9acf";
-      bushbush = "7523d0d5-1640-45d1-bc38-12155a8efd30";
+      aromaxia = "2b180110-2325-489f-922f-b5e9a1fcbfbc";
       Renter512 = "92e653a3ca1e4adc929f3e58a0c48a8c";
       LessiPlay = "57975c41701e46eba4a4a739ab25cdfd";
       nDoom = "70adda3c65b14ae9b5a32c9d8244e0c8";

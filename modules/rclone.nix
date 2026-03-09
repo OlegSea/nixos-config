@@ -13,27 +13,29 @@
       secrets = {
         pass = config.age.secrets.rclone-pass;
       };
-      mounts."" = {
-        enable = true;
-        mountPoint = "/home/olegsea/Share";
-        options = {
-          allow-non-empty = true;
-          allow-other = true;
-          nodev = true;
-          nofail = true;
-          buffer-size = "256M";
-          cache-dir = "/home/olegsea/.cache/rclone";
-          vfs-cache-mode = "full";
-          vfs-read-chunk-size = "128M";
-          vfs-read-chunk-size-limit = "1G";
-          dir-cache-time = "5000h";
-          poll-interval = "15s";
-          vfs-cache-max-age = "1h";
-          vfs-cache-max-size = "1G";
-          umask = "000";
-          gid = "100";
-        };
-      };
     };
+  };
+
+  hm.systemd.user.services.rclone-webdav-mount = {
+    Unit = {
+      Description = "WebDAV home server mount";
+    };
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+
+    Service =
+      let
+        mountDir = "/home/olegsea/Share";
+      in
+      {
+        Type = "simple";
+        ExecStartPre = "/run/current-system/sw/bin/mkdir -p ${mountDir}";
+        ExecStart = "${pkgs.rclone}/bin/rclone mount --vfs-cache-mode writes --dir-cache-time 5s olegdesktop-dav: ${mountDir}";
+        ExecStop = "/run/current-system/sw/bin/fusermount -u ${mountDir}";
+        Restart = "on-failure";
+        RestartSec = "10s";
+        Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
+      };
   };
 }

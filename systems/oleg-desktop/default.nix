@@ -9,6 +9,11 @@
 
   nixpkgs.config.cudaSupport = true;
 
+  fileSystems."/mnt/external1" = {
+    device = "/dev/disk/by-uuid/15c50dbf-5559-4fac-835f-049384965d6c";
+    fsType = "ext4";
+  };
+
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;

@@ -12,6 +12,7 @@
     ../modules/bypass.nix
     ../modules/keepassxc.nix
     ../modules/git.nix
+    ../modules/nix-ld.nix
   ];
 
   # System things

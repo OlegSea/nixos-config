@@ -26,6 +26,7 @@
     ../modules/desktop/games/minecraft.nix
     ../modules/desktop/games/steam.nix
     ../modules/desktop/games/osu.nix
+    ../modules/desktop/games/emu.nix
   ];
 
   # Packages

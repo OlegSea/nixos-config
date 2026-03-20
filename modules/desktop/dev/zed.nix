@@ -41,6 +41,8 @@
         };
         edit_predictions.mode = "subtle";
 
+        inlay_hints = true;
+
         diagnostics.inline.enabled = true;
 
         vim_mode = true;

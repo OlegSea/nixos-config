@@ -50,14 +50,6 @@
             "lock"
           ];
         };
-        "Super+Alt+L" = {
-          hotkey-overlay.title = "Lock the Screen: swaylock";
-          action.spawn = [ "swaylock" ];
-        };
-        "Super+N" = {
-          hotkey-overlay.title = "Notification daemon";
-          action.spawn-sh = "swaync-client -op";
-        };
 
         "XF86AudioRaiseVolume" = {
           allow-when-locked = true;

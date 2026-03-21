@@ -28,6 +28,7 @@
 
   environment.sessionVariables = {
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+    ALSA_PLUGIN_DIR = "/run/current-system/sw/lib/alsa-lib";
   };
 
   environment.systemPackages = with pkgs; [

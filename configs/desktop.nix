@@ -35,6 +35,8 @@
 
     pciutils
     nvtopPackages.full
+
+    alsa-plugins
   ];
 
   # Notifications
@@ -49,6 +51,15 @@
     pulse.enable = true;
     jack.enable = true;
   };
+
+  environment.etc."asound.conf".text = ''
+    pcm.!default {
+      type pulse
+    }
+    ctl.!default {
+      type pulse
+    }
+  '';
 
   programs.noisetorch.enable = true;
 

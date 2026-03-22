@@ -41,7 +41,9 @@
         };
         edit_predictions.mode = "subtle";
 
-        inlay_hints = true;
+        inlay_hints = {
+          enabled = true;
+        };
 
         diagnostics.inline.enabled = true;
 

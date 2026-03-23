@@ -30,18 +30,26 @@
       };
 
       extras = {
-        lang = {
-          nix.enable = true;
-          python = {
-            enable = true;
-            installDependencies = true;
-            installRuntimeDependencies = true;
-          };
-          rust = {
-            enable = true;
-            installDependencies = true;
-          };
-        };
+        lang = builtins.listToAttrs (
+          builtins.map
+            (w: {
+              name = w;
+              value = {
+                enable = true;
+                installDependencies = true;
+                installRuntimeDependencies = true;
+              };
+            })
+            [
+              "nix"
+              "python"
+              "rust"
+              "json"
+              "markdown"
+              "typescript"
+              "dotnet"
+            ]
+        );
       };
 
       extraPackages = with pkgs; [

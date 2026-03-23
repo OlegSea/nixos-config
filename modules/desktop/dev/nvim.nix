@@ -6,11 +6,6 @@
       enable = true;
 
       plugins = {
-        # colorscheme = ''
-        #   return {
-        #     "ellisonleao/gruvbox.nvim",
-        #   }
-        # '';
         lazyvim = ''
           return {
             "LazyVim/LazyVim",
@@ -35,15 +30,17 @@
       };
 
       extras = {
-        lang.nix.enable = true;
-        lang.python = {
-          enable = true;
-          installDependencies = true;
-          installRuntimeDependencies = true;
-        };
-        lang.rust = {
-          enable = true;
-          installDependencies = true;
+        lang = {
+          nix.enable = true;
+          python = {
+            enable = true;
+            installDependencies = true;
+            installRuntimeDependencies = true;
+          };
+          rust = {
+            enable = true;
+            installDependencies = true;
+          };
         };
       };
 

@@ -6,16 +6,16 @@
       enable = true;
 
       plugins = {
-        colorscheme = ''
-          return {
-            "ellisonleao/gruvbox.nvim",
-          }
-        '';
+        # colorscheme = ''
+        #   return {
+        #     "ellisonleao/gruvbox.nvim",
+        #   }
+        # '';
         lazyvim = ''
           return {
             "LazyVim/LazyVim",
             opts = {
-              colorscheme = "gruvbox",
+              colorscheme = "base16-gruvbox-dark",
             },
           }
         '';
@@ -24,6 +24,7 @@
       config = {
         options = ''
           vim.opt.foldmethod = "manual"
+          vim.opt.clipboard = ""
         '';
         autocmds = ''
           vim.api.nvim_create_autocmd("FocusLost", {
@@ -39,6 +40,10 @@
           enable = true;
           installDependencies = true;
           installRuntimeDependencies = true;
+        };
+        lang.rust = {
+          enable = true;
+          installDependencies = true;
         };
       };
 

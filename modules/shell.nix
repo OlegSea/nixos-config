@@ -60,6 +60,7 @@
       extraConfig = ''
         set-option -g default-shell "${pkgs.zsh}/bin/zsh"
         set -g mouse on
+        set -sg escape-time 5
       '';
 
     };

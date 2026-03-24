@@ -6,11 +6,16 @@
       enable = true;
 
       plugins = {
+        colorscheme = ''
+          return {
+            "ellisonleao/gruvbox.nvim",
+          }
+        '';
         lazyvim = ''
           return {
             "LazyVim/LazyVim",
             opts = {
-              colorscheme = "base16-gruvbox-dark-soft",
+              colorscheme = "gruvbox",
             },
           }
         '';

@@ -96,6 +96,7 @@
   # Network
   networking.networkmanager.enable = true;
   networking.firewall.enable = true;
+  networking.firewall.checkReversePath = "loose";
 
   services.resolved.enable = true;
 

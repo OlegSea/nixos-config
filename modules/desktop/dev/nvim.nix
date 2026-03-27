@@ -35,6 +35,10 @@
       };
 
       extras = {
+        coding.mini-surround.enable = true;
+        editor.dial.enable = true;
+        editor.inc-rename.enable = true;
+        util.mini-hipatterns.enable = true;
         lang = builtins.listToAttrs (
           builtins.map
             (w: {

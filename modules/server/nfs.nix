@@ -8,7 +8,7 @@
     statdPort = 4000;
     extraNfsdConfig = "";
     exports = ''
-      /export *(rw,nohide,insecure,no_subtree_check)
+      /storage/domain *(rw,anonuid=36,anongid=36)
     '';
   };
   networking.firewall = {

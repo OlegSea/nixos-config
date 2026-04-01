@@ -8,7 +8,7 @@
     statdPort = 4000;
     extraNfsdConfig = "";
     exports = ''
-      /export *(rw,anonuid=36,anongid=36)
+      /export *(rw,sync,no_subtree_check,all_squash,anonuid=1000,anongid=1000)
     '';
   };
   networking.firewall = {

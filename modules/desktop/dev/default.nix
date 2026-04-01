@@ -25,7 +25,6 @@
     notepad-next
 
     claude-code
-    claude-code-acp
 
     vscode.fhs
   ];

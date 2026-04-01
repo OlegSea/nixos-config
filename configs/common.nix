@@ -123,6 +123,7 @@
 
     zip
     unzip
+    unrar
     p7zip
 
     vim

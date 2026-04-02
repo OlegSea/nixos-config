@@ -21,6 +21,8 @@
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
 
+    supportedFilesystems = [ "nfs" ];
+
     kernelPackages = pkgs.linuxPackages_zen;
     kernelParams = [
       "hugepages=2048"

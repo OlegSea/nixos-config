@@ -65,6 +65,8 @@
   };
   nixpkgs.config.allowUnfree = true;
 
+  nix.package = pkgs.lixPackageSets.stable.lix;
+
   programs.nh = {
     enable = true;
     clean.enable = true;

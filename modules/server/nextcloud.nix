@@ -8,6 +8,10 @@ in
   age.secrets.nextcloud_pass.group = "nextcloud";
   age.secrets.nextcloud_pass.mode = "770";
 
+  age.secrets.nextcloud_whiteboard_jwt.owner = "nextcloud";
+  age.secrets.nextcloud_whiteboard_jwt.group = "nextcloud";
+  age.secrets.nextcloud_whiteboard_jwt.mode = "770";
+
   services.nextcloud = {
     enable = true;
     package = pkgs.nextcloud33;
@@ -48,6 +52,12 @@ in
       default_phone_region = "RU";
       overwriteprotocol = "https";
     };
+  };
+
+  services.nextcloud-whiteboard-server = {
+    enable = true;
+    settings.NEXTCLOUD_URL = "https://${domain}";
+    secrets = [ config.age.secrets.nextcloud_whiteboard_jwt.path ];
   };
 
   services.nginx.virtualHosts.${domain} = {

@@ -13,6 +13,7 @@ let
     "vpn2"
     "vpn3"
     "nextcloud_pass"
+    "nextcloud_whiteboard_jwt"
   ];
 
 in

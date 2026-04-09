@@ -13,7 +13,9 @@ in
   age.secrets.nextcloud_whiteboard_jwt.group = "nextcloud";
   age.secrets.nextcloud_whiteboard_jwt.mode = "770";
 
-  age.secrets.onlyoffice_jwt = { };
+  age.secrets.onlyoffice_jwt.owner = "onlyoffice";
+  age.secrets.onlyoffice_jwt.group = "onlyoffice";
+  age.secrets.onlyoffice_jwt.mode = "440";
   age.secrets.onlyoffice_nonce.owner = "nginx";
   age.secrets.onlyoffice_nonce.group = "nginx";
   age.secrets.onlyoffice_nonce.mode = "440";

@@ -2,7 +2,7 @@
 
 let
   domain = "next.olegsea.ru";
-  onlyofficeDomain = "office.olegsea.ru";
+  collaboraDomain = "office.olegsea.ru";
 in
 {
   age.secrets.nextcloud_pass.owner = "nextcloud";
@@ -12,13 +12,6 @@ in
   age.secrets.nextcloud_whiteboard_jwt.owner = "nextcloud";
   age.secrets.nextcloud_whiteboard_jwt.group = "nextcloud";
   age.secrets.nextcloud_whiteboard_jwt.mode = "770";
-
-  age.secrets.onlyoffice_jwt.owner = "onlyoffice";
-  age.secrets.onlyoffice_jwt.group = "onlyoffice";
-  age.secrets.onlyoffice_jwt.mode = "440";
-  age.secrets.onlyoffice_nonce.owner = "nginx";
-  age.secrets.onlyoffice_nonce.group = "nginx";
-  age.secrets.onlyoffice_nonce.mode = "440";
 
   services.nextcloud = {
     enable = true;
@@ -37,7 +30,6 @@ in
         mail
         music
         notes
-        onlyoffice
         polls
         spreed
         whiteboard
@@ -69,12 +61,15 @@ in
     secrets = [ config.age.secrets.nextcloud_whiteboard_jwt.path ];
   };
 
-  services.onlyoffice = {
-    enable = true;
-    hostname = onlyofficeDomain;
-    port = 8888;
-    jwtSecretFile = config.age.secrets.onlyoffice_jwt.path;
-    securityNonceFile = config.age.secrets.onlyoffice_nonce.path;
+  virtualisation.oci-containers.containers.collabora = {
+    image = "collabora/code";
+    ports = [ "127.0.0.1:9980:9980" ];
+    environment = {
+      aliasgroup1 = "https://${domain}:443";
+      server_name = collaboraDomain;
+      extra_params = "--o:ssl.enable=false --o:ssl.termination=true";
+    };
+    extraOptions = [ "--restart=always" ];
   };
 
   services.nginx.virtualHosts = {
@@ -83,9 +78,36 @@ in
       forceSSL = true;
     };
 
-    ${onlyofficeDomain} = {
+    ${collaboraDomain} = {
       enableACME = true;
       forceSSL = true;
+
+      locations = {
+        # static files
+        "/browser" = {
+          proxyPass = "http://127.0.0.1:9980";
+          proxyWebsockets = true;
+        };
+        # WOPI discovery
+        "/hosting/discovery" = {
+          proxyPass = "http://127.0.0.1:9980";
+          proxyWebsockets = true;
+        };
+        "/hosting/capabilities" = {
+          proxyPass = "http://127.0.0.1:9980";
+          proxyWebsockets = true;
+        };
+        # main websocket
+        "/cool/" = {
+          proxyPass = "http://127.0.0.1:9980";
+          proxyWebsockets = true;
+        };
+        # Admin Console websocket
+        "/cool/adminws" = {
+          proxyPass = "http://127.0.0.1:9980";
+          proxyWebsockets = true;
+        };
+      };
     };
   };
 }

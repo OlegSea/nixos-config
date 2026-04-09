@@ -27,5 +27,6 @@
     claude-code
 
     vscode.fhs
+    mongodb-compass
   ];
 }

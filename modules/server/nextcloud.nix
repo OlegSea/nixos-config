@@ -14,7 +14,9 @@ in
   age.secrets.nextcloud_whiteboard_jwt.mode = "770";
 
   age.secrets.onlyoffice_jwt = { };
-  age.secrets.onlyoffice_nonce = { };
+  age.secrets.onlyoffice_nonce.owner = "nginx";
+  age.secrets.onlyoffice_nonce.group = "nginx";
+  age.secrets.onlyoffice_nonce.mode = "440";
 
   services.nextcloud = {
     enable = true;

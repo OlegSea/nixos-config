@@ -69,7 +69,6 @@ in
       server_name = collaboraDomain;
       extra_params = "--o:ssl.enable=false --o:ssl.termination=true";
     };
-    extraOptions = [ "--restart=always" ];
   };
 
   services.nginx.virtualHosts = {

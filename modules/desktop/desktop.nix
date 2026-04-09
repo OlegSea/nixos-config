@@ -12,6 +12,7 @@
     qbittorrent
     ffmpeg
     font-manager
+    foliate
 
     libqalculate
     qalculate-qt

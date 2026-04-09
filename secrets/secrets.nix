@@ -15,6 +15,7 @@ let
     "nextcloud_pass"
     "nextcloud_whiteboard_jwt"
     "onlyoffice_jwt"
+    "onlyoffice_nonce"
   ];
 
 in

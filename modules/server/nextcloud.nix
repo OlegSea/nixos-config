@@ -14,6 +14,7 @@ in
   age.secrets.nextcloud_whiteboard_jwt.mode = "770";
 
   age.secrets.onlyoffice_jwt = { };
+  age.secrets.onlyoffice_nonce = { };
 
   services.nextcloud = {
     enable = true;
@@ -69,6 +70,7 @@ in
     hostname = onlyofficeDomain;
     port = 8888;
     jwtSecretFile = config.age.secrets.onlyoffice_jwt.path;
+    securityNonceFile = config.age.secrets.onlyoffice_nonce.path;
   };
 
   services.nginx.virtualHosts = {

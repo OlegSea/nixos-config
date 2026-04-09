@@ -82,10 +82,6 @@ in
     ${onlyofficeDomain} = {
       enableACME = true;
       forceSSL = true;
-      locations."/" = {
-        proxyPass = "http://127.0.0.1:8888";
-        proxyWebsockets = true;
-      };
     };
   };
 }

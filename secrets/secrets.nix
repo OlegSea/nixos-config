@@ -14,6 +14,7 @@ let
     "vpn3"
     "nextcloud_pass"
     "nextcloud_whiteboard_jwt"
+    "onlyoffice_jwt"
   ];
 
 in

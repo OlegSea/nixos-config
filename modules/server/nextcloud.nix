@@ -2,6 +2,7 @@
 
 let
   domain = "next.olegsea.ru";
+  onlyofficeDomain = "office.olegsea.ru";
 in
 {
   age.secrets.nextcloud_pass.owner = "nextcloud";
@@ -11,6 +12,8 @@ in
   age.secrets.nextcloud_whiteboard_jwt.owner = "nextcloud";
   age.secrets.nextcloud_whiteboard_jwt.group = "nextcloud";
   age.secrets.nextcloud_whiteboard_jwt.mode = "770";
+
+  age.secrets.onlyoffice_jwt = { };
 
   services.nextcloud = {
     enable = true;
@@ -33,6 +36,7 @@ in
         polls
         spreed
         whiteboard
+        richdocuments
         ;
     };
     extraAppsEnable = true;
@@ -60,8 +64,26 @@ in
     secrets = [ config.age.secrets.nextcloud_whiteboard_jwt.path ];
   };
 
-  services.nginx.virtualHosts.${domain} = {
-    enableACME = true;
-    forceSSL = true;
+  services.onlyoffice = {
+    enable = true;
+    hostname = onlyofficeDomain;
+    port = 8888;
+    jwtSecretFile = config.age.secrets.onlyoffice_jwt.path;
+  };
+
+  services.nginx.virtualHosts = {
+    ${domain} = {
+      enableACME = true;
+      forceSSL = true;
+    };
+
+    ${onlyofficeDomain} = {
+      enableACME = true;
+      forceSSL = true;
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:8888";
+        proxyWebsockets = true;
+      };
+    };
   };
 }

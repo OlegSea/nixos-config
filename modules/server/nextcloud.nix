@@ -14,6 +14,25 @@ in
     hostName = domain;
     https = true;
 
+    extraApps = {
+      inherit (config.services.nextcloud.package.packages.apps)
+        news
+        contacts
+        calendar
+        tasks
+        forms
+        integration_openai
+        mail
+        music
+        notes
+        onlyoffice
+        polls
+        spreed
+        whiteboard
+        ;
+    };
+    extraAppsEnable = true;
+
     configureRedis = true;
     database.createLocally = true;
 

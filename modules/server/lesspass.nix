@@ -29,7 +29,7 @@ in
       forceSSL = true;
 
       locations."/" = {
-        proxyPass = "http://127.0.0.1:8008";
+        proxyPass = "http://127.0.0.1:8081";
         extraConfig = ''
           # Preserve host and scheme - critical for proper Matrix operation
           proxy_set_header Host $host;

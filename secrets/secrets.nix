@@ -12,10 +12,6 @@ let
     "vpn1"
     "vpn2"
     "vpn3"
-    "nextcloud_pass"
-    "nextcloud_whiteboard_jwt"
-    "onlyoffice_jwt"
-    "onlyoffice_nonce"
   ];
 
 in

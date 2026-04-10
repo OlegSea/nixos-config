@@ -4,11 +4,11 @@ let
 in
 {
   virtualisation.oci-containers.containers = {
-    lesspass = {
+    rockpass = {
       image = "ogarcia/rockpass";
       autoStart = true;
       ports = [
-        "8000:8000"
+        "8008:8000"
       ];
       volumes = [
         "/srv/rockpass:/var/lib/rockpass"
@@ -29,7 +29,7 @@ in
       forceSSL = true;
 
       locations."/" = {
-        proxyPass = "http://127.0.0.1:8000";
+        proxyPass = "http://127.0.0.1:8008";
         extraConfig = ''
           # Preserve host and scheme - critical for proper Matrix operation
           proxy_set_header Host $host;

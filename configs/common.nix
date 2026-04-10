@@ -10,7 +10,7 @@
     ../modules/containers.nix
     ../modules/virtualization.nix
     ../modules/bypass.nix
-    ../modules/keepassxc.nix
+    ../modules/security.nix
     ../modules/git.nix
     ../modules/nix-ld.nix
   ];

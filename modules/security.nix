@@ -1,5 +1,8 @@
-{ ... }:
+{ pkgs, ... }:
 {
+  environment.systemPackages = with pkgs; [
+    lesspass-cli
+  ];
   hm = {
     programs.keepassxc = {
       autostart = true;

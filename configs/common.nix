@@ -105,7 +105,10 @@
   # SSH
   services.openssh = {
     enable = true;
-    ports = [ 2022 ];
+    ports = [
+      2022
+      2023
+    ];
     settings = {
       PasswordAuthentication = true;
       AllowUsers = null;

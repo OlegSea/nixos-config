@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 let
   domain = "lesspass.olegsea.ru";
 in

@@ -23,6 +23,7 @@
     jq
     postman
     notepad-next
+    lazygit
 
     claude-code
 

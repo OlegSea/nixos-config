@@ -1,5 +1,6 @@
-{ nixcord, ... }:
+{ nixcord, pkgs, ... }:
 {
+  environment.systemPackages = with pkgs; [ discord ];
   hm = {
     imports = [ nixcord.homeModules.nixcord ];
 
@@ -47,7 +48,7 @@
             allowEveryone = true;
             allowMentions = true;
           };
-          openInApp.enable = true;
+          openInApp.enable = false;
           permissionFreeWill.enable = true;
           permissionsViewer.enable = true;
           petpet.enable = true;

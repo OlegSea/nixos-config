@@ -9,6 +9,7 @@
   stylix = with pkgs; {
     enable = true;
     polarity = "dark";
+    targets.kmscon.enable = false;
     base16Scheme = "${base16-schemes}/share/themes/gruvbox-dark.yaml";
     fonts = {
       serif = {

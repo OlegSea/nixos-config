@@ -2,7 +2,7 @@
 {
   hm = {
     home.packages = [
-      pkgs.zed-editor
+      pkgs.zed
     ];
     programs.zed-editor = {
       enable = true;

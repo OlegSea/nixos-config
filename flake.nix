@@ -64,6 +64,8 @@
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
+    nix-gaming.url = "github:fufexan/nix-gaming";
+
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
   };
 }

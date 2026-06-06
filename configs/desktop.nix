@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nixpkgs-stable, ... }:
 {
   imports = [
     ./common.nix
@@ -61,7 +61,10 @@
     }
   '';
 
-  programs.noisetorch.enable = true;
+  programs.noisetorch = {
+    enable = true;
+    package = nixpkgs-stable.legacyPackages.x86_64-linux.noisetorch;
+  };
 
   # Graphics
   hardware.graphics = {
@@ -74,7 +77,12 @@
   };
 
   # Login
-  services.displayManager.gdm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+
+    # Enables experimental Wayland support
+    wayland.enable = true;
+  };
 
   # Xorg
   services.xserver.enable = true;

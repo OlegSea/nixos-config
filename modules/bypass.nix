@@ -17,10 +17,12 @@
   environment.systemPackages = with pkgs; [
     xray
     sing-box
-    throne
   ];
 
-  programs.throne.tunMode.enable = true;
+  programs.throne = {
+    enable = true;
+    tunMode.enable = true;
+  };
 
   security.wrappers = {
     xray = {
@@ -40,7 +42,7 @@
     throne-core = {
       owner = "root";
       group = "root";
-      source = "${pkgs.throne.core}/bin/Core";
+      source = "${pkgs.throne.core}/bin/ThroneCore";
       capabilities = "cap_net_admin=ep";
     };
   };

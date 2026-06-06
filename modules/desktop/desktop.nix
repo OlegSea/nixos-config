@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nixpkgs-stable, ... }:
 {
   environment.systemPackages = with pkgs; [
     vivaldi
@@ -9,7 +9,7 @@
     vlc
     nomacs
     yt-dlp
-    qbittorrent
+    nixpkgs-stable.legacyPackages.x86_64-linux.qbittorrent
     ffmpeg
     font-manager
     foliate

@@ -13,40 +13,36 @@
         "Mod+D" = {
           hotkey-overlay.title = "Run an Application launcher";
           action.spawn = [
-            "noctalia-shell"
-            "ipc"
-            "call"
+            "noctalia"
+            "msg"
+            "panel-open"
             "launcher"
-            "toggle"
           ];
         };
         "Mod+C" = {
           hotkey-overlay.title = "See clipboard history";
           action.spawn = [
-            "noctalia-shell"
-            "ipc"
-            "call"
-            "launcher"
+            "noctalia"
+            "msg"
+            "panel-open"
             "clipboard"
           ];
         };
         "Mod+Escape" = {
           hotkey-overlay.title = "Power menu";
           action.spawn = [
-            "noctalia-shell"
-            "ipc"
-            "call"
-            "sessionMenu"
-            "toggle"
+            "noctalia"
+            "msg"
+            "panel-open"
+            "session"
           ];
         };
         "Mod+Alt+L" = {
           hotkey-overlay.title = "Lock the Screen";
           action.spawn = [
-            "noctalia-shell"
-            "ipc"
-            "call"
-            "lockScreen"
+            "noctalia"
+            "msg"
+            "session"
             "lock"
           ];
         };

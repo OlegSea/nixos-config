@@ -16,6 +16,7 @@
     ../modules/desktop/discord.nix
     ../modules/desktop/spotify.nix
     ../modules/desktop/social.nix
+    ../modules/desktop/japanese.nix
 
     ../modules/desktop/niri
     ../modules/desktop/noctalia

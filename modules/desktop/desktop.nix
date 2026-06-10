@@ -14,6 +14,11 @@
     font-manager
     foliate
 
+    mpv
+    lame
+    (pkgs.anki.withAddons [
+      pkgs.ankiAddons.anki-connect
+    ])
     libqalculate
     qalculate-qt
   ];

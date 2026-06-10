@@ -1,8 +1,12 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
 {
   hm = {
     home.packages = [
-      pkgs.zed
+      pkgs.zed-editor
     ];
     programs.zed-editor = {
       enable = true;

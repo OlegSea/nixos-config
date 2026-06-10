@@ -2,7 +2,7 @@
 {
   imports = [
     ./niri.nix
-    ./noctalia.nix
+    # ./noctalia.nix
     ./gnome.nix
   ];
 

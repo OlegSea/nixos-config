@@ -1,10 +1,10 @@
 { pkgs, noctalia, ... }:
 {
   imports = [
-    # ./bar.nix
-    # ./launcher.nix
-    # ./system.nix
-    # ./widgets.nix
+    ./bar.nix
+    ./dock.nix
+    ./idle.nix
+    ./lockscreen.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -17,10 +17,42 @@
       noctalia.homeModules.default
     ];
 
-    programs.noctalia = {
-      # TODO:
+    programs.noctalia.settings = {
+
+      calendar = {
+        account = {
+          personal_google = {
+            name = "Google";
+            type = "google";
+          };
+        };
+      };
+
+      location = {
+        address = "Moscow";
+      };
+      lockscreen = {
+      };
+
+      nightlight = {
+        enabled = true;
+      };
+      notification = {
+        monitors = [ "HDMI-A-1" ];
+      };
+      shell = {
+        niri_overview_type_to_launch_enabled = true;
+        animation = {
+          speed = 1.3;
+        };
+        screenshot = {
+          save_to_file = false;
+        };
+      };
+      
+      
     };
 
-    # programs.noctalia-shell.enable = true;
+    programs.noctalia.enable = true;
   };
 }

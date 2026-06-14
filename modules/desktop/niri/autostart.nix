@@ -7,13 +7,6 @@
   hm = {
     programs.niri.settings = {
       spawn-at-startup = [
-        {
-          argv = [
-            "${pkgs.swaybg}/bin/swaybg"
-            "-i"
-            "${flakeDir}/resources/wallpaper.png"
-          ];
-        }
         { argv = [ "${pkgs.vivaldi}/bin/vivaldi" ]; }
         { argv = [ "${pkgs.vivaldi}/bin/vivaldi" ]; }
         { argv = [ "${pkgs.kitty}/bin/kitty" ]; }

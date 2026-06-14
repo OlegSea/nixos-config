@@ -2,7 +2,7 @@
 {
   imports = [
     ./niri.nix
-    # ./noctalia.nix
+    ./noctalia.nix
     ./gnome.nix
   ];
 
@@ -32,6 +32,5 @@
         name = "Noto Color Emoji";
       };
     };
-    image = ../../../resources/wallpaper.png;
   };
 }

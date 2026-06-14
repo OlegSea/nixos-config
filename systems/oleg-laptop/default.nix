@@ -15,6 +15,7 @@
 
   services.xserver.videoDrivers = [
     "amdgpu"
+    "nvidia"
   ];
   hardware.nvidia = {
     modesetting.enable = true;

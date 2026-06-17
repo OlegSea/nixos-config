@@ -5,6 +5,8 @@
     ../../configs/desktop.nix
     ../../modules/ai.nix
     ../../modules/desktop/audio.nix
+    ../../modules/desktop/games/osu.nix
+    ../../modules/desktop/games/sdvx.nix
   ];
 
   nixpkgs.config.cudaSupport = true;

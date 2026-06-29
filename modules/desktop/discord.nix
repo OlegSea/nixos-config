@@ -7,6 +7,7 @@
     programs.nixcord = {
       enable = true;
       discord.vencord.enable = true;
+      discord.openASAR.enable = false;
       config = {
         themeLinks = [
           "https://raw.githubusercontent.com/shvedes/discord-gruvbox/refs/heads/main/gruvbox-dark.theme.css"

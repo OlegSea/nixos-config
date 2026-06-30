@@ -13,7 +13,7 @@ let
       postBuild = ''
         wrapProgram $out/bin/osu! \
           --set SDL_VIDEODRIVER wayland \
-          --set PIPEWIRE_LATENCY 64/48000 \
+          --set PIPEWIRE_LATENCY 256/48000 \
           --set PIPEWIRE_ALSA "{ alsa.format=S32_LE alsa.rate=48000 alsa.channels=2 alsa.buffer-bytes=1024 alsa.period-bytes=256 }"
       '';
     }

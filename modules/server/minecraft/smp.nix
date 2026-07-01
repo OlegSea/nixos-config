@@ -7,7 +7,7 @@
 
   services.minecraft-servers.servers.smp = {
     enable = true;
-    package = pkgs.fabricServers.fabric-1_21_11;
+    package = pkgs.fabricServers.fabric-26_2;
 
     operators = {
       olegsea = "f423d004-b056-4f79-87b3-a0fc33cb9acf";
@@ -46,58 +46,37 @@
     symlinks = {
       mods = pkgs.linkFarmFromDrvs "mods" (
         builtins.attrValues {
-          disable-end = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/26FOsJLr/versions/kYuqbqon/Disable%20End-0.7-1.21.11-BETA.jar";
-            sha512 = "fc7170a96f720bd69e77c5d440e381f22f8fe5a106e34d39598ddac23503893d83a0bc9d16b1873e236d18e936a7d7303ed28484d59caf517e5e1fea7b7a79ea";
-          };
-
-          owo-lib = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/ccKDOlHs/versions/33Ei8Thm/owo-lib-0.13.0%2B1.21.11.jar";
-            sha512 = "acdd14f068a1751ec9e9baa4c6febc1a807a522ada80c2d999abf07e4a5693892fc92497f13043fbb7fc6e04c1eb42fb59a364a6ef813302f60833355a489c2e";
-          };
-          emoji = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/q7vRRpxU/versions/6RHnbOv3/emoji-type-3.0.0-1.21.10-fabric.jar";
-            sha512 = "ee26d2592e2f783b98a0faaacc1688ed7268da5c2c70a5c455b8d2dcb1cec4584175c89431440ecb3d785bb53b251585eeddfa5b2bdc42dd6e030662b5cbfdb3";
-          };
-          lithium = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/qvNsoO3l/lithium-fabric-0.21.3%2Bmc1.21.11.jar";
-            sha512 = "2883739303f0bb602d3797cc601ed86ce6833e5ec313ddce675f3d6af3ee6a40b9b0a06dafe39d308d919669325e95c0aafd08d78c97acd976efde899c7810fd";
-          };
-          krypton = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/fQEb0iXm/versions/O9LmWYR7/krypton-0.2.10.jar";
-            sha512 = "4dcd7228d1890ddfc78c99ff284b45f9cf40aae77ef6359308e26d06fa0d938365255696af4cc12d524c46c4886cdcd19268c165a2bf0a2835202fe857da5cab";
-          };
           c2me = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/VSNURh3q/versions/vsiqVtu6/c2me-fabric-mc1.21.11-0.3.7%2Balpha.0.9.jar";
-            sha512 = "b2f92ef8a6dc7473305211c43dd54d509cb8a0dc2bbbd89e9267efb35b0a9871d0bb1a9b3c3e5c349bafa1a60567915e19f50d2b58bb90608556f93b290d72f6";
+            url = "https://cdn.modrinth.com/data/VSNURh3q/versions/nvOkOiyi/c2me-fabric-mc26.2-0.4.2-alpha.0.9.jar";
+            sha512 = "31e6ff1f07872e9cdd4532919610df4b53fa2900f41b45df73ebc7ede8fff9379ee9ae3f57d63dba7303d176676d59ac588bbc2adedd317af79fa6a01ad84490";
           };
           sit = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/EsYqsGV4/versions/xy4C23w4/sit%21-1.2.5.2%2B1.21.11.jar";
-            sha512 = "2c53a85dcaf9db9866e99e06bec8b0f678b47ab2dc055ea02dd1aac14edd870043ade70e90e6628304f451d97f0c7aeee124863d5bef3d5678999d315ed678c5";
+            url = "https://cdn.modrinth.com/data/EsYqsGV4/versions/yymwWm0P/sit%21-1.2.6.3%2B26.2.jar";
+            sha512 = "d6d1310de1f77601e45bbb25c5f5a8194053b3dc31b6c70f4f162c598354b1913bc6e07996e6cbf37a6673097444ce845403e52dd850437414d4d4c838f36e79";
           };
           fabric-api = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5tSkVBH/fabric-api-0.141.3%2B1.21.11.jar";
-            sha512 = "c20c017e23d6d2774690d0dd774cec84c16bfac5461da2d9345a1cd95eee495b1954333c421e3d1c66186284d24a433f6b0cced8021f62e0bfa617d2384d0471";
+            url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/Cpy2Px2f/fabric-api-0.154.0%2B26.2.jar";
+            sha512 = "fcdb09692eec3047a9091d942dae08c234fd2c4577d94bfb4f9f5309a5201ff3b247b4f27eeaf3f6bab71a34e5ca82753b3dbf6deeb86ac45fe5429e74892dcf";
           };
           cloth-config = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/9s6osm5g/versions/xuX40TN5/cloth-config-21.11.153-fabric.jar";
-            sha512 = "8f455489d4b71069e998568cf4e1450116f4360a4eb481cd89117f629c6883164886cf63ca08ac4fc929dd13d1112152755a6216d4a1498ee6406ef102093e51";
+            url = "https://cdn.modrinth.com/data/9s6osm5g/versions/Nv3xnWXd/cloth-config-26.2.155.jar";
+            sha512 = "37b1e402f0df5a383656e21a38ee18cdd15cb4ba3fb62fbeba82ef4b959a4479fc32718ac0d9d154a7d9104c5f7315bfa67dbeced0b8ff240b8039d4848d5df1";
           };
           otter-lib = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/zVVpzurY/versions/97STrMee/otterlib-0.2.2.1%2B1.21.11-fabric.jar";
-            sha512 = "3f62f95d620f5e5a476120b97232847607edb2e2559e0ef282650ce033e4d778a586539614fc3222975999b380f1c1d782813bb190a2677c7ab1f828ce575aac";
+            url = "https://cdn.modrinth.com/data/zVVpzurY/versions/3UwHuXqT/paper-0.4.0.0%2B26.2-paper-all.jar";
+            sha512 = "e8e1da51b5984de5657dfe173c93586c94772383d842bf315fc3119b0005c11b52b84c2a34a519cc709dde567f92add750c3b497b482b47c80a95d047a4ac9c3";
           };
           armor-stands = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/PFwYNrHb/versions/pqoCZONH/ArmorPoser-fabric-1.21.11-13.2.0.jar";
-            sha512 = "7d83b60cde24e5ffd00f14a3adc333cdbdedc2cdebff9249de1ca33bc190479b1b5adb8d0c9903bf32bb5938608d8ab0121edbfca0f6eb77380b72729b7f59fc";
+            url = "https://cdn.modrinth.com/data/FlC9CXUY/versions/lV6sGGrC/armorstands-fabric-3.0.4%2B26.2.jar";
+            sha512 = "1c3569c37cfc7fd8a60475372cbbeb6c7e932e29999f11c23cfed95b5aa22d1fdafc4fafe2eca16428dee35b43fcc2f3c9c1d8f4885f390fd0fe63f0463adecb";
           };
           carpet = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/TQTTVgYE/versions/HzPcczDK/fabric-carpet-1.21.11-1.4.194%2Bv251223.jar";
-            sha512 = "1135807e44b34a628c89674a4df94d617120aea932c24c7d4a375410103884e94713b4252d29035d1722d149cc65465afef24eafbfc476c51bc64b6fffff57e0";
+            url = "https://cdn.modrinth.com/data/TQTTVgYE/versions/bGrLxJ8v/fabric-carpet-26.2%2Bv260616.jar";
+            sha512 = "8b8fac6979bd3153f5cfb4faa6bab52e1357eab814492a6658f3c0e1ac2856ad37a626c0a03a0839c39abb7bf56661f77b09d05d10ac01173bcdd373a33c6265";
           };
           servux = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/zQhsx8KF/versions/wdbe92T5/servux-fabric-1.21.11-0.9.2.jar";
-            sha512 = "0f5efd7707007aa7ecb502e7140baff78919b3c37bb85cb8fd9673442d0446e88e36bc151ecaccf0ef223aca957dbcfb0ef0454d3733ed05349fd562014df544";
+            url = "https://cdn.modrinth.com/data/zQhsx8KF/versions/LJbDtH2B/servux-fabric-26.2-0.11.1.jar";
+            sha512 = "6ccc5cea50f062f283665c26101508364f66175221cee18259f044dcd42722d5332f8490f1a1c8b1c49990b013667d297de3ef31be56bee7e650d90073924017";
           };
         }
       );

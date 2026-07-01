@@ -7,7 +7,7 @@
 
   services.minecraft-servers.servers.smp = {
     enable = true;
-    package = pkgs.fabricServers.fabric-26_2;
+    package = pkgs.fabricServers.fabric-26_2.override { jre_headless = pkgs.openjdk25_headless; };
 
     operators = {
       olegsea = "f423d004-b056-4f79-87b3-a0fc33cb9acf";

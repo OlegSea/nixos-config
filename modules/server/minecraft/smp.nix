@@ -63,8 +63,8 @@
             sha512 = "37b1e402f0df5a383656e21a38ee18cdd15cb4ba3fb62fbeba82ef4b959a4479fc32718ac0d9d154a7d9104c5f7315bfa67dbeced0b8ff240b8039d4848d5df1";
           };
           otter-lib = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/zVVpzurY/versions/3UwHuXqT/paper-0.4.0.0%2B26.2-paper-all.jar";
-            sha512 = "e8e1da51b5984de5657dfe173c93586c94772383d842bf315fc3119b0005c11b52b84c2a34a519cc709dde567f92add750c3b497b482b47c80a95d047a4ac9c3";
+            url = "https://cdn.modrinth.com/data/zVVpzurY/versions/TSzkTFkO/otterlib-0.4.0.0%2B26.2-fabric.jar";
+            sha512 = "a911eb45158995b250382137e7e7a0867dd00ab954713db1dc6f58711de16b7fe9bfaab7499510c5d1fa5774bbd1c2c1b38c560c6c9b7d9f1fcc40ac4f6f9a78";
           };
           armor-stands = pkgs.fetchurl {
             url = "https://cdn.modrinth.com/data/FlC9CXUY/versions/lV6sGGrC/armorstands-fabric-3.0.4%2B26.2.jar";

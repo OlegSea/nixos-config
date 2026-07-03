@@ -7,7 +7,7 @@
 
   services.minecraft-servers.servers.smp = {
     enable = true;
-    package = pkgs.fabricServers.fabric-26_2.override { jre_headless = pkgs.openjdk25_headless; };
+    package = pkgs.fabricServers.fabric-26_1_2.override { jre_headless = pkgs.openjdk25_headless; };
 
     operators = {
       olegsea = "f423d004-b056-4f79-87b3-a0fc33cb9acf";
@@ -45,39 +45,53 @@
 
     symlinks = {
       mods = pkgs.linkFarmFromDrvs "mods" (
-        builtins.attrValues {
-          c2me = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/VSNURh3q/versions/nvOkOiyi/c2me-fabric-mc26.2-0.4.2-alpha.0.9.jar";
-            sha512 = "31e6ff1f07872e9cdd4532919610df4b53fa2900f41b45df73ebc7ede8fff9379ee9ae3f57d63dba7303d176676d59ac588bbc2adedd317af79fa6a01ad84490";
+        with builtins;
+        attrValues {
+          a = fetchurl {
+            url = "https://cdn.modrinth.com/data/VSNURh3q/versions/1qBYfTmr/c2me-fabric-mc26.1.2-0.4.0-alpha.0.28.jar";
+            sha512 = "e5a0da868e28a808398bfd62c30ac1fa289ddce59aaeac08bfc3ef88620f78d21269a216344db71d787fd995aad2c58df553e9c16ccf608fb3e843bd43810afe";
           };
-          sit = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/EsYqsGV4/versions/yymwWm0P/sit%21-1.2.6.3%2B26.2.jar";
-            sha512 = "d6d1310de1f77601e45bbb25c5f5a8194053b3dc31b6c70f4f162c598354b1913bc6e07996e6cbf37a6673097444ce845403e52dd850437414d4d4c838f36e79";
+          b = fetchurl {
+            url = "https://cdn.modrinth.com/data/EsYqsGV4/versions/s1ghgeMQ/sit%21-1.2.6.2%2B26.1.jar";
+            sha512 = "91004b5817c153d5324e1692aff7a72c1d3af8a4770ff3f9baad0143099b22b4dcd877f4ab331a3c3038522e8ffe678642cdd4054f9faeb99b8314d0115e8e2f";
           };
-          fabric-api = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/Cpy2Px2f/fabric-api-0.154.0%2B26.2.jar";
-            sha512 = "fcdb09692eec3047a9091d942dae08c234fd2c4577d94bfb4f9f5309a5201ff3b247b4f27eeaf3f6bab71a34e5ca82753b3dbf6deeb86ac45fe5429e74892dcf";
+          c = fetchurl {
+            url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/1F9Sl2ke/fabric-api-0.154.0%2B26.1.2.jar";
+            sha512 = "0f5885ca80716dee547e8e8ec6c2eda137b5591d40d8fb424d9d1d99a3e5c7a6d861ef11590903f9fa18838806de8876e51285c5d830cfa50f518c0217139e78";
           };
-          cloth-config = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/9s6osm5g/versions/Nv3xnWXd/cloth-config-26.2.155.jar";
-            sha512 = "37b1e402f0df5a383656e21a38ee18cdd15cb4ba3fb62fbeba82ef4b959a4479fc32718ac0d9d154a7d9104c5f7315bfa67dbeced0b8ff240b8039d4848d5df1";
+          d = fetchurl {
+            url = "https://cdn.modrinth.com/data/9s6osm5g/versions/GFM8zh9J/cloth-config-26.1.154.jar";
+            sha512 = "8bfb75f2cac0a9910316c6a368a228c0f8f1261ac6f03dec5fba594e1619ac04334a3df4fb29778d61d0b8290d55949371a523d722b35501bf9a2902956d3b17";
           };
-          otter-lib = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/zVVpzurY/versions/TSzkTFkO/otterlib-0.4.0.0%2B26.2-fabric.jar";
-            sha512 = "a911eb45158995b250382137e7e7a0867dd00ab954713db1dc6f58711de16b7fe9bfaab7499510c5d1fa5774bbd1c2c1b38c560c6c9b7d9f1fcc40ac4f6f9a78";
+          e = fetchurl {
+            url = "https://cdn.modrinth.com/data/zVVpzurY/versions/VrPGp6VK/otterlib-0.3.0.1%2B26.1-fabric.jar";
+            sha512 = "608d5774cee8b57b8fe21e2beaddf8d09e175f6526d06418aace3903a8c7428b3305c03caec2b123579fb343d2652619e000727c5e686299c54022aeaa96ea0c";
           };
-          armor-stands = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/FlC9CXUY/versions/lV6sGGrC/armorstands-fabric-3.0.4%2B26.2.jar";
-            sha512 = "1c3569c37cfc7fd8a60475372cbbeb6c7e932e29999f11c23cfed95b5aa22d1fdafc4fafe2eca16428dee35b43fcc2f3c9c1d8f4885f390fd0fe63f0463adecb";
+          f = fetchurl {
+            url = "https://cdn.modrinth.com/data/FlC9CXUY/versions/ctFnRns4/armorstands-fabric-3.0.4%2B26.1.jar";
+            sha512 = "dd138a0fbaf31a35ef9aac9c7b27d459588ed5661b2bcfe94eeee0689e73cf40b814379eb5aa06a4ff6a12eeb2fd9683f08632277c4fb38b5dfdae20ea32b1e2";
           };
-          carpet = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/TQTTVgYE/versions/bGrLxJ8v/fabric-carpet-26.2%2Bv260616.jar";
-            sha512 = "8b8fac6979bd3153f5cfb4faa6bab52e1357eab814492a6658f3c0e1ac2856ad37a626c0a03a0839c39abb7bf56661f77b09d05d10ac01173bcdd373a33c6265";
+          g = fetchurl {
+            url = "https://cdn.modrinth.com/data/TQTTVgYE/versions/ygtmLbO3/fabric-carpet-26.1%2Bv260402.jar";
+            sha512 = "d98b02eb2bd2c7594aac3913c7ddfc8ef6ff724a6b1e86098611e09c303134626eb76e1c9fe910101c6972c8fe0993fb0b21ea99c7affc0e33a0ac64f941954b";
           };
-          servux = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/zQhsx8KF/versions/LJbDtH2B/servux-fabric-26.2-0.11.1.jar";
-            sha512 = "6ccc5cea50f062f283665c26101508364f66175221cee18259f044dcd42722d5332f8490f1a1c8b1c49990b013667d297de3ef31be56bee7e650d90073924017";
+          h = fetchurl {
+            url = "https://cdn.modrinth.com/data/zQhsx8KF/versions/uS1xht5s/servux-fabric-26.1.2-0.10.3.jar";
+            sha512 = "a54927750f83156ce76b009cdb9bf564e0894157d46eaf485947438aa3b5a6bfbc64cf2289b28c1ded7417363c95273fbacda493ef01677e7f780dc2d419a63a";
           };
+          i = fetchurl {
+            url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/rzrH7czY/lithium-fabric-0.24.4%2Bmc26.1.2.jar";
+            sha512 = "5d439660968bc06deea62a3b76ce46efa6907c460602d6e6d70fd5078a22f41acbca5d1177ee8f73a354a59ca3981f33ee20dafddffbf41ff0b4bfbfc657b6ca";
+          };
+          j = fetchurl {
+            url = "https://cdn.modrinth.com/data/uXXizFIs/versions/d5ddUdiB/ferritecore-9.0.0-fabric.jar";
+            sha512 = "d81fa97e11784c19d42f89c2f433831d007603dd7193cee45fa177e4a6a9c52b384b198586e04a0f7f63cd996fed713322578bde9a8db57e1188854ae5cbe584";
+          };
+          k = fetchurl {
+            url = "https://cdn.modrinth.com/data/fQEb0iXm/versions/kYAGItyj/krypton-0.3.0.jar";
+            sha512 = "14233210283a76f3cf435a3b8ddbcbd65a858d2b1a10b88ff643c0a01486dfd2bf1843bd3456cd4fb86cbb3b06f2dea0c4e663b1976a48e96de16d3b5a707ec9";
+          };
+
         }
       );
     };

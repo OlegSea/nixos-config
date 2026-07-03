@@ -6,5 +6,6 @@
     reaper
     qjackctl
     crosspipe
+    easyeffects
   ];
 }

@@ -28,7 +28,7 @@
         lta = "lt -a";
         arch = "distrobox enter arch";
         edit = "zeditor";
-        flake = "cd ${flakeDir} && nvim .";
+        flake = "cd ${flakeDir} && zeditor .";
         ta = "tmux attach";
         vpn1 = "sudo sing-box run -c ${config.age.secrets.vpn1.path}";
         vpn2 = "sudo sing-box run -c ${config.age.secrets.vpn2.path}";

@@ -8,7 +8,7 @@
       enabled = true;
       schema_version = 2;
       widget_order = [
-        "lockscreen-login-box@DP-1"
+        "lockscreen-login-box@DP-2"
         "lockscreen-login-box@HDMI-A-1"
         "lockscreen-widget-0000000000000001"
         "lockscreen-widget-0000000000000002"
@@ -20,12 +20,12 @@
         visible = true;
       };
       widget = {
-        "lockscreen-login-box@DP-1" = {
+        "lockscreen-login-box@DP-2" = {
           box_height = 0.0;
           box_width = 0.0;
           cx = 960.0;
           cy = 957.0;
-          output = "DP-1";
+          output = "DP-2";
           rotation = 0.0;
           type = "login_box";
         };
@@ -43,7 +43,7 @@
           box_width = 592.0;
           cx = 960.0;
           cy = 340.0;
-          output = "DP-1";
+          output = "DP-2";
           rotation = 0.0;
           type = "clock";
           settings = {
@@ -55,7 +55,7 @@
           box_width = 0.0;
           cx = 726.0;
           cy = 658.0;
-          output = "DP-1";
+          output = "DP-2";
           rotation = 0.0;
           type = "fancy_audio_visualizer";
           settings = {
@@ -67,7 +67,7 @@
           box_width = 464.0;
           cx = 1128.0;
           cy = 652.0;
-          output = "DP-1";
+          output = "DP-2";
           rotation = 0.0;
           type = "media_player";
         };

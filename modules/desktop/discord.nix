@@ -27,12 +27,10 @@
           crashHandler.enable = true;
           experiments.enable = true;
           expressionCloner.enable = true;
-          favoriteGifSearch.enable = true;
           fixYoutubeEmbeds.enable = true;
           fixSpotifyEmbeds.enable = true;
           fixImagesQuality.enable = true;
           fullSearchContext.enable = true;
-          friendsSince.enable = true;
           fullUserInChatbox.enable = true;
           imageLink.enable = true;
           imageZoom.enable = true;

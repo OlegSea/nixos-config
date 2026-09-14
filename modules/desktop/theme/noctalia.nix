@@ -1,7 +1,7 @@
-{ ... }:
+{ lib, ... }:
 {
   hm.stylix.targets.noctalia-shell.enable = false;
-  hm.programs.noctalia.settings = {
+  hm.programs.noctalia.settings = lib.mkForce {
     theme = {
       builtin = "Gruvbox";
       source = "builtin";
@@ -19,7 +19,7 @@
         path = "/home/olegsea/nixos-config/resources/wallpapers/wallpaper.jpg";
       };
       monitors = {
-        DP-1 = {
+        DP-2 = {
           path = "/home/olegsea/nixos-config/resources/wallpapers/wallpaper.jpg";
         };
         HDMI-A-1 = {

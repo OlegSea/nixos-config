@@ -1,11 +1,23 @@
-{ pkgs, nixpkgs-stable, ... }:
 {
+  pkgs,
+  nixpkgs-stable,
+  musnix,
+  ...
+}:
+{
+  imports = [
+    musnix.nixosModules.musnix
+  ];
+  musnix.enable = true;
+  users.users.olegsea.extraGroups = [ "audio" ];
+
   environment.systemPackages = with pkgs; [
-    # FIX ME: remove this after https://github.com/nixos/nixpkgs/issues/493717 gets fixed
-    nixpkgs-stable.legacyPackages.x86_64-linux.guitarix
+    guitarix
     reaper
     qjackctl
     crosspipe
     easyeffects
+    yabridge
+    yabridgectl
   ];
 }

@@ -1,16 +1,5 @@
-{ pkgs, zapret-discord-youtube, ... }:
+{ pkgs, ... }:
 {
-  # zapret
-  imports = [
-    zapret-discord-youtube.nixosModules.default
-    {
-      services.zapret-discord-youtube = {
-        enable = true;
-        configName = "general (SIMPLE FAKE)";
-      };
-    }
-  ];
-
   # VPN
   networking.firewall.trustedInterfaces = [ "tun" ];
 

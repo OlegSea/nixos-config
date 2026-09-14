@@ -66,6 +66,6 @@
 
     nix-gaming.url = "github:fufexan/nix-gaming";
 
-    zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
+    musnix.url = "github:musnix/musnix";
   };
 }

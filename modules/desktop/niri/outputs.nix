@@ -2,7 +2,7 @@
 {
   hm = {
     programs.niri.settings = {
-      outputs."DP-1" = {
+      outputs."DP-2" = {
         enable = true;
         mode = {
           width = 1920;

@@ -30,6 +30,7 @@
       koivas = "fc68532b-ca83-49d5-8fe4-3b1cd974a4ad";
       speed_addict = "a48f177d-1cb1-4a0a-ae27-dec0371c5585";
       bunnymonsterrrr = "68cbce28-e525-42b4-afa3-aa3216e46e15";
+      skibble = "504d6c57-44ce-4132-a5be-992afec66b2d";
     };
 
     serverProperties = {

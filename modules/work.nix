@@ -18,6 +18,9 @@
     10.252.207.5 engine.olegsea-repl.local
     10.255.4.200 engine.ps.local
     172.25.1.100 repo-zvirt.orionsoft.ru
+    10.252.197.115 ngh-mhe01.work.test
+    10.252.197.125 ngh-he01.work.test
+    10.252.206.100 trvirt.anton.cloud
   '';
 
   security.pki.certificates =

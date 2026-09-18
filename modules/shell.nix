@@ -8,6 +8,10 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
+  environment.systemPackages = with pkgs; [
+    nnn
+  ];
+
   hm = {
     programs.zsh = {
       enable = true;
@@ -28,6 +32,7 @@
         lta = "lt -a";
         arch = "distrobox enter arch";
         edit = "zeditor";
+        fm = "EDITOR=nvim nnn -e";
         flake = "cd ${flakeDir} && zeditor .";
         ta = "tmux attach";
         vpn1 = "sudo sing-box run -c ${config.age.secrets.vpn1.path}";

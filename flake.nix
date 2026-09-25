@@ -62,6 +62,8 @@
 
     copyparty.url = "github:9001/copyparty";
 
+    llama-cpp.url = "github:PrismML-Eng/llama.cpp";
+
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     nix-gaming.url = "github:fufexan/nix-gaming";

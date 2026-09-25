@@ -1,8 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, llama-cpp, ... }:
 {
   environment.systemPackages = with pkgs; [
     lmstudio
-    (pkgs.callPackage ../packages/llamacpp.nix { })
+    # (pkgs.callPackage ../packages/llamacpp.nix { })
+    llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
   ];
   networking.firewall.allowedTCPPorts = [
     1234

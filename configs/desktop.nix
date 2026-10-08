@@ -6,6 +6,9 @@
     ../modules/work.nix
     ../modules/rclone.nix
 
+    ../modules/desktop/misc-fix.nix
+    ../modules/desktop/appimage.nix
+
     ../modules/devices/tablet.nix
     ../modules/devices/logitech.nix
 

@@ -150,6 +150,8 @@
 
       # Something
       alsa-plugins
+      wayland
+      libGL
     ];
   };
 

@@ -12,6 +12,8 @@ let
     "vpn1"
     "vpn2"
     "vpn3"
+    "ai-endpoint"
+    "ai-token"
   ];
 
 in

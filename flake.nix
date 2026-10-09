@@ -64,6 +64,8 @@
 
     llama-cpp.url = "github:PrismML-Eng/llama.cpp";
 
+    nix-openclaw.url = "github:openclaw/nix-openclaw";
+
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     nix-gaming.url = "github:fufexan/nix-gaming";

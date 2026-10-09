@@ -6,11 +6,12 @@
 
 {
   virtualisation.spiceUSBRedirection.enable = true;
-  # users.groups.libvirtd.members = [ "olegsea" ];
-  # virtualisation.libvirtd = {
-  #   enable = true;
-  #   onBoot = "start";
-  # };
+  users.groups.libvirtd.members = [ "olegsea" ];
+  virtualisation.libvirtd = {
+    enable = true;
+    onBoot = "start";
+    qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+  };
   # FIX ME: wait for libvirtd to stop being a bitch
 
   networking = {
@@ -39,6 +40,7 @@
     virtiofsd
     libguestfs
     virt-viewer
+    dnsmasq
     winapps.packages."${system}".winapps
     winapps.packages."${system}".winapps-launcher
   ];

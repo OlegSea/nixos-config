@@ -1,0 +1,44 @@
+warning: Git tree '/home/olegsea/nixos-config' is dirty
+trace: LazyVim/LazyVim: Using source (v16.0.1)
+trace: folke/lazy.nvim: Using source (v11.17.5)
+warning: olegsea profile: The option `programs.nixcord.config.plugins.OnePingPerDM.enable' defined in `/nix/store/hhfnpma32czw4h3bqpag8dciax0bcmar-source/flake.nix' has been renamed to `programs.nixcord.config.plugins.onePingPerDm.enable'.
+warning: olegsea profile: The option `programs.nixcord.config.plugins.OnePingPerDM.allowMentions' defined in `/nix/store/hhfnpma32czw4h3bqpag8dciax0bcmar-source/flake.nix' has been renamed to `programs.nixcord.config.plugins.onePingPerDm.allowMentions'.
+warning: olegsea profile: The option `programs.nixcord.config.plugins.OnePingPerDM.allowEveryone' defined in `/nix/store/hhfnpma32czw4h3bqpag8dciax0bcmar-source/flake.nix' has been renamed to `programs.nixcord.config.plugins.onePingPerDm.allowEveryone'.
+warning: olegsea profile: The option `programs.nixcord.config.plugins.MutualGroupDMs.enable' defined in `/nix/store/hhfnpma32czw4h3bqpag8dciax0bcmar-source/flake.nix' has been renamed to `programs.nixcord.config.plugins.mutualGroupDms.enable'.
+warning: olegsea profile: The option `programs.nixcord.config.plugins.CopyUserURLs.enable' defined in `/nix/store/hhfnpma32czw4h3bqpag8dciax0bcmar-source/flake.nix' has been renamed to `programs.nixcord.config.plugins.copyUserUrls.enable'.
+warning: olegsea profile: The option `programs.nixcord.config.plugins.ClearURLs.enable' defined in `/nix/store/hhfnpma32czw4h3bqpag8dciax0bcmar-source/flake.nix' has been renamed to `programs.nixcord.config.plugins.clearUrls.enable'.
+warning: olegsea profile: The option `programs.nixcord.config.plugins.BlurNSFW.enable' defined in `/nix/store/hhfnpma32czw4h3bqpag8dciax0bcmar-source/flake.nix' has been renamed to `programs.nixcord.config.plugins.blurNsfw.enable'.
+warning: olegsea profile: Relying on `home.pointerCursor` to enable cursor config generation is deprecated.
+Please update your configuration to explicitly set:
+
+  home.pointerCursor.enable = true;
+
+warning: 'system' has been renamed to/replaced by 'stdenv.hostPlatform.system'
+warning: using or as an identifier is deprecated because it cannot be used in most places (try let or = 1; in or). Use --extra-deprecated-features or-as-identifier to disable this warning.
+         at /nix/store/cj3ap078z97r6ny00bc4652yjzcjwqlk-source/default.nix:67:3:
+             66|   # Or is actually a keyword, but can also be used as a key in an attrset.
+             67|   or = or_;
+               |   ^
+             68|
+warning: cudaPackages.cuda_cccl is deprecated, use cccl instead
+warning: The xorg package set has been deprecated, 'xorg.libXcomposite' has been renamed to 'libxcomposite'
+warning: The xorg package set has been deprecated, 'xorg.libXtst' has been renamed to 'libxtst'
+warning: The xorg package set has been deprecated, 'xorg.libXrandr' has been renamed to 'libxrandr'
+warning: The xorg package set has been deprecated, 'xorg.libXext' has been renamed to 'libxext'
+warning: The xorg package set has been deprecated, 'xorg.libX11' has been renamed to 'libx11'
+warning: The xorg package set has been deprecated, 'xorg.libXfixes' has been renamed to 'libxfixes'
+warning: The xorg package set has been deprecated, 'xorg.libxcb' has been renamed to 'libxcb'
+warning: The xorg package set has been deprecated, 'xorg.libXdamage' has been renamed to 'libxdamage'
+warning: The xorg package set has been deprecated, 'xorg.libxshmfence' has been renamed to 'libxshmfence'
+warning: The xorg package set has been deprecated, 'xorg.libXxf86vm' has been renamed to 'libxxf86vm'
+warning: The xorg package set has been deprecated, 'xorg.libXinerama' has been renamed to 'libxinerama'
+warning: The xorg package set has been deprecated, 'xorg.libXcursor' has been renamed to 'libxcursor'
+warning: The xorg package set has been deprecated, 'xorg.libXrender' has been renamed to 'libxrender'
+warning: The xorg package set has been deprecated, 'xorg.libXScrnSaver' has been renamed to 'libxscrnsaver'
+warning: The xorg package set has been deprecated, 'xorg.libXi' has been renamed to 'libxi'
+warning: The xorg package set has been deprecated, 'xorg.libSM' has been renamed to 'libsm'
+warning: The xorg package set has been deprecated, 'xorg.libICE' has been renamed to 'libice'
+warning: The xorg package set has been deprecated, 'xorg.libXt' has been renamed to 'libxt'
+warning: The xorg package set has been deprecated, 'xorg.libXmu' has been renamed to 'libxmu'
+warning: 'glew110' has been renamed to 'glew_1_10'
+warning: The xorg package set has been deprecated, 'xorg.libXft' has been renamed to 'libxft'

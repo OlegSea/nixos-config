@@ -1,5 +1,7 @@
-{ pkgs, nixpkgs-stable, ... }:
-{
+{ pkgs, nixpkgs-stable, storytold, ... }:
+let
+  st = storytold.packages.${pkgs.system};
+in{
   environment.systemPackages = with pkgs; [
     vivaldi
     nemo
@@ -9,7 +11,7 @@
     vlc
     nomacs
     yt-dlp
-    nixpkgs-stable.legacyPackages.x86_64-linux.qbittorrent
+    qbittorrent
     ffmpeg
     font-manager
     foliate
@@ -21,6 +23,11 @@
     ])
     libqalculate
     qalculate-qt
+
+    st.photocraft
+    st.filmcraft
+    st.wordcraft
+    st.gridcraft
   ];
 
   fonts.packages = with pkgs; [

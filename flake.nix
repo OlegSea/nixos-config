@@ -54,6 +54,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    storytold.url = "github:sjdevries/storytold-craft-nix";
+
     nixcord.url = "github:FlameFlag/nixcord";
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";

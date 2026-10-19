@@ -3,12 +3,14 @@
   llama-cpp,
   nix-openclaw,
   config,
+  claude-desktop,
   ...
 }:
 {
   environment.systemPackages = with pkgs; [
     lmstudio
     # (pkgs.callPackage ../packages/llamacpp.nix { })
+    opencode
     llama-cpp.packages.${pkgs.stdenv.hostPlatform.system}.cuda
   ];
   networking.firewall.allowedTCPPorts = [
@@ -123,6 +125,9 @@
 
       config = {
         gateway.mode = "local";
+        browser = {
+          executablePath = "${pkgs.vivaldi}/bin/vivaldi";
+          ssrfPolicy.allowedHostnames = ["127.0.0.1" "localhost"]; };
 
         models = {
           mode = "merge";

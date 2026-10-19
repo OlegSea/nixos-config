@@ -5,11 +5,11 @@
       workspaces = {
         "1" = {
           name = "browser";
-          open-on-output = "DP-2";
+          open-on-output = "DP-1";
         };
         "2" = {
           name = "dev";
-          open-on-output = "DP-2";
+          open-on-output = "DP-1";
         };
         "3" = {
           name = "social";

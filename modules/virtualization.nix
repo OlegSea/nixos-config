@@ -12,7 +12,6 @@
     onBoot = "start";
     qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
   };
-  # FIX ME: wait for libvirtd to stop being a bitch
 
   networking = {
     firewall = {

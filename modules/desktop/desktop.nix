@@ -28,6 +28,7 @@ in{
     st.filmcraft
     st.wordcraft
     st.gridcraft
+    st.pdfcraft
   ];
 
   fonts.packages = with pkgs; [

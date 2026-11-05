@@ -107,6 +107,26 @@
         "type": "github"
       }
     },
+    "duckgame": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793567203,
+        "narHash": "sha256-uVrQi/m/V4QxsYa0tIaKFlPQAr5LdDCeHkiO8jg2HDw=",
+        "owner": "klof44",
+        "repo": "DuckGameRebuilt-Nix",
+        "rev": "1d3586338a580555903f429b26682c7179ff4e1d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "klof44",
+        "repo": "DuckGameRebuilt-Nix",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -1055,6 +1075,7 @@
       "inputs": {
         "agenix": "agenix",
         "copyparty": "copyparty",
+        "duckgame": "duckgame",
         "home-manager": "home-manager",
         "lazyvim": "lazyvim",
         "llama-cpp": "llama-cpp",

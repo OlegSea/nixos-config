@@ -55,6 +55,8 @@
     jack.enable = true;
   };
 
+  boot.kernelParams = [ "preempt=full" ];
+
   environment.etc."asound.conf".text = ''
     pcm.!default {
       type pulse
@@ -66,7 +68,7 @@
 
   programs.noisetorch = {
     enable = true;
-    package = nixpkgs-stable.legacyPackages.x86_64-linux.noisetorch;
+    package = pkgs.noisetorch;
   };
 
   # Graphics

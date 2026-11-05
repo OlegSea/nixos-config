@@ -2,6 +2,7 @@
   pkgs,
   options,
   flakeDir,
+  lib,
   ...
 }:
 {
@@ -23,7 +24,7 @@
 
     supportedFilesystems = [ "nfs" ];
 
-    kernelPackages = pkgs.linuxPackages_zen;
+    kernelPackages = lib.mkDefault pkgs.linuxPackages_zen;
     kernelParams = [
       "hugepages=2048"
       "elevator=mq-deadline"
@@ -36,6 +37,12 @@
       size = 16 * 1024;
     }
   ];
+
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 20;
+  };
 
   # Hacks
   boot.kernel.sysctl = {

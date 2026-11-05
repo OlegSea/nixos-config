@@ -6,6 +6,7 @@
     ../../modules/ai.nix
     ../../modules/desktop/audio.nix
     ../../modules/desktop/games/osu.nix
+    ../../modules/desktop/games/duckgame.nix
 #    ../../modules/desktop/games/sdvx.nix
   ];
 

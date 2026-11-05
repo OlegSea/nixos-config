@@ -8,6 +8,7 @@
     onlyoffice-desktopeditors
     libreoffice
     obsidian
+    anydesk
   ];
   networking.networkmanager.plugins = with pkgs; [
     networkmanager-openvpn

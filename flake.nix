@@ -54,6 +54,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    duckgame = {
+      url = "github:klof44/DuckGameRebuilt-Nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     storytold.url = "github:sjdevries/storytold-craft-nix";
 
     nixcord.url = "github:FlameFlag/nixcord";

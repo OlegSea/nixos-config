@@ -1,7 +1,13 @@
-{ pkgs, nixpkgs-stable, storytold, ... }:
+{
+  pkgs,
+  nixpkgs-stable,
+  storytold,
+  ...
+}:
 let
   st = storytold.packages.${pkgs.system};
-in{
+in
+{
   environment.systemPackages = with pkgs; [
     vivaldi
     nemo
@@ -27,7 +33,9 @@ in{
     st.photocraft
     st.filmcraft
     st.wordcraft
+    st.wordcraft-cli
     st.gridcraft
+    st.gridcraft-cli
     st.pdfcraft
   ];
 

@@ -17,10 +17,17 @@
 
   users.groups.docker.members = [ "olegsea" ];
 
+  virtualisation.containers.registries.settings = {
+      registries.search = {
+        registries = [ "docker.io" "quay.io" ];
+      };
+    };
+
   environment.systemPackages = with pkgs; [
     distrobox
     podman-compose
     nvidia-container-toolkit
+    zenity
   ];
   environment.etc."distrobox/distrobox.conf".text = ''
     unset LD_LIBRARY_PATH ALSA_PLUGIN_DIR

@@ -11,6 +11,7 @@
 
     ../modules/devices/tablet.nix
     ../modules/devices/logitech.nix
+    ../modules/devices/usb.nix
 
     ../modules/desktop/desktop.nix
     ../modules/desktop/kitty.nix
